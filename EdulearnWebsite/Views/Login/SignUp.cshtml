@@ -1,0 +1,87 @@
+﻿@model EdulearnWebsite.Models.user
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="~/wwwroot/css/landingstyle.css" />
+
+<div class="container-fluid g-container">
+    <div class="container mx-auto sign-up-mode">
+        <div class="forms-container">
+            <div class="signin-signup">
+                @*<form action="/Login/Index" class="sign-in-form" id="user-sign-in" method="post" novalidate="novalidate">
+            @Html.AntiForgeryToken()
+
+            <h2 class="title">Sign in</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "Username" } })
+                @Html.ValidationMessageFor(model => model.username, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Forgot password?</p>
+            <p class="social-text"><a asp-page="/Home">Homepage></a></p>
+        </form>*@
+
+                
+                    <form action="/Login/SignUp" class="sign-up-form" method="post" novalidate="novalidate">
+                        @Html.AntiForgeryToken()
+                        <h2 class="title">Sign-up</h2>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "Username", @style = "margin-top: 7px;"  } })
+                            @Html.ValidationMessageFor(model => model.username, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email", @style = "margin-top: 7px;" } })
+                            @Html.ValidationMessageFor(model => model.email, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password", @style = "margin-top: 7px;" } }) @Html.ValidationMessageFor(model => model.password, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            @Html.EditorFor(model => model.confirmPass, new { htmlAttributes = new { @class = "form-control", placeholder = "Confirm Password", @type = "password", @style = "margin-top: 7px;" } })
+                            @Html.ValidationMessageFor(model => model.confirmPass, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
+                        </div>
+                        <input type="submit" class="btn" value="Sign up" />
+                        </form>
+                </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel" style="padding-bottom: 0 !important">
+                <div class="logo-heading">
+                    <img src="~/wwwroot/images/logo.png" alt="logo" class="logo" />
+                    <h1 id="logo-title"><span>E</span>dulearn</h1>
+                </div>
+                <div class="content left-content">
+                    <h3>New here?</h3>
+                    <p>Click the sign-up button below and register!</p>
+                    <button class="btn transparent" id="sign-up-btn">Sign-up</button>
+                </div>
+                <img src="~/wwwroot/images/log.svg" class="image log" alt="welcome svg" />
+            </div>
+            <div class="panel right-panel">
+                <div class="content" style="text-align: center; margin: 0 auto; display: block">
+                    <h3>One of us?</h3>
+                    <p>Let's go! and login your account and start to learn!</p>
+                    <button class="btn transparent">@Html.ActionLink("Login", "Index", "Login", new { @class = "CssActionLinks" })</button>
+                </div>
+                <img src="~/wwwroot/images/register.svg" class="image" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")}

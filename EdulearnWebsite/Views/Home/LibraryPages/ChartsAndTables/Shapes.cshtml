@@ -1,0 +1,229 @@
+﻿
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/wwwroot/css/Shapes.css" />
+<!-- Wrapper -->
+<div id="wrapper">
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<a href="/Home/Library" class="logo"><strong>Library</strong></a>
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="shapes">
+				<section>
+					<h2>Square</h2>
+					<div class="square"></div>
+				</section>
+
+				<section>
+					<h2>Rectangle</h2>
+					<div class="rectangle"></div>
+				</section>
+
+				<section>
+					<h2>Circle</h2>
+					<div class="circle"></div>
+				</section>
+
+				<section>
+					<h2>Semi-circle</h2>
+					<div class="semi-circle"></div>
+				</section>
+
+				<section>
+					<h2>Ellipse</h2>
+					<div class="ellipse"></div>
+				</section>
+
+				<section>
+					<h2>Pill</h2>
+					<div class="pill"></div>
+				</section>
+
+				<section>
+					<h2>Equilateral Triangle</h2>
+					<div class="equilateral-triangle"></div>
+				</section>
+
+				<section>
+					<h2>Isosceles Triangle</h2>
+					<div class="isosceles-triangle"></div>
+				</section>
+
+				<section>
+					<h2>Scalene Triangle</h2>
+					<div class="scalene-triangle"></div>
+				</section>
+
+				<section>
+					<h2>Right Trianagle</h2>
+					<div class="right-triangle"></div>
+				</section>
+
+				<section>
+					<h2>Trapezium</h2>
+					<div class="trapezium"></div>
+				</section>
+
+				<section>
+					<h2>Parallelogram</h2>
+					<div class="parallelogram"></div>
+				</section>
+
+				<section>
+					<h2>Rhombus</h2>
+					<div class="rhombus"></div>
+				</section>
+
+				<section>
+					<h2>Six-point Star</h2>
+					<div class="sixpoint-star"></div>
+				</section>
+
+				<section>
+					<h2>Pentagon</h2>
+					<div class="pentagon"></div>
+				</section>
+
+				<section>
+					<h2>Hexagon</h2>
+					<div class="hexagon"></div>
+				</section>
+
+				<section>
+					<h2>Heart</h2>
+					<div class="heart"></div>
+				</section>
+
+				<section>
+					<h2>Diamond</h2>
+					<div class="diamond"></div>
+				</section>
+
+				<section>
+					<h2>Egg</h2>
+					<div class="egg"></div>
+				</section>
+
+				<section>
+					<h2>Cross</h2>
+					<div class="cross"></div>
+				</section>
+
+				<section>
+					<h2>Infinity</h2>
+					<div class="infinity"></div>
+				</section>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+        <div class="inner">
+            <!-- Home Back Button -->
+            <a href="/Home">
+                <div class="home-back-button">
+                    <i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+                </div>
+            </a>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+
+                <ul>
+                    <li>@Html.ActionLink("General", "Library", "Home")</li>
+                    <li>
+
+                        <span class="opener">Web Directory</span>
+                        <ul>
+                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Modules</span>
+                        <ul>
+                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tables & Charts</span>
+                        <ul>
+                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Maps</span>
+                        <ul>
+                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Videos</span>
+                        <ul>
+                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">eBooks</span>
+                        <ul>
+                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Systematrics  All rights reserved. </p>
+            </footer>
+        </div>
+	</div>
+</div>
+
+<!-- Library script -->
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library.js"></script>
