@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="edulearnModelStoreContainer" CdmEntityContainer="edulearnEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="edulearnModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="headAdmins">
+      <EntityTypeMapping TypeName="edulearnModel.headAdmin">
+        <MappingFragment StoreEntitySet="headAdmin">
+          <ScalarProperty Name="HeadAdminID" ColumnName="HeadAdminID" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="learners">
+      <EntityTypeMapping TypeName="edulearnModel.learner">
+        <MappingFragment StoreEntitySet="learner">
+          <ScalarProperty Name="LearnerID" ColumnName="LearnerID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="edulearnModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="HeadAdminID" ColumnName="HeadAdminID" />
+          <ScalarProperty Name="LearnerID" ColumnName="LearnerID" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="confirmPass" ColumnName="confirmPass" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
