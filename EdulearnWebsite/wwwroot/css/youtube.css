@@ -1,0 +1,49 @@
+﻿#youtube-search {
+	width: 150px;
+	margin: 0 auto;
+	background-color: rgb(255, 22, 22) !important;
+	border-radius: 10px !important;
+	color: white !important;
+	font-weight: normal;
+	box-shadow: none;
+}
+
+.form-control {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.y-title {
+	margin-top: 50px;
+	margin-bottom: 0;
+}
+
+#videos {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center !important;
+}
+
+iframe {
+	float: left;
+	width: 400px;
+	height: 310px;
+	margin: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+	#youtube-search {
+		width: 100px;
+	}
+
+	iframe {
+		width: 99%;
+		height: 210px;
+	}
+
+	.y-title {
+		font-size: 1rem;
+	}
+}

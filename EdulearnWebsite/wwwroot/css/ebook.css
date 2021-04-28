@@ -1,0 +1,64 @@
+﻿.subheading {
+	text-transform: uppercase;
+}
+
+.books {
+	margin: 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0 0 2em 1em rgba(204, 189, 189, 0.2);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.ebooks {
+	padding-top: 0 !important;
+}
+
+.description,
+.book-cover {
+	float: left;
+	margin: 0 10px;
+}
+
+	.description p {
+		width: 650px;
+	}
+
+@media only screen and (max-width: 900px) {
+	.description p {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.description p {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.description p {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.book-cover {
+		margin: 0 auto;
+	}
+
+	.description p {
+		width: auto;
+		text-align: center;
+	}
+
+	.description h2 {
+		text-align: center;
+	}
+
+	.description button {
+		margin: 0 auto;
+		display: block;
+	}
+}

@@ -1,0 +1,331 @@
+﻿.shapes {
+	padding: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(300px, auto);
+	grid-gap: 1em;
+}
+
+@media screen and (max-width: 1100px) {
+	.shapes {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.shapes {
+		grid-template-columns: 1fr;
+		grid-gap: 2em;
+	}
+}
+
+.shapes section {
+	display: flex;
+	flex-direction: column;
+	color: black;
+	background-color: #eef;
+	border-radius: 1em;
+	box-shadow: 0 0 2em 1em rgba(0,0,0,0.2);
+	padding: 10px;
+	padding-top: 15px;
+	overflow: hidden;
+}
+
+	.shapes section > div {
+		margin: auto;
+		margin-left: 0 auto;
+		margin-right: 0 auto;
+		display: block;
+		text-align: center;
+	}
+
+	.shapes section > h2 {
+		text-align: center;
+		font-weight: 600;
+		margin-top: -0.3em;
+		color: #556;
+		margin-bottom: 0 !important;
+	}
+
+/***************************************/
+/*              REFERENCE              */
+/***************************************/
+.square {
+	background-color: lightsalmon;
+	height: 125px;
+	width: 125px;
+}
+
+.rectangle {
+	background-color: rgb(253, 175, 130);
+	height: 105px;
+	width: 180px;
+}
+
+.circle {
+	background-color: rgb(253, 205, 142);
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+}
+
+.semi-circle {
+	background-color: rgb(253, 255, 122);
+	height: 80px; /*Height should be half of width*/
+	width: 180px;
+	border-radius: 100px 100px 0 0; /*Radius = Height*/
+}
+
+.ellipse {
+	background-color: rgb(150, 241, 89);
+	height: 105px;
+	width: 180px;
+	border-radius: 50%;
+}
+
+.pill {
+	background-color: rgb(96, 238, 120);
+	height: 100px;
+	width: 200px;
+	border-radius: 50000px; /*Any large value will do the trick*/
+}
+
+.equilateral-triangle {
+	height: 0px;
+	width: 0px;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 153px solid rgb(122, 255, 204); /*You need to multiply the left/right border width by 1.732 to get the bottom border, ie, height of triangle*/
+}
+
+.isosceles-triangle {
+	height: 0px;
+	width: 0px;
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-bottom: 170px solid rgb(122, 217, 255);
+}
+
+.scalene-triangle {
+	height: 0px;
+	width: 0px;
+	border-left: 130px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 170px solid rgb(122, 180, 255);
+}
+
+.right-triangle {
+	height: 0px;
+	width: 0px;
+	border-right: 135px solid transparent;
+	border-bottom: 140px solid rgb(122, 153, 255);
+}
+
+.trapezium {
+	height: 0px;
+	width: 140px;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 140px solid rgb(146, 122, 255);
+}
+
+.parallelogram {
+	height: 105px;
+	width: 180px;
+	background-color: rgb(195, 122, 255);
+	transform: skew(-20deg);
+}
+
+.rhombus {
+	height: 130px;
+	width: 130px;
+	background-color: rgb(251, 122, 255);
+	transform: skew(-20deg);
+}
+
+/* sixpoint-star start */
+.sixpoint-star {
+	position: relative;
+	height: 0px;
+	width: 0px;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 153px solid rgb(255, 122, 188);
+	margin-top: 10px;
+}
+
+	.sixpoint-star::after {
+		position: absolute;
+		content: "";
+		height: 0px;
+		width: 0px;
+		border-left: 80px solid transparent;
+		border-right: 80px solid transparent;
+		border-top: 153px solid rgb(255, 122, 188);
+		top: 40px;
+		left: -80px;
+	}
+/*sixpoint-start end*/
+
+/*hexagon start*/
+.hexagon {
+	position: relative;
+	height: 0px;
+	width: 100px;
+	border-bottom: 100px solid rgb(255, 122, 122);
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	margin-top: 10px !important;
+}
+
+	.hexagon::after {
+		position: absolute;
+		content: "";
+		height: 0px;
+		width: 100px;
+		border-top: 100px solid rgb(255, 122, 122);
+		border-left: 60px solid transparent;
+		border-right: 60px solid transparent;
+		left: -60px;
+		top: 100px;
+	}
+/*hexagon end*/
+
+/*pentagon start*/
+.pentagon {
+	position: relative;
+	height: 0px;
+	width: 0px;
+	border-bottom: 75px solid rgb(255, 160, 122);
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	margin-top: 20px !important;
+}
+
+	.pentagon:after {
+		position: absolute;
+		content: "";
+		height: 0px;
+		width: 125px;
+		border-top: 115px solid rgb(255, 160, 122);
+		border-left: 37.5px solid transparent;
+		border-right: 37.5px solid transparent;
+		left: -100px;
+		top: 75px;
+	}
+/*pentagon end*/
+
+/*heart start*/
+.heart {
+	position: relative;
+	width: 200px;
+	height: 180px;
+	margin-top: 40px;
+}
+
+	.heart::before,
+	.heart::after {
+		position: absolute;
+		content: "";
+		left: 100px;
+		top: 0;
+		width: 100px;
+		height: 160px;
+		background-color: rgb(255, 197, 122);
+		border-radius: 50px 50px 0 0;
+		transform: rotate(-45deg);
+		transform-origin: 0 100%;
+	}
+
+	.heart::after {
+		left: 0;
+		transform: rotate(45deg);
+		transform-origin: 100% 100%;
+	}
+/*heart end*/
+
+/*diamond start*/
+.diamond {
+	position: relative;
+	height: 0px;
+	width: 100px;
+	border-bottom: 80px solid rgb(220, 255, 122);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	margin-top: 20px;
+}
+
+	.diamond::after {
+		position: absolute;
+		content: "";
+		height: 0px;
+		width: 0px;
+		border-top: 80px solid rgb(220, 255, 122);
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		left: -50px;
+		top: 80px;
+	}
+/*diamond end*/
+
+.egg {
+	height: 180px;
+	width: 130px;
+	background-color: rgb(149, 255, 122);
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+/*cross start*/
+.cross {
+	position: relative;
+	height: 180px;
+	width: 30px;
+	background-color: rgb(122, 255, 248);
+}
+
+	.cross::after {
+		position: absolute;
+		content: "";
+		height: 30px;
+		width: 180px;
+		background-color: rgb(122, 255, 248);
+		top: 75px;
+		left: -75px;
+	}
+/*cross end*/
+
+/* infinty start */
+.infinity {
+	position: relative;
+	height: 80px;
+	width: 170px;
+}
+
+	.infinity::before,
+	.infinity::after {
+		position: absolute;
+		content: "";
+		height: 80px;
+		width: 80px;
+		background-color: transparent;
+		border: 20px solid rgb(142, 122, 255);
+		box-sizing: border-box;
+		top: 0;
+	}
+
+	.infinity::before {
+		border-radius: 50% 50% 0 50%;
+		transform: rotate(-45deg);
+		left: 2px;
+	}
+
+	.infinity::after {
+		border-radius: 50% 50% 50% 0;
+		transform: rotate(45deg);
+		right: 2px;
+	}
+/* infinty end */
+
+/****************************************/
+/*            REFERENCE END             */
+/****************************************/

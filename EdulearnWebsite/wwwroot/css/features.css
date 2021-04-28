@@ -1,0 +1,144 @@
+﻿/*FEATURES
+=========================================================*/
+.section-2 {
+	border-radius: 20px;
+}
+
+.cover {
+	width: 100%;
+	height: 55vmin;
+	background-position: -24rem -19rem;
+	background-size: 150%;
+	position: relative;
+	border-radius: 20px;
+}
+
+	.cover .overlay {
+		border-radius: 20px !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+	}
+
+	.cover .content {
+		width: 100%;
+		height: 100%;
+		background: rgba(66, 66, 66, 0.7);
+		padding-top: 19vmin;
+		border-radius: 20px;
+	}
+
+		.cover .content > h1 {
+			font-family: "Patua One", cursive;
+			font-size: 6.5vmin;
+			color: whitesmoke;
+		}
+
+		.cover .content > p {
+			font-family: "Rubik", cursive;
+			font-size: 2.5vmin;
+			color: #e5e5e5;
+		}
+
+.numbers .rect {
+	position: relative;
+	z-index: 1;
+	background: white;
+	width: 17rem;
+	height: 19rem;
+	padding-top: 3.5vmin;
+	margin: 1rem;
+	border-radius: 0.5em;
+	-webkit-box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+	box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+}
+
+	.numbers .rect h1 {
+		font-size: 5rem;
+		color: #ff6347;
+	}
+
+	.numbers .rect img {
+		width: 150px;
+		height: 150px;
+	}
+
+	.numbers .rect p {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+.rect {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+	.rect:hover {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+
+
+.numbers {
+	margin-top: -17vmin;
+}
+
+#features {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.feature-row {
+	width: 80%;
+	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.feature-col {
+	flex-basis: 25%;
+	text-align: center;
+}
+
+	.feature-col img {
+		width: 100px;
+	}
+
+	.feature-col h4 {
+		margin-bottom: 15px;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+.feature-btn {
+	margin: 80px auto 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+	.feature-btn .line {
+		text-align: right;
+		display: inline-block;
+		margin-right: 25px;
+	}

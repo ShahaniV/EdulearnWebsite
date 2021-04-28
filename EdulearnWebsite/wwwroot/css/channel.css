@@ -1,0 +1,88 @@
+﻿
+.channel {
+	background-color: #222222;
+	margin: 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0 0 2em 1em rgba(204, 189, 189, 0.2);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.channels {
+	padding-top: 0 !important;
+}
+
+.channel-profile {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+}
+
+.description,
+.channel-profile {
+	float: left;
+	margin: 0 10px;
+}
+
+.description {
+	margin-left: 20px;
+}
+
+	.description p {
+		width: 640px;
+		margin-bottom: 10px;
+	}
+
+	.description h2 {
+		
+		color: white;
+		margin-bottom: 10px;
+	}
+
+		.description h2:hover {
+			color: rgb(167, 165, 165);
+		}
+
+	.description a {
+		text-decoration: none !important;
+	}
+
+@media only screen and (max-width: 900px) {
+	.description p {
+		width: 490px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.description p {
+		width: 390px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.description p {
+		width: 290px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.channel-profile {
+		margin: 0 auto;
+	}
+
+	.description p {
+		width: auto;
+		text-align: center;
+	}
+
+	.description h2 {
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.description button {
+		margin: 0 auto;
+		display: block;
+	}
+}

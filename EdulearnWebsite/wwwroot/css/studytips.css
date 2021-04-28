@@ -1,0 +1,101 @@
+﻿.studying {
+	margin: 0 auto;
+	display: block;
+	width: 500px;
+}
+
+.study-teacher {
+	display: flex;
+	width: 260px;
+	height: 200px;
+	margin-left: 20px;
+}
+
+.study-cycle {
+	display: flex;
+	width: 150px;
+	height: 200px;
+	margin-left: 20px;
+}
+
+.study-intense {
+	display: flex;
+	width: 200px;
+	height: 200px;
+	margin-left: 20px;
+}
+
+.study-problem,
+.study-multitask {
+	display: flex;
+	width: 200px;
+	height: 200px;
+	margin-left: 20px;
+}
+
+.p-section {
+	width: 70%;
+}
+
+.p-section1 {
+	width: 65%;
+}
+.bulletList {
+	margin-left: 50px;
+}
+
+@media only screen and (max-width: 908px) {
+	.study-teacher {
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.study-intense,
+	.study-problem,
+	.study-multitask {
+		width: 180px;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.study-intense,
+	.study-problem,
+	.study-multitask {
+		width: 150px;
+	}
+
+	.study-teacher {
+		width: 160px;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.study-intense,
+	.study-problem,
+	.study-multitask,
+	.study-cycle {
+		width: 180px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.study-teacher {
+		width: 200px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.p-section,
+	.p-section1 {
+		clear: both;
+		width: 100%;
+	}
+
+	.studying {
+		width: 80%;
+	}
+	.bulletList {
+		margin-left: 25px;
+	}
+}
