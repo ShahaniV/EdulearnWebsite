@@ -1,0 +1,1648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75EAC650-6E50-4E63-B799-B1C6BB39698A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EdulearnWebsite</RootNamespace>
+    <AssemblyName>EdulearnWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44340</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HeadAdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admin.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\headAdmin.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\learner.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Views\Home\webfonts\fa-brands-400.svg" />
+    <Content Include="Views\Home\webfonts\fa-regular-400.svg" />
+    <Content Include="Views\Home\webfonts\fa-solid-900.svg" />
+    <Content Include="wwwroot\cover\g10\eng10\1.png" />
+    <Content Include="wwwroot\cover\g10\eng10\2.png" />
+    <Content Include="wwwroot\cover\g10\eng10\3.png" />
+    <Content Include="wwwroot\cover\g10\eng10\4.png" />
+    <Content Include="wwwroot\cover\g10\eng10\5.png" />
+    <Content Include="wwwroot\cover\g10\eng10\6.png" />
+    <Content Include="wwwroot\cover\g10\eng10\7.png" />
+    <Content Include="wwwroot\cover\g10\fil10\1.png" />
+    <Content Include="wwwroot\cover\g10\fil10\2.png" />
+    <Content Include="wwwroot\cover\g10\fil10\3.png" />
+    <Content Include="wwwroot\cover\g10\fil10\4.png" />
+    <Content Include="wwwroot\cover\g10\fil10\5.png" />
+    <Content Include="wwwroot\cover\g10\fil10\6.png" />
+    <Content Include="wwwroot\cover\g10\fil10\7.png" />
+    <Content Include="wwwroot\cover\g10\math10\1.png" />
+    <Content Include="wwwroot\cover\g10\math10\2.png" />
+    <Content Include="wwwroot\cover\g10\math10\3.png" />
+    <Content Include="wwwroot\cover\g10\math10\4.png" />
+    <Content Include="wwwroot\cover\g10\math10\5.png" />
+    <Content Include="wwwroot\cover\g10\math10\6.png" />
+    <Content Include="wwwroot\cover\g10\math10\7.png" />
+    <Content Include="wwwroot\cover\g10\math10\8.png" />
+    <Content Include="wwwroot\cover\g10\math10\9.png" />
+    <Content Include="wwwroot\cover\g10\sci10\1.png" />
+    <Content Include="wwwroot\cover\g10\sci10\2.png" />
+    <Content Include="wwwroot\cover\g10\sci10\3.png" />
+    <Content Include="wwwroot\cover\g10\sci10\4.png" />
+    <Content Include="wwwroot\cover\g10\sci10\5.png" />
+    <Content Include="wwwroot\cover\g1\esp1\1.png" />
+    <Content Include="wwwroot\cover\g1\esp1\2.png" />
+    <Content Include="wwwroot\cover\g1\esp1\3.png" />
+    <Content Include="wwwroot\cover\g1\esp1\4.png" />
+    <Content Include="wwwroot\cover\g1\esp1\5.png" />
+    <Content Include="wwwroot\cover\g1\fil1\1.png" />
+    <Content Include="wwwroot\cover\g1\fil1\2.png" />
+    <Content Include="wwwroot\cover\g1\fil1\3.png" />
+    <Content Include="wwwroot\cover\g1\fil1\4.png" />
+    <Content Include="wwwroot\cover\g1\fil1\5.png" />
+    <Content Include="wwwroot\cover\g1\fil1\6.png" />
+    <Content Include="wwwroot\cover\g1\fil1\7.png" />
+    <Content Include="wwwroot\cover\g1\math1\1.png" />
+    <Content Include="wwwroot\cover\g1\math1\10.png" />
+    <Content Include="wwwroot\cover\g1\math1\2.png" />
+    <Content Include="wwwroot\cover\g1\math1\3.png" />
+    <Content Include="wwwroot\cover\g1\math1\4.png" />
+    <Content Include="wwwroot\cover\g1\math1\5.png" />
+    <Content Include="wwwroot\cover\g1\math1\6.png" />
+    <Content Include="wwwroot\cover\g1\math1\7.png" />
+    <Content Include="wwwroot\cover\g1\math1\8.png" />
+    <Content Include="wwwroot\cover\g1\math1\9.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\1.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\10.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\11.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\12.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\13.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\14.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\2.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\3.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\4.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\5.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\6.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\7.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\8.png" />
+    <Content Include="wwwroot\cover\g1\mtb1\9.png" />
+    <Content Include="wwwroot\cover\g2\eng2\1.png" />
+    <Content Include="wwwroot\cover\g2\eng2\10.png" />
+    <Content Include="wwwroot\cover\g2\eng2\11.png" />
+    <Content Include="wwwroot\cover\g2\eng2\12.png" />
+    <Content Include="wwwroot\cover\g2\eng2\13.png" />
+    <Content Include="wwwroot\cover\g2\eng2\2.png" />
+    <Content Include="wwwroot\cover\g2\eng2\3.png" />
+    <Content Include="wwwroot\cover\g2\eng2\4.png" />
+    <Content Include="wwwroot\cover\g2\eng2\5.png" />
+    <Content Include="wwwroot\cover\g2\eng2\6.png" />
+    <Content Include="wwwroot\cover\g2\eng2\7.png" />
+    <Content Include="wwwroot\cover\g2\eng2\8.png" />
+    <Content Include="wwwroot\cover\g2\eng2\9.png" />
+    <Content Include="wwwroot\cover\g2\fil2\1.png" />
+    <Content Include="wwwroot\cover\g2\fil2\10.png" />
+    <Content Include="wwwroot\cover\g2\fil2\11.png" />
+    <Content Include="wwwroot\cover\g2\fil2\12.png" />
+    <Content Include="wwwroot\cover\g2\fil2\13.png" />
+    <Content Include="wwwroot\cover\g2\fil2\14.png" />
+    <Content Include="wwwroot\cover\g2\fil2\2.png" />
+    <Content Include="wwwroot\cover\g2\fil2\3.png" />
+    <Content Include="wwwroot\cover\g2\fil2\4.png" />
+    <Content Include="wwwroot\cover\g2\fil2\5.png" />
+    <Content Include="wwwroot\cover\g2\fil2\6.png" />
+    <Content Include="wwwroot\cover\g2\fil2\7.png" />
+    <Content Include="wwwroot\cover\g2\fil2\8.png" />
+    <Content Include="wwwroot\cover\g2\fil2\9.png" />
+    <Content Include="wwwroot\cover\g2\math2\1.png" />
+    <Content Include="wwwroot\cover\g2\math2\10.png" />
+    <Content Include="wwwroot\cover\g2\math2\11.png" />
+    <Content Include="wwwroot\cover\g2\math2\12.png" />
+    <Content Include="wwwroot\cover\g2\math2\13.png" />
+    <Content Include="wwwroot\cover\g2\math2\14.png" />
+    <Content Include="wwwroot\cover\g2\math2\15.png" />
+    <Content Include="wwwroot\cover\g2\math2\16.png" />
+    <Content Include="wwwroot\cover\g2\math2\17.png" />
+    <Content Include="wwwroot\cover\g2\math2\18.png" />
+    <Content Include="wwwroot\cover\g2\math2\19.png" />
+    <Content Include="wwwroot\cover\g2\math2\2.png" />
+    <Content Include="wwwroot\cover\g2\math2\20.png" />
+    <Content Include="wwwroot\cover\g2\math2\21.png" />
+    <Content Include="wwwroot\cover\g2\math2\22.png" />
+    <Content Include="wwwroot\cover\g2\math2\23.png" />
+    <Content Include="wwwroot\cover\g2\math2\24.png" />
+    <Content Include="wwwroot\cover\g2\math2\25.png" />
+    <Content Include="wwwroot\cover\g2\math2\26.png" />
+    <Content Include="wwwroot\cover\g2\math2\27.png" />
+    <Content Include="wwwroot\cover\g2\math2\28.png" />
+    <Content Include="wwwroot\cover\g2\math2\29.png" />
+    <Content Include="wwwroot\cover\g2\math2\3.png" />
+    <Content Include="wwwroot\cover\g2\math2\30.png" />
+    <Content Include="wwwroot\cover\g2\math2\4.png" />
+    <Content Include="wwwroot\cover\g2\math2\5.png" />
+    <Content Include="wwwroot\cover\g2\math2\6.png" />
+    <Content Include="wwwroot\cover\g2\math2\7.png" />
+    <Content Include="wwwroot\cover\g2\math2\8.png" />
+    <Content Include="wwwroot\cover\g2\math2\9.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\1.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\10.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\11.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\12.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\13.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\14.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\15.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\16.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\17.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\18.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\19.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\2.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\20.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\21.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\22.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\3.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\4.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\5.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\6.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\7.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\8.png" />
+    <Content Include="wwwroot\cover\g2\mtb2\9.png" />
+    <Content Include="wwwroot\cover\g3\eng3\1.png" />
+    <Content Include="wwwroot\cover\g3\eng3\10.png" />
+    <Content Include="wwwroot\cover\g3\eng3\11.png" />
+    <Content Include="wwwroot\cover\g3\eng3\12.png" />
+    <Content Include="wwwroot\cover\g3\eng3\13.png" />
+    <Content Include="wwwroot\cover\g3\eng3\14.png" />
+    <Content Include="wwwroot\cover\g3\eng3\15.png" />
+    <Content Include="wwwroot\cover\g3\eng3\2.png" />
+    <Content Include="wwwroot\cover\g3\eng3\3.png" />
+    <Content Include="wwwroot\cover\g3\eng3\4.png" />
+    <Content Include="wwwroot\cover\g3\eng3\5.png" />
+    <Content Include="wwwroot\cover\g3\eng3\6.png" />
+    <Content Include="wwwroot\cover\g3\eng3\7.png" />
+    <Content Include="wwwroot\cover\g3\eng3\8.png" />
+    <Content Include="wwwroot\cover\g3\eng3\9.png" />
+    <Content Include="wwwroot\cover\g3\fil3\1.png" />
+    <Content Include="wwwroot\cover\g3\fil3\10.png" />
+    <Content Include="wwwroot\cover\g3\fil3\11.png" />
+    <Content Include="wwwroot\cover\g3\fil3\12.png" />
+    <Content Include="wwwroot\cover\g3\fil3\13.png" />
+    <Content Include="wwwroot\cover\g3\fil3\14.png" />
+    <Content Include="wwwroot\cover\g3\fil3\15.png" />
+    <Content Include="wwwroot\cover\g3\fil3\16.png" />
+    <Content Include="wwwroot\cover\g3\fil3\17.png" />
+    <Content Include="wwwroot\cover\g3\fil3\18.png" />
+    <Content Include="wwwroot\cover\g3\fil3\19.png" />
+    <Content Include="wwwroot\cover\g3\fil3\2.png" />
+    <Content Include="wwwroot\cover\g3\fil3\20.png" />
+    <Content Include="wwwroot\cover\g3\fil3\21.png" />
+    <Content Include="wwwroot\cover\g3\fil3\22.png" />
+    <Content Include="wwwroot\cover\g3\fil3\23.png" />
+    <Content Include="wwwroot\cover\g3\fil3\24.png" />
+    <Content Include="wwwroot\cover\g3\fil3\25.png" />
+    <Content Include="wwwroot\cover\g3\fil3\26.png" />
+    <Content Include="wwwroot\cover\g3\fil3\3.png" />
+    <Content Include="wwwroot\cover\g3\fil3\4.png" />
+    <Content Include="wwwroot\cover\g3\fil3\5.png" />
+    <Content Include="wwwroot\cover\g3\fil3\6.png" />
+    <Content Include="wwwroot\cover\g3\fil3\7.png" />
+    <Content Include="wwwroot\cover\g3\fil3\8.png" />
+    <Content Include="wwwroot\cover\g3\fil3\9.png" />
+    <Content Include="wwwroot\cover\g3\math3\1.png" />
+    <Content Include="wwwroot\cover\g3\math3\10.png" />
+    <Content Include="wwwroot\cover\g3\math3\11.png" />
+    <Content Include="wwwroot\cover\g3\math3\12.png" />
+    <Content Include="wwwroot\cover\g3\math3\13.png" />
+    <Content Include="wwwroot\cover\g3\math3\14.png" />
+    <Content Include="wwwroot\cover\g3\math3\15.png" />
+    <Content Include="wwwroot\cover\g3\math3\16.png" />
+    <Content Include="wwwroot\cover\g3\math3\17.png" />
+    <Content Include="wwwroot\cover\g3\math3\18.png" />
+    <Content Include="wwwroot\cover\g3\math3\19.png" />
+    <Content Include="wwwroot\cover\g3\math3\2.png" />
+    <Content Include="wwwroot\cover\g3\math3\20.png" />
+    <Content Include="wwwroot\cover\g3\math3\21.png" />
+    <Content Include="wwwroot\cover\g3\math3\22.png" />
+    <Content Include="wwwroot\cover\g3\math3\23.png" />
+    <Content Include="wwwroot\cover\g3\math3\24.png" />
+    <Content Include="wwwroot\cover\g3\math3\25.png" />
+    <Content Include="wwwroot\cover\g3\math3\26.png" />
+    <Content Include="wwwroot\cover\g3\math3\27.png" />
+    <Content Include="wwwroot\cover\g3\math3\28.png" />
+    <Content Include="wwwroot\cover\g3\math3\29.png" />
+    <Content Include="wwwroot\cover\g3\math3\3.png" />
+    <Content Include="wwwroot\cover\g3\math3\30.png" />
+    <Content Include="wwwroot\cover\g3\math3\31.png" />
+    <Content Include="wwwroot\cover\g3\math3\32.png" />
+    <Content Include="wwwroot\cover\g3\math3\33.png" />
+    <Content Include="wwwroot\cover\g3\math3\4.png" />
+    <Content Include="wwwroot\cover\g3\math3\5.png" />
+    <Content Include="wwwroot\cover\g3\math3\6.png" />
+    <Content Include="wwwroot\cover\g3\math3\7.png" />
+    <Content Include="wwwroot\cover\g3\math3\8.png" />
+    <Content Include="wwwroot\cover\g3\math3\9.png" />
+    <Content Include="wwwroot\cover\g3\sci3\1.png" />
+    <Content Include="wwwroot\cover\g3\sci3\2.png" />
+    <Content Include="wwwroot\cover\g3\sci3\3.png" />
+    <Content Include="wwwroot\cover\g3\sci3\4.png" />
+    <Content Include="wwwroot\cover\g3\sci3\5.png" />
+    <Content Include="wwwroot\cover\g3\sci3\6.png" />
+    <Content Include="wwwroot\cover\g3\sci3\7.png" />
+    <Content Include="wwwroot\cover\g3\sci3\8.png" />
+    <Content Include="wwwroot\cover\g3\sci3\9.png" />
+    <Content Include="wwwroot\cover\g4\eng4\1.png" />
+    <Content Include="wwwroot\cover\g4\eng4\10.png" />
+    <Content Include="wwwroot\cover\g4\eng4\11.png" />
+    <Content Include="wwwroot\cover\g4\eng4\2.png" />
+    <Content Include="wwwroot\cover\g4\eng4\3.png" />
+    <Content Include="wwwroot\cover\g4\eng4\4.png" />
+    <Content Include="wwwroot\cover\g4\eng4\5.png" />
+    <Content Include="wwwroot\cover\g4\eng4\6.png" />
+    <Content Include="wwwroot\cover\g4\eng4\7.png" />
+    <Content Include="wwwroot\cover\g4\eng4\8.png" />
+    <Content Include="wwwroot\cover\g4\eng4\9.png" />
+    <Content Include="wwwroot\cover\g4\fil4\1.png" />
+    <Content Include="wwwroot\cover\g4\fil4\10.png" />
+    <Content Include="wwwroot\cover\g4\fil4\11.png" />
+    <Content Include="wwwroot\cover\g4\fil4\12.png" />
+    <Content Include="wwwroot\cover\g4\fil4\13.png" />
+    <Content Include="wwwroot\cover\g4\fil4\14.png" />
+    <Content Include="wwwroot\cover\g4\fil4\15.png" />
+    <Content Include="wwwroot\cover\g4\fil4\16.png" />
+    <Content Include="wwwroot\cover\g4\fil4\17.png" />
+    <Content Include="wwwroot\cover\g4\fil4\18.png" />
+    <Content Include="wwwroot\cover\g4\fil4\19.png" />
+    <Content Include="wwwroot\cover\g4\fil4\2.png" />
+    <Content Include="wwwroot\cover\g4\fil4\20.png" />
+    <Content Include="wwwroot\cover\g4\fil4\21.png" />
+    <Content Include="wwwroot\cover\g4\fil4\22.png" />
+    <Content Include="wwwroot\cover\g4\fil4\23.png" />
+    <Content Include="wwwroot\cover\g4\fil4\24.png" />
+    <Content Include="wwwroot\cover\g4\fil4\3.png" />
+    <Content Include="wwwroot\cover\g4\fil4\4.png" />
+    <Content Include="wwwroot\cover\g4\fil4\5.png" />
+    <Content Include="wwwroot\cover\g4\fil4\6.png" />
+    <Content Include="wwwroot\cover\g4\fil4\7.png" />
+    <Content Include="wwwroot\cover\g4\fil4\8.png" />
+    <Content Include="wwwroot\cover\g4\fil4\9.png" />
+    <Content Include="wwwroot\cover\g4\math4\1.png" />
+    <Content Include="wwwroot\cover\g4\math4\10.png" />
+    <Content Include="wwwroot\cover\g4\math4\11.png" />
+    <Content Include="wwwroot\cover\g4\math4\12.png" />
+    <Content Include="wwwroot\cover\g4\math4\13.png" />
+    <Content Include="wwwroot\cover\g4\math4\2.png" />
+    <Content Include="wwwroot\cover\g4\math4\3.png" />
+    <Content Include="wwwroot\cover\g4\math4\4.png" />
+    <Content Include="wwwroot\cover\g4\math4\5.png" />
+    <Content Include="wwwroot\cover\g4\math4\6.png" />
+    <Content Include="wwwroot\cover\g4\math4\7.png" />
+    <Content Include="wwwroot\cover\g4\math4\8.png" />
+    <Content Include="wwwroot\cover\g4\math4\9.png" />
+    <Content Include="wwwroot\cover\g4\sci4\1.png" />
+    <Content Include="wwwroot\cover\g4\sci4\10.png" />
+    <Content Include="wwwroot\cover\g4\sci4\2.png" />
+    <Content Include="wwwroot\cover\g4\sci4\3.png" />
+    <Content Include="wwwroot\cover\g4\sci4\4.png" />
+    <Content Include="wwwroot\cover\g4\sci4\5.png" />
+    <Content Include="wwwroot\cover\g4\sci4\6.png" />
+    <Content Include="wwwroot\cover\g4\sci4\7.png" />
+    <Content Include="wwwroot\cover\g4\sci4\8.png" />
+    <Content Include="wwwroot\cover\g4\sci4\9.png" />
+    <Content Include="wwwroot\cover\g5\eng5\1.png" />
+    <Content Include="wwwroot\cover\g5\eng5\10.png" />
+    <Content Include="wwwroot\cover\g5\eng5\2.png" />
+    <Content Include="wwwroot\cover\g5\eng5\3.png" />
+    <Content Include="wwwroot\cover\g5\eng5\4.png" />
+    <Content Include="wwwroot\cover\g5\eng5\5.png" />
+    <Content Include="wwwroot\cover\g5\eng5\6.png" />
+    <Content Include="wwwroot\cover\g5\eng5\7.png" />
+    <Content Include="wwwroot\cover\g5\eng5\8.png" />
+    <Content Include="wwwroot\cover\g5\eng5\9.png" />
+    <Content Include="wwwroot\cover\g5\fil5\1.png" />
+    <Content Include="wwwroot\cover\g5\fil5\10.png" />
+    <Content Include="wwwroot\cover\g5\fil5\11.png" />
+    <Content Include="wwwroot\cover\g5\fil5\12.png" />
+    <Content Include="wwwroot\cover\g5\fil5\13.png" />
+    <Content Include="wwwroot\cover\g5\fil5\14.png" />
+    <Content Include="wwwroot\cover\g5\fil5\2.png" />
+    <Content Include="wwwroot\cover\g5\fil5\3.png" />
+    <Content Include="wwwroot\cover\g5\fil5\4.png" />
+    <Content Include="wwwroot\cover\g5\fil5\5.png" />
+    <Content Include="wwwroot\cover\g5\fil5\6.png" />
+    <Content Include="wwwroot\cover\g5\fil5\7.png" />
+    <Content Include="wwwroot\cover\g5\fil5\8.png" />
+    <Content Include="wwwroot\cover\g5\fil5\9.png" />
+    <Content Include="wwwroot\cover\g5\math5\1.png" />
+    <Content Include="wwwroot\cover\g5\math5\10.png" />
+    <Content Include="wwwroot\cover\g5\math5\11.png" />
+    <Content Include="wwwroot\cover\g5\math5\12.png" />
+    <Content Include="wwwroot\cover\g5\math5\13.png" />
+    <Content Include="wwwroot\cover\g5\math5\14.png" />
+    <Content Include="wwwroot\cover\g5\math5\2.png" />
+    <Content Include="wwwroot\cover\g5\math5\3.png" />
+    <Content Include="wwwroot\cover\g5\math5\4.png" />
+    <Content Include="wwwroot\cover\g5\math5\5.png" />
+    <Content Include="wwwroot\cover\g5\math5\6.png" />
+    <Content Include="wwwroot\cover\g5\math5\7.png" />
+    <Content Include="wwwroot\cover\g5\math5\8.png" />
+    <Content Include="wwwroot\cover\g5\math5\9.png" />
+    <Content Include="wwwroot\cover\g5\sci5\1.png" />
+    <Content Include="wwwroot\cover\g5\sci5\2.png" />
+    <Content Include="wwwroot\cover\g5\sci5\3.png" />
+    <Content Include="wwwroot\cover\g5\sci5\4.png" />
+    <Content Include="wwwroot\cover\g5\sci5\5.png" />
+    <Content Include="wwwroot\cover\g5\sci5\6.png" />
+    <Content Include="wwwroot\cover\g5\sci5\7.png" />
+    <Content Include="wwwroot\cover\g5\sci5\8.png" />
+    <Content Include="wwwroot\cover\g6\eng6\1.png" />
+    <Content Include="wwwroot\cover\g6\eng6\2.png" />
+    <Content Include="wwwroot\cover\g6\eng6\3.png" />
+    <Content Include="wwwroot\cover\g6\fil6\1.png" />
+    <Content Include="wwwroot\cover\g6\fil6\10.png" />
+    <Content Include="wwwroot\cover\g6\fil6\11.png" />
+    <Content Include="wwwroot\cover\g6\fil6\12.png" />
+    <Content Include="wwwroot\cover\g6\fil6\13.png" />
+    <Content Include="wwwroot\cover\g6\fil6\14.png" />
+    <Content Include="wwwroot\cover\g6\fil6\15.png" />
+    <Content Include="wwwroot\cover\g6\fil6\16.png" />
+    <Content Include="wwwroot\cover\g6\fil6\17.png" />
+    <Content Include="wwwroot\cover\g6\fil6\18.png" />
+    <Content Include="wwwroot\cover\g6\fil6\19.png" />
+    <Content Include="wwwroot\cover\g6\fil6\2.png" />
+    <Content Include="wwwroot\cover\g6\fil6\20.png" />
+    <Content Include="wwwroot\cover\g6\fil6\3.png" />
+    <Content Include="wwwroot\cover\g6\fil6\4.png" />
+    <Content Include="wwwroot\cover\g6\fil6\5.png" />
+    <Content Include="wwwroot\cover\g6\fil6\6.png" />
+    <Content Include="wwwroot\cover\g6\fil6\7.png" />
+    <Content Include="wwwroot\cover\g6\fil6\8.png" />
+    <Content Include="wwwroot\cover\g6\fil6\9.png" />
+    <Content Include="wwwroot\cover\g6\math6\1.png" />
+    <Content Include="wwwroot\cover\g6\math6\10.png" />
+    <Content Include="wwwroot\cover\g6\math6\11.png" />
+    <Content Include="wwwroot\cover\g6\math6\2.png" />
+    <Content Include="wwwroot\cover\g6\math6\3.png" />
+    <Content Include="wwwroot\cover\g6\math6\4.png" />
+    <Content Include="wwwroot\cover\g6\math6\5.png" />
+    <Content Include="wwwroot\cover\g6\math6\6.png" />
+    <Content Include="wwwroot\cover\g6\math6\7.png" />
+    <Content Include="wwwroot\cover\g6\math6\8.png" />
+    <Content Include="wwwroot\cover\g6\math6\9.png" />
+    <Content Include="wwwroot\cover\g6\sci6\1.png" />
+    <Content Include="wwwroot\cover\g6\sci6\10.png" />
+    <Content Include="wwwroot\cover\g6\sci6\2.png" />
+    <Content Include="wwwroot\cover\g6\sci6\3.png" />
+    <Content Include="wwwroot\cover\g6\sci6\4.png" />
+    <Content Include="wwwroot\cover\g6\sci6\5.png" />
+    <Content Include="wwwroot\cover\g6\sci6\6.png" />
+    <Content Include="wwwroot\cover\g6\sci6\7.png" />
+    <Content Include="wwwroot\cover\g6\sci6\8.png" />
+    <Content Include="wwwroot\cover\g6\sci6\9.png" />
+    <Content Include="wwwroot\cover\g7\eng7\1.png" />
+    <Content Include="wwwroot\cover\g7\eng7\2.png" />
+    <Content Include="wwwroot\cover\g7\eng7\3.png" />
+    <Content Include="wwwroot\cover\g7\eng7\4.png" />
+    <Content Include="wwwroot\cover\g7\eng7\5.png" />
+    <Content Include="wwwroot\cover\g7\eng7\6.png" />
+    <Content Include="wwwroot\cover\g7\eng7\7.png" />
+    <Content Include="wwwroot\cover\g7\fil7\1.png" />
+    <Content Include="wwwroot\cover\g7\fil7\10.png" />
+    <Content Include="wwwroot\cover\g7\fil7\11.png" />
+    <Content Include="wwwroot\cover\g7\fil7\12.png" />
+    <Content Include="wwwroot\cover\g7\fil7\13.png" />
+    <Content Include="wwwroot\cover\g7\fil7\2.png" />
+    <Content Include="wwwroot\cover\g7\fil7\3.png" />
+    <Content Include="wwwroot\cover\g7\fil7\4.png" />
+    <Content Include="wwwroot\cover\g7\fil7\5.png" />
+    <Content Include="wwwroot\cover\g7\fil7\6.png" />
+    <Content Include="wwwroot\cover\g7\fil7\7.png" />
+    <Content Include="wwwroot\cover\g7\fil7\8.png" />
+    <Content Include="wwwroot\cover\g7\fil7\9.png" />
+    <Content Include="wwwroot\cover\g7\math7\1.png" />
+    <Content Include="wwwroot\cover\g7\math7\10.png" />
+    <Content Include="wwwroot\cover\g7\math7\2.png" />
+    <Content Include="wwwroot\cover\g7\math7\3.png" />
+    <Content Include="wwwroot\cover\g7\math7\4.png" />
+    <Content Include="wwwroot\cover\g7\math7\5.png" />
+    <Content Include="wwwroot\cover\g7\math7\6.png" />
+    <Content Include="wwwroot\cover\g7\math7\7.png" />
+    <Content Include="wwwroot\cover\g7\math7\8.png" />
+    <Content Include="wwwroot\cover\g7\math7\9.png" />
+    <Content Include="wwwroot\cover\g7\sci7\1.png" />
+    <Content Include="wwwroot\cover\g7\sci7\2.png" />
+    <Content Include="wwwroot\cover\g7\sci7\3.png" />
+    <Content Include="wwwroot\cover\g7\sci7\4.png" />
+    <Content Include="wwwroot\cover\g7\sci7\5.png" />
+    <Content Include="wwwroot\cover\g8\eng8\1.png" />
+    <Content Include="wwwroot\cover\g8\eng8\2.png" />
+    <Content Include="wwwroot\cover\g8\eng8\3.png" />
+    <Content Include="wwwroot\cover\g8\eng8\4.png" />
+    <Content Include="wwwroot\cover\g8\eng8\5.png" />
+    <Content Include="wwwroot\cover\g8\fil8\1.png" />
+    <Content Include="wwwroot\cover\g8\fil8\2.png" />
+    <Content Include="wwwroot\cover\g8\math8\1.png" />
+    <Content Include="wwwroot\cover\g8\math8\10.png" />
+    <Content Include="wwwroot\cover\g8\math8\11.png" />
+    <Content Include="wwwroot\cover\g8\math8\12.png" />
+    <Content Include="wwwroot\cover\g8\math8\13.png" />
+    <Content Include="wwwroot\cover\g8\math8\14.png" />
+    <Content Include="wwwroot\cover\g8\math8\15.png" />
+    <Content Include="wwwroot\cover\g8\math8\16.png" />
+    <Content Include="wwwroot\cover\g8\math8\17.png" />
+    <Content Include="wwwroot\cover\g8\math8\18.png" />
+    <Content Include="wwwroot\cover\g8\math8\19.png" />
+    <Content Include="wwwroot\cover\g8\math8\2.png" />
+    <Content Include="wwwroot\cover\g8\math8\3.png" />
+    <Content Include="wwwroot\cover\g8\math8\4.png" />
+    <Content Include="wwwroot\cover\g8\math8\5.png" />
+    <Content Include="wwwroot\cover\g8\math8\6.png" />
+    <Content Include="wwwroot\cover\g8\math8\7.png" />
+    <Content Include="wwwroot\cover\g8\math8\8.png" />
+    <Content Include="wwwroot\cover\g8\math8\9.png" />
+    <Content Include="wwwroot\cover\g8\sci8\1.png" />
+    <Content Include="wwwroot\cover\g8\sci8\2.png" />
+    <Content Include="wwwroot\cover\g8\sci8\3.png" />
+    <Content Include="wwwroot\cover\g8\sci8\4.png" />
+    <Content Include="wwwroot\cover\g8\sci8\5.png" />
+    <Content Include="wwwroot\cover\g8\sci8\6.png" />
+    <Content Include="wwwroot\cover\g8\sci8\7.png" />
+    <Content Include="wwwroot\cover\g8\sci8\8.png" />
+    <Content Include="wwwroot\cover\g8\sci8\9.png" />
+    <Content Include="wwwroot\cover\g9\eng9\1.png" />
+    <Content Include="wwwroot\cover\g9\eng9\2.png" />
+    <Content Include="wwwroot\cover\g9\eng9\3.png" />
+    <Content Include="wwwroot\cover\g9\fil9\1.png" />
+    <Content Include="wwwroot\cover\g9\fil9\2.png" />
+    <Content Include="wwwroot\cover\g9\fil9\3.png" />
+    <Content Include="wwwroot\cover\g9\fil9\4.png" />
+    <Content Include="wwwroot\cover\g9\fil9\5.png" />
+    <Content Include="wwwroot\cover\g9\fil9\6.png" />
+    <Content Include="wwwroot\cover\g9\math9\1.png" />
+    <Content Include="wwwroot\cover\g9\math9\2.png" />
+    <Content Include="wwwroot\cover\g9\math9\3.png" />
+    <Content Include="wwwroot\cover\g9\math9\4.png" />
+    <Content Include="wwwroot\cover\g9\math9\5.png" />
+    <Content Include="wwwroot\cover\g9\math9\6.png" />
+    <Content Include="wwwroot\cover\g9\sci9\1.png" />
+    <Content Include="wwwroot\cover\g9\sci9\2.png" />
+    <Content Include="wwwroot\cover\g9\sci9\3.png" />
+    <Content Include="wwwroot\cover\g9\sci9\4.png" />
+    <Content Include="wwwroot\cover\g9\sci9\5.png" />
+    <Content Include="wwwroot\cover\kinder\1.png" />
+    <Content Include="wwwroot\cover\kinder\2.png" />
+    <Content Include="wwwroot\cover\kinder\3.png" />
+    <Content Include="wwwroot\cover\kinder\4.png" />
+    <Content Include="wwwroot\cover\kinder\5.png" />
+    <Content Include="wwwroot\cover\kinder\6.png" />
+    <Content Include="wwwroot\cover\kinder\7.png" />
+    <Content Include="wwwroot\cover\kinder\8.png" />
+    <Content Include="wwwroot\css\channel.css" />
+    <Content Include="wwwroot\css\ebook.css" />
+    <Content Include="wwwroot\css\features.css" />
+    <Content Include="wwwroot\css\Flag.css" />
+    <Content Include="wwwroot\css\fontawesome-all.min.css" />
+    <Content Include="wwwroot\css\games-part2.css" />
+    <Content Include="wwwroot\css\games.css" />
+    <Content Include="wwwroot\css\Googlemap.css" />
+    <Content Include="wwwroot\css\landingstyle.css" />
+    <Content Include="wwwroot\css\letterChart.css" />
+    <Content Include="wwwroot\css\library.css" />
+    <Content Include="wwwroot\css\modules.css" />
+    <Content Include="wwwroot\css\numberChart.css" />
+    <Content Include="wwwroot\css\policy.css" />
+    <Content Include="wwwroot\css\resources.css" />
+    <Content Include="wwwroot\css\Shapes.css" />
+    <Content Include="wwwroot\css\studytips.css" />
+    <Content Include="wwwroot\css\stye-switcher.css" />
+    <Content Include="wwwroot\css\style.css" />
+    <Content Include="wwwroot\css\trivia.css" />
+    <Content Include="wwwroot\css\youtube.css" />
+    <Content Include="wwwroot\game_images\advace.png" />
+    <Content Include="wwwroot\game_images\animalQuiz.png" />
+    <Content Include="wwwroot\game_images\Baby-Hazel-Learn-Shapes.png" />
+    <Content Include="wwwroot\game_images\blockmonsters1010extreme300.jpg" />
+    <Content Include="wwwroot\game_images\Bubble-Shooter-1.png" />
+    <Content Include="wwwroot\game_images\clickplay-time-5.png" />
+    <Content Include="wwwroot\game_images\Dinasaurs-Coloring-Book.png" />
+    <Content Include="wwwroot\game_images\Drawing-For-Kids.png" />
+    <Content Include="wwwroot\game_images\Happy-Glass-2.png" />
+    <Content Include="wwwroot\game_images\Into-Space-2.png" />
+    <Content Include="wwwroot\game_images\Kids-Memory-Wild-Animals.png" />
+    <Content Include="wwwroot\game_images\Master-Chess.png" />
+    <Content Include="wwwroot\game_images\Math-Vs-Bat.png" />
+    <Content Include="wwwroot\game_images\minicheckers.jpg" />
+    <Content Include="wwwroot\game_images\Puzzles-And-Matching-Educational-Games.png" />
+    <Content Include="wwwroot\game_images\Roll-The-Ball-Online.png" />
+    <Content Include="wwwroot\game_images\Tasty-Planet-Dinotime.png" />
+    <Content Include="wwwroot\game_images\Word-Search-Classic.png" />
+    <Content Include="wwwroot\images\agreement.svg" />
+    <Content Include="wwwroot\images\background.png" />
+    <Content Include="wwwroot\images\circle-logo.png" />
+    <Content Include="wwwroot\images\course.svg" />
+    <Content Include="wwwroot\images\directory-images\a4esl.png" />
+    <Content Include="wwwroot\images\directory-images\ABCYa.png" />
+    <Content Include="wwwroot\images\directory-images\algebra-online.png" />
+    <Content Include="wwwroot\images\directory-images\answermath.png" />
+    <Content Include="wwwroot\images\directory-images\BBC.png" />
+    <Content Include="wwwroot\images\directory-images\bits.png" />
+    <Content Include="wwwroot\images\directory-images\blackholegang.png" />
+    <Content Include="wwwroot\images\directory-images\bubbles.png" />
+    <Content Include="wwwroot\images\directory-images\catie.png" />
+    <Content Include="wwwroot\images\directory-images\Chagg.png" />
+    <Content Include="wwwroot\images\directory-images\childrens-mathematics.png" />
+    <Content Include="wwwroot\images\directory-images\coolmath.png" />
+    <Content Include="wwwroot\images\directory-images\Edheads.png" />
+    <Content Include="wwwroot\images\directory-images\filipinopod.png" />
+    <Content Include="wwwroot\images\directory-images\language guide.png" />
+    <Content Include="wwwroot\images\directory-images\learning chocolate.png" />
+    <Content Include="wwwroot\images\directory-images\let%27s talk science.png" />
+    <Content Include="wwwroot\images\directory-images\mathcentre.png" />
+    <Content Include="wwwroot\images\directory-images\natural math.png" />
+    <Content Include="wwwroot\images\directory-images\Sciencekids.png" />
+    <Content Include="wwwroot\images\directory-images\Storynory.png" />
+    <Content Include="wwwroot\images\directory-images\voa.png" />
+    <Content Include="wwwroot\images\directory-images\webmath.png" />
+    <Content Include="wwwroot\images\directory-images\winpossible.png" />
+    <Content Include="wwwroot\images\ebook-covers\aliceAdventure.jfif" />
+    <Content Include="wwwroot\images\ebook-covers\annaKarenina.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\arabianNights.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\coralIsland.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\emeraldCity.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\floatingCity.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\greatExpectations.jfif" />
+    <Content Include="wwwroot\images\ebook-covers\huckleberryFinn.jpg" />
+    <Content Include="wwwroot\images\ebook-covers\scarletLetter.png" />
+    <Content Include="wwwroot\images\ebook-covers\signOfFour.jpg" />
+    <Content Include="wwwroot\images\ebooksD-images\authorama.png" />
+    <Content Include="wwwroot\images\ebooksD-images\bookboon.png" />
+    <Content Include="wwwroot\images\ebooksD-images\google-books.png" />
+    <Content Include="wwwroot\images\ebooksD-images\Internet-archive.png" />
+    <Content Include="wwwroot\images\ebooksD-images\manybooks.png" />
+    <Content Include="wwwroot\images\ebooksD-images\open-library.png" />
+    <Content Include="wwwroot\images\ebooksD-images\project-gutenberg.png" />
+    <Content Include="wwwroot\images\ebooksD-images\smashwords.png" />
+    <Content Include="wwwroot\images\ebooksD-images\wattpad.png" />
+    <Content Include="wwwroot\images\error404.svg" />
+    <Content Include="wwwroot\images\facebook.png" />
+    <Content Include="wwwroot\images\featurebg.png" />
+    <Content Include="wwwroot\images\finishline-vector.svg" />
+    <Content Include="wwwroot\images\flavicon.ico" />
+    <Content Include="wwwroot\images\games-vid.gif" />
+    <Content Include="wwwroot\images\games.svg" />
+    <Content Include="wwwroot\images\home-dark-background.png" />
+    <Content Include="wwwroot\images\instagram.png" />
+    <Content Include="wwwroot\images\letters\a.png" />
+    <Content Include="wwwroot\images\letters\b.png" />
+    <Content Include="wwwroot\images\letters\c.png" />
+    <Content Include="wwwroot\images\letters\d.png" />
+    <Content Include="wwwroot\images\letters\e.png" />
+    <Content Include="wwwroot\images\letters\f.png" />
+    <Content Include="wwwroot\images\letters\g.png" />
+    <Content Include="wwwroot\images\letters\h.png" />
+    <Content Include="wwwroot\images\letters\i.png" />
+    <Content Include="wwwroot\images\letters\j.png" />
+    <Content Include="wwwroot\images\letters\k.png" />
+    <Content Include="wwwroot\images\letters\l.png" />
+    <Content Include="wwwroot\images\letters\m.png" />
+    <Content Include="wwwroot\images\letters\n.png" />
+    <Content Include="wwwroot\images\letters\o.png" />
+    <Content Include="wwwroot\images\letters\p.png" />
+    <Content Include="wwwroot\images\letters\q.png" />
+    <Content Include="wwwroot\images\letters\r.png" />
+    <Content Include="wwwroot\images\letters\s.png" />
+    <Content Include="wwwroot\images\letters\t.png" />
+    <Content Include="wwwroot\images\letters\try.jpg" />
+    <Content Include="wwwroot\images\letters\u.png" />
+    <Content Include="wwwroot\images\letters\v.png" />
+    <Content Include="wwwroot\images\letters\w.png" />
+    <Content Include="wwwroot\images\letters\x.png" />
+    <Content Include="wwwroot\images\letters\y.png" />
+    <Content Include="wwwroot\images\letters\z.png" />
+    <Content Include="wwwroot\images\linkedin.png" />
+    <Content Include="wwwroot\images\log.svg" />
+    <Content Include="wwwroot\images\logo.png" />
+    <Content Include="wwwroot\images\menu.png" />
+    <Content Include="wwwroot\images\module-vid.gif" />
+    <Content Include="wwwroot\images\numbers\1.png" />
+    <Content Include="wwwroot\images\numbers\10.png" />
+    <Content Include="wwwroot\images\numbers\100.png" />
+    <Content Include="wwwroot\images\numbers\11.png" />
+    <Content Include="wwwroot\images\numbers\12.png" />
+    <Content Include="wwwroot\images\numbers\13.png" />
+    <Content Include="wwwroot\images\numbers\14.png" />
+    <Content Include="wwwroot\images\numbers\15.png" />
+    <Content Include="wwwroot\images\numbers\16.png" />
+    <Content Include="wwwroot\images\numbers\17.png" />
+    <Content Include="wwwroot\images\numbers\18.png" />
+    <Content Include="wwwroot\images\numbers\19.png" />
+    <Content Include="wwwroot\images\numbers\2.png" />
+    <Content Include="wwwroot\images\numbers\20.png" />
+    <Content Include="wwwroot\images\numbers\21.png" />
+    <Content Include="wwwroot\images\numbers\22.png" />
+    <Content Include="wwwroot\images\numbers\23.png" />
+    <Content Include="wwwroot\images\numbers\24.png" />
+    <Content Include="wwwroot\images\numbers\25.png" />
+    <Content Include="wwwroot\images\numbers\26.png" />
+    <Content Include="wwwroot\images\numbers\27.png" />
+    <Content Include="wwwroot\images\numbers\28.png" />
+    <Content Include="wwwroot\images\numbers\29.png" />
+    <Content Include="wwwroot\images\numbers\3.png" />
+    <Content Include="wwwroot\images\numbers\30.png" />
+    <Content Include="wwwroot\images\numbers\31.png" />
+    <Content Include="wwwroot\images\numbers\32.png" />
+    <Content Include="wwwroot\images\numbers\33.png" />
+    <Content Include="wwwroot\images\numbers\34.png" />
+    <Content Include="wwwroot\images\numbers\35.png" />
+    <Content Include="wwwroot\images\numbers\36.png" />
+    <Content Include="wwwroot\images\numbers\37.png" />
+    <Content Include="wwwroot\images\numbers\38.png" />
+    <Content Include="wwwroot\images\numbers\39.png" />
+    <Content Include="wwwroot\images\numbers\4.png" />
+    <Content Include="wwwroot\images\numbers\40.png" />
+    <Content Include="wwwroot\images\numbers\41.png" />
+    <Content Include="wwwroot\images\numbers\42.png" />
+    <Content Include="wwwroot\images\numbers\43.png" />
+    <Content Include="wwwroot\images\numbers\44.png" />
+    <Content Include="wwwroot\images\numbers\45.png" />
+    <Content Include="wwwroot\images\numbers\46.png" />
+    <Content Include="wwwroot\images\numbers\47.png" />
+    <Content Include="wwwroot\images\numbers\48.png" />
+    <Content Include="wwwroot\images\numbers\49.png" />
+    <Content Include="wwwroot\images\numbers\5.png" />
+    <Content Include="wwwroot\images\numbers\50.png" />
+    <Content Include="wwwroot\images\numbers\51.png" />
+    <Content Include="wwwroot\images\numbers\52.png" />
+    <Content Include="wwwroot\images\numbers\53.png" />
+    <Content Include="wwwroot\images\numbers\54.png" />
+    <Content Include="wwwroot\images\numbers\55.png" />
+    <Content Include="wwwroot\images\numbers\56.png" />
+    <Content Include="wwwroot\images\numbers\57.png" />
+    <Content Include="wwwroot\images\numbers\58.png" />
+    <Content Include="wwwroot\images\numbers\59.png" />
+    <Content Include="wwwroot\images\numbers\6.png" />
+    <Content Include="wwwroot\images\numbers\60.png" />
+    <Content Include="wwwroot\images\numbers\61.png" />
+    <Content Include="wwwroot\images\numbers\62.png" />
+    <Content Include="wwwroot\images\numbers\63.png" />
+    <Content Include="wwwroot\images\numbers\64.png" />
+    <Content Include="wwwroot\images\numbers\65.png" />
+    <Content Include="wwwroot\images\numbers\66.png" />
+    <Content Include="wwwroot\images\numbers\67.png" />
+    <Content Include="wwwroot\images\numbers\68.png" />
+    <Content Include="wwwroot\images\numbers\69.png" />
+    <Content Include="wwwroot\images\numbers\7.png" />
+    <Content Include="wwwroot\images\numbers\70.png" />
+    <Content Include="wwwroot\images\numbers\71.png" />
+    <Content Include="wwwroot\images\numbers\72.png" />
+    <Content Include="wwwroot\images\numbers\73.png" />
+    <Content Include="wwwroot\images\numbers\74.png" />
+    <Content Include="wwwroot\images\numbers\75.png" />
+    <Content Include="wwwroot\images\numbers\76.png" />
+    <Content Include="wwwroot\images\numbers\77.png" />
+    <Content Include="wwwroot\images\numbers\78.png" />
+    <Content Include="wwwroot\images\numbers\79.png" />
+    <Content Include="wwwroot\images\numbers\8.png" />
+    <Content Include="wwwroot\images\numbers\80.png" />
+    <Content Include="wwwroot\images\numbers\81.png" />
+    <Content Include="wwwroot\images\numbers\82.png" />
+    <Content Include="wwwroot\images\numbers\83.png" />
+    <Content Include="wwwroot\images\numbers\84.png" />
+    <Content Include="wwwroot\images\numbers\85.png" />
+    <Content Include="wwwroot\images\numbers\86.png" />
+    <Content Include="wwwroot\images\numbers\87.png" />
+    <Content Include="wwwroot\images\numbers\88.png" />
+    <Content Include="wwwroot\images\numbers\89.png" />
+    <Content Include="wwwroot\images\numbers\9.png" />
+    <Content Include="wwwroot\images\numbers\90.png" />
+    <Content Include="wwwroot\images\numbers\91.png" />
+    <Content Include="wwwroot\images\numbers\92.png" />
+    <Content Include="wwwroot\images\numbers\93.png" />
+    <Content Include="wwwroot\images\numbers\94.png" />
+    <Content Include="wwwroot\images\numbers\95.png" />
+    <Content Include="wwwroot\images\numbers\96.png" />
+    <Content Include="wwwroot\images\numbers\97.png" />
+    <Content Include="wwwroot\images\numbers\98.png" />
+    <Content Include="wwwroot\images\numbers\99.png" />
+    <Content Include="wwwroot\images\owl-logo.png" />
+    <Content Include="wwwroot\images\parts\arm.png" />
+    <Content Include="wwwroot\images\parts\chest.png" />
+    <Content Include="wwwroot\images\parts\ear.png" />
+    <Content Include="wwwroot\images\parts\elbow.png" />
+    <Content Include="wwwroot\images\parts\eyes.png" />
+    <Content Include="wwwroot\images\parts\feet.png" />
+    <Content Include="wwwroot\images\parts\forehead.png" />
+    <Content Include="wwwroot\images\parts\hair.png" />
+    <Content Include="wwwroot\images\parts\hand.png" />
+    <Content Include="wwwroot\images\parts\head.png" />
+    <Content Include="wwwroot\images\parts\knee.png" />
+    <Content Include="wwwroot\images\parts\leg.png" />
+    <Content Include="wwwroot\images\parts\lip.png" />
+    <Content Include="wwwroot\images\parts\mouth.png" />
+    <Content Include="wwwroot\images\parts\nose.png" />
+    <Content Include="wwwroot\images\parts\shoulder.png" />
+    <Content Include="wwwroot\images\parts\stomach.png" />
+    <Content Include="wwwroot\images\parts\thigh.png" />
+    <Content Include="wwwroot\images\phone.png" />
+    <Content Include="wwwroot\images\pic-1.png" />
+    <Content Include="wwwroot\images\pic-2.png" />
+    <Content Include="wwwroot\images\pic-3.png" />
+    <Content Include="wwwroot\images\profiles\bacus.jpg" />
+    <Content Include="wwwroot\images\profiles\chynna.jpg" />
+    <Content Include="wwwroot\images\profiles\kristine.jpg" />
+    <Content Include="wwwroot\images\profiles\rhea.jpg" />
+    <Content Include="wwwroot\images\profiles\sha.png" />
+    <Content Include="wwwroot\images\profiles\yap.jpg" />
+    <Content Include="wwwroot\images\register.svg" />
+    <Content Include="wwwroot\images\search-svg.svg" />
+    <Content Include="wwwroot\images\searching.svg" />
+    <Content Include="wwwroot\images\study-cycle.png" />
+    <Content Include="wwwroot\images\study-intense.png" />
+    <Content Include="wwwroot\images\study-multitask.png" />
+    <Content Include="wwwroot\images\study-problem.png" />
+    <Content Include="wwwroot\images\study-teacher.png" />
+    <Content Include="wwwroot\images\studying.png" />
+    <Content Include="wwwroot\images\twitter.png" />
+    <Content Include="wwwroot\js\breakpoints.min.js" />
+    <Content Include="wwwroot\js\browser.min.js" />
+    <Content Include="wwwroot\js\contact.js" />
+    <Content Include="wwwroot\js\coverflow.min.js" />
+    <Content Include="wwwroot\js\dictionary.js" />
+    <Content Include="wwwroot\js\games.js" />
+    <Content Include="wwwroot\js\jquery.min.js" />
+    <Content Include="wwwroot\js\landingscript.js" />
+    <Content Include="wwwroot\js\library.js" />
+    <Content Include="wwwroot\js\modules.js" />
+    <Content Include="wwwroot\js\modules_script\grade1_2.js" />
+    <Content Include="wwwroot\js\modules_script\grade5_6.js" />
+    <Content Include="wwwroot\js\modules_script\grade7_8.js" />
+    <Content Include="wwwroot\js\modules_script\kinder.js" />
+    <Content Include="wwwroot\js\script.js" />
+    <Content Include="wwwroot\js\style-switcher.js" />
+    <Content Include="wwwroot\js\util.js" />
+    <Content Include="wwwroot\js\youtube.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="wwwroot\lib\jquery\LICENSE.txt" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\LICENSE" />
+    <Content Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <Content Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md6-7.pdf" />
+    <Content Include="wwwroot\module\grade10\eng10\eng10_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade10\fil10\fil10_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade10\math10\math10_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade10\sci10\sci10_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade10\sci10\sci10_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade10\sci10\sci10_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade10\sci10\sci10_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade10\sci10\sci10_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade1\esp1\esp1_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade1\esp1\esp1_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade1\esp1\esp1_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade1\esp1\esp1_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade1\esp1\esp1_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade1\fil1\fil1_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade1\math1\math1_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade1\mtb1\mtb1_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\eng2\eng2_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade2\fil2\fil2_q2_md9.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md16.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md17.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md18.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md19.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md10.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md11.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade2\math2\math2_q2_md9.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade2\mtb2\mtb2_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\eng3\eng3_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md10.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md11.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md12.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade3\fil3\fil3_q2_md9.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md11a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md11b.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md15a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md15b.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md16.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md5a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md5b.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md7a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md7b.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md10.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md11a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md4a.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md4b.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md4c.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md4d.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md8.pdf" />
+    <Content Include="wwwroot\module\grade3\math3\math3_q2_md9.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade3\sci3\sci3_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade4\eng4\eng4_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md16.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md17.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md6.pdf" />
+    <Content Include="wwwroot\module\grade4\fil4\fil4_q2_md7.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade4\math4\math4_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md3a.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md3b.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md4a.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md4b.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md5a.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md5b.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md6a.pdf" />
+    <Content Include="wwwroot\module\grade4\sci4\sci4_q1_md6b.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade5\eng5\eng5_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q2_md2.PDF" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade5\fil5\fil5_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade5\math5\math5_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade5\sci5\sci5_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade6\eng6\eng6_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade6\eng6\eng6_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade6\eng6\eng6_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q2_md1.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q2_md2.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q2_md3.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q2_md4.pdf" />
+    <Content Include="wwwroot\module\grade6\fil6\fil6_q2_md5.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade6\math6\math6_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1a.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1b.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1c.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1d.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1e.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md1f.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md2a.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md2b.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md2c.pdf" />
+    <Content Include="wwwroot\module\grade6\sci6\sci6_q1_md2d.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade7\eng7\eng7_q1_md7-8.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade7\fil7\fil7_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade7\math7\math7_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade7\sci7\sci7_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade7\sci7\sci7_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade7\sci7\sci7_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade7\sci7\sci7_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade7\sci7\sci7_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade8\eng8\eng8_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade8\eng8\eng8_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade8\eng8\eng8_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade8\eng8\eng8_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade8\eng8\eng8_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade8\fil8\fil8_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade8\fil8\fil8_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md11.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md12.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md13.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md14.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md15.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md16.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md1a.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md1b.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md5a.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md5b.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md5c.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade8\math8\math8_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md7.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md8.pdf" />
+    <Content Include="wwwroot\module\grade8\sci8\sci8_q1_md9.pdf" />
+    <Content Include="wwwroot\module\grade9\eng9\eng9_q1_md1-3.pdf" />
+    <Content Include="wwwroot\module\grade9\eng9\eng9_q1_md4-5.pdf" />
+    <Content Include="wwwroot\module\grade9\eng9\eng9_q1_md6-8.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md2.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md4.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md5.pdf" />
+    <Content Include="wwwroot\module\grade9\fil9\fil9_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md1.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md10.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md2-3.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md4-5.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md6-7.pdf" />
+    <Content Include="wwwroot\module\grade9\math9\math9_q1_md8-9.pdf" />
+    <Content Include="wwwroot\module\grade9\sci9\sci9_q1_md1-2.pdf" />
+    <Content Include="wwwroot\module\grade9\sci9\sci9_q1_md3.pdf" />
+    <Content Include="wwwroot\module\grade9\sci9\sci9_q1_md4-5.pdf" />
+    <Content Include="wwwroot\module\grade9\sci9\sci9_q1_md6.pdf" />
+    <Content Include="wwwroot\module\grade9\sci9\sci9_q1_md7-8.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_cnt.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdeng1.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg1.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg2.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg3.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg4.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg5.pdf" />
+    <Content Include="wwwroot\module\kinder\kin_rdtg6.pdf" />
+    <Content Include="Views\Login\SignUp.cshtml" />
+    <Content Include="Views\Home\GamePages\BlockMonsters.cshtml" />
+    <Content Include="Views\Home\GamePages\Bubbleshooter.cshtml" />
+    <Content Include="Views\Home\GamePages\Checkers.cshtml" />
+    <Content Include="Views\Home\GamePages\Clickplay5.cshtml" />
+    <Content Include="Views\Home\GamePages\DinoColor.cshtml" />
+    <Content Include="Views\Home\GamePages\Drawingforkids.cshtml" />
+    <Content Include="Views\Home\GamePages\Goo.cshtml" />
+    <Content Include="Views\Home\GamePages\Happyglass.cshtml" />
+    <Content Include="Views\Home\GamePages\Masterchess.cshtml" />
+    <Content Include="Views\Home\GamePages\Mathbat.cshtml" />
+    <Content Include="Views\Home\GamePages\PuzzleAndMatchingGame.cshtml" />
+    <Content Include="Views\Home\GamePages\RollTheBall.cshtml" />
+    <Content Include="Views\Home\GamePages\SolarMax2.cshtml" />
+    <Content Include="Views\Home\GamePages\WildAnimals.cshtml" />
+    <Content Include="Views\Home\GamePages\WordSearch.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Channels.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\BodyParts.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\Color.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\Flags.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\LetterChart.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\MultiplicationTable.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\NumberChart.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ChartsAndTables\Shapes.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Dictionary.cshtml" />
+    <Content Include="Views\Home\LibraryPages\DirectoryPages\eBooksD.cshtml" />
+    <Content Include="Views\Home\LibraryPages\DirectoryPages\EnglishD.cshtml" />
+    <Content Include="Views\Home\LibraryPages\DirectoryPages\FilipinoD.cshtml" />
+    <Content Include="Views\Home\LibraryPages\DirectoryPages\MathD.cshtml" />
+    <Content Include="Views\Home\LibraryPages\DirectoryPages\ScienceD.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Ebook.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Elementary.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Junior_high.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Kindergarten.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Maps\Country.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Maps\Google.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Maps\World.cshtml" />
+    <Content Include="Views\Home\LibraryPages\ModuleManager.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Resources.cshtml" />
+    <Content Include="Views\Home\LibraryPages\StudyTips.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Trivia.cshtml" />
+    <Content Include="Views\Home\LibraryPages\Youtube.cshtml" />
+    <Content Include="Views\Home\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Include="Views\Home\webfonts\fa-brands-400.eot" />
+    <Content Include="Views\Home\webfonts\fa-brands-400.ttf" />
+    <Content Include="Views\Home\webfonts\fa-brands-400.woff" />
+    <Content Include="Views\Home\webfonts\fa-brands-400.woff2" />
+    <Content Include="Views\Home\webfonts\fa-regular-400.eot" />
+    <Content Include="Views\Home\webfonts\fa-regular-400.ttf" />
+    <Content Include="Views\Home\webfonts\fa-regular-400.woff" />
+    <Content Include="Views\Home\webfonts\fa-regular-400.woff2" />
+    <Content Include="Views\Home\webfonts\fa-solid-900.eot" />
+    <Content Include="Views\Home\webfonts\fa-solid-900.ttf" />
+    <Content Include="Views\Home\webfonts\fa-solid-900.woff" />
+    <Content Include="Views\Home\webfonts\fa-solid-900.woff2" />
+    <Content Include="Views\Home\Game.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Library.cshtml" />
+    <Content Include="Views\Home\PrivacyPolicy.cshtml" />
+    <Content Include="Views\Home\TermsAndConditions.cshtml" />
+    <Content Include="Views\Home\GamePages\BabyHazel.cshtml" />
+    <Content Include="Views\Home\Accounts\ManageAdmin.cshtml" />
+    <Content Include="Views\Home\Accounts\ManageUser.cshtml" />
+    <Content Include="Views\HeadAdmin\Create.cshtml" />
+    <Content Include="Views\HeadAdmin\Delete.cshtml" />
+    <Content Include="Views\HeadAdmin\Details.cshtml" />
+    <Content Include="Views\HeadAdmin\Edit.cshtml" />
+    <Content Include="Views\HeadAdmin\Index.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Home\AdminHome.cshtml" />
+    <Content Include="Views\Home\AdminLibrary.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56682</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
