@@ -27,9 +27,10 @@
                         @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password", @style = "margin-top: 7px;" } })
                         @Html.ValidationMessageFor(model => model.password, "", new { @style = "color: red; min-width:400px; font-size:14px; " })
                     </div>
+                    <p class="social-text mb-3 p-0">Forgot password?</p>
                     <input type="submit" value="Login" class="btn solid" />
-                    <p class="social-text">Forgot password?</p>
-                   
+
+
                 </form>
                 <form action="#" class="sign-up-form">
                     <h2 class="title">Sign-up</h2>
