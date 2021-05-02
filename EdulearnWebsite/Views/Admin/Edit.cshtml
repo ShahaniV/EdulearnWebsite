@@ -32,8 +32,8 @@
                         Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @Html.ActionLink("Manage Admin", "ManageAdmin", "Home", null, new { @class = "dropdown-item" })
-                        @Html.ActionLink("Manage User", "ManageUser", "Home", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
                         <a href="/Home/Logout" class="dropdown-item pl-4">
                             Logout
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="demo-name">Password</label>
-                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })
                         @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-6 col-12-xsmall">

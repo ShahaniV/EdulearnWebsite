@@ -33,8 +33,8 @@
                         Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @Html.ActionLink("Manage Admin", "ManageAdmin", "Home", null, new { @class = "dropdown-item" })
-                        @Html.ActionLink("Manage User", "ManageUser", "Home", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
                         <a href="/Home/Logout" class="dropdown-item pl-4">
                             Logout

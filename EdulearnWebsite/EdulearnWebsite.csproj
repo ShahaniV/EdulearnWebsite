@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HeadAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LearnerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1587,6 +1588,11 @@
     <Content Include="Views\Home\AdminHome.cshtml" />
     <Content Include="Views\Home\AdminLibrary.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Learner\Create.cshtml" />
+    <Content Include="Views\Learner\Delete.cshtml" />
+    <Content Include="Views\Learner\Details.cshtml" />
+    <Content Include="Views\Learner\Edit.cshtml" />
+    <Content Include="Views\Learner\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

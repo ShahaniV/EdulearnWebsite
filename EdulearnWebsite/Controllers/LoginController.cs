@@ -10,6 +10,7 @@ namespace EdulearnWebsite.Controllers
     public class LoginController : Controller
     {
         edulearnEntities db = new edulearnEntities();
+        edulearnEntities1 database = new edulearnEntities1();
         // GET: Login
         public ActionResult Index()
         {
@@ -79,12 +80,14 @@ namespace EdulearnWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SignUp([Bind(Include = "UserID,username,password,HeadAdminID,LearnerID,AdminID,confirmPass,email")] user user)
+        public ActionResult SignUp([Bind(Include = "UserID,username,password,HeadAdminID,LearnerID,AdminID,confirmPass,email")] user user, [Bind(Include = "LearnerID,username,email,password")] learner learner)
         {
             if (ModelState.IsValid)
             {
                 db.users.Add(user);
+                database.learners.Add(learner);
                 db.SaveChanges();
+                database.SaveChanges();
                 return RedirectToAction("Index","Login");
             }
 
