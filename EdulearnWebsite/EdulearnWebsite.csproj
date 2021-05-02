@@ -687,6 +687,7 @@
     <Content Include="wwwroot\cover\kinder\6.png" />
     <Content Include="wwwroot\cover\kinder\7.png" />
     <Content Include="wwwroot\cover\kinder\8.png" />
+    <Content Include="wwwroot\css\accounts.css" />
     <Content Include="wwwroot\css\channel.css" />
     <Content Include="wwwroot\css\ebook.css" />
     <Content Include="wwwroot\css\features.css" />
@@ -953,6 +954,7 @@
     <Content Include="wwwroot\images\study-teacher.png" />
     <Content Include="wwwroot\images\studying.png" />
     <Content Include="wwwroot\images\twitter.png" />
+    <Content Include="wwwroot\js\accounts.js" />
     <Content Include="wwwroot\js\breakpoints.min.js" />
     <Content Include="wwwroot\js\browser.min.js" />
     <Content Include="wwwroot\js\contact.js" />

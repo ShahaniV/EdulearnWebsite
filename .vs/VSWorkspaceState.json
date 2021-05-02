@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\EdulearnWebsite",
+    "\\EdulearnWebsite\\Controllers",
     "\\EdulearnWebsite\\wwwroot",
     "\\EdulearnWebsite\\wwwroot\\cover"
   ],
-  "SelectedNode": "\\EdulearnWebsite",
+  "SelectedNode": "\\EdulearnWebsite\\Controllers\\AdminController.cs",
   "PreviewInSolutionExplorer": false
 }
