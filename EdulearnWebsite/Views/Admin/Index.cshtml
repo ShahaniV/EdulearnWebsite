@@ -98,8 +98,8 @@
                                 @Html.DisplayFor(modelItem => item.email)
                             </td>
                             <td>
-                                <a href="/Admin/Edit/1002" class="button primary small">Edit</a>
-                                <a href="/Admin/Delete/1002" class="button primary small">Delete</a>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.AdminID }, new { @class = "button primary small" })
+                                @Html.ActionLink("Delete", "Delete", new { id = item.AdminID }, new { @class = "button primary small" })
                             </td>
                         </tr>
                         }

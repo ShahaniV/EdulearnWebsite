@@ -3,9 +3,12 @@
     "",
     "\\EdulearnWebsite",
     "\\EdulearnWebsite\\Controllers",
+    "\\EdulearnWebsite\\Views",
+    "\\EdulearnWebsite\\Views\\Admin",
+    "\\EdulearnWebsite\\Views\\HeadAdmin",
     "\\EdulearnWebsite\\wwwroot",
     "\\EdulearnWebsite\\wwwroot\\cover"
   ],
-  "SelectedNode": "\\EdulearnWebsite\\Controllers\\AdminController.cs",
+  "SelectedNode": "\\EdulearnWebsite.sln",
   "PreviewInSolutionExplorer": false
 }

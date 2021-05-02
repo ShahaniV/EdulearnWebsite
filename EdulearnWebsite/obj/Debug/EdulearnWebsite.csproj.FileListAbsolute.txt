@@ -163,3 +163,4 @@ F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\Edul
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.csproj.CopyComplete
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.dll
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.pdb
+F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.csprojAssemblyReference.cache
