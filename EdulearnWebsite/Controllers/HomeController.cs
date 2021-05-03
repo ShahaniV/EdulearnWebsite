@@ -57,6 +57,21 @@ namespace EdulearnWebsite.Controllers
         {
             return View();
         }
+        //======================================================= Footer Links
+        public ActionResult PrivacyPolicy()
+        {
+            return View();
+        }
+
+        public ActionResult TermsAndConditions()
+        {
+            return View();
+        }
+
+        public ActionResult Resources()
+        {
+            return View("LibraryPages/Resources");
+        }
         //======================================================= Manage Accounts
         public ActionResult ManageAdmin()
         {

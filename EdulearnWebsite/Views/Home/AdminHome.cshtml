@@ -324,28 +324,28 @@
             <div class="container footer-row">
                 <hr />
                 <div class="footer-left-col">
-                    <div class="footer-links">
-                        <div class="link-title">
-                            <h4>Support</h4>
-                            <a asp-page="/LibraryPages/Resources" target="_blank"><small>Resources</small></a><br />
-                            <a href="#contact"><small>Contact Us</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>Legal</h4>
-                            <a asp-page="/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
-                            <a asp-page="/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>Explore</h4>
-                            <a href="#header"><small>Home</small></a><br />
-                            <a href="#about"><small>About</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>&nbsp</h4>
-                            <a asp-page="/Library"><small>Library</small></a><br />
-                            <a asp-page="/Game"><small>Games</small></a>
-                        </div>
-                    </div>
+					<div class="footer-links">
+						<div class="link-title">
+							<h4>Support</h4>
+							@Html.ActionLink("Resources", "Resources", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							<a href="#contact"><small>Contact Us</small></a>
+						</div>
+						<div class="link-title">
+							<h4>Legal</h4>
+							@Html.ActionLink("Terms", "TermsAndConditions", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Privacy", "PrivacyPolicy", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+						</div>
+						<div class="link-title">
+							<h4>Explore</h4>
+							@Html.ActionLink("Modules", "Kindergarten", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Ebooks", "Ebook", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+						</div>
+						<div class="link-title">
+							<h4>&nbsp</h4>
+							@Html.ActionLink("Web Directory", "EnglishD", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Trivias", "Trivia", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+						</div>
+					</div>
                 </div>
 
                 <div class="footer-right-col">
@@ -357,7 +357,7 @@
                                 <i id="msgboxShowEmail" class="fa fa-envelope fa-lg p-1" style="color: #1b9de9"></i>
                             </div>
                             <br />
-                            <small>Copyright 2020 HPM</small>
+                            <small>Copyright 2020 Systematrics</small>
                         </div>
                         <div class="footer-logo">
                             <img src="~/wwwroot/images/owl-logo.png" />

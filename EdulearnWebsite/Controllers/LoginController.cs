@@ -55,7 +55,7 @@ namespace EdulearnWebsite.Controllers
                     else
                     {
 
-                        ModelState.AddModelError("", "The UserName or Password is Incorrect");
+                        ModelState.AddModelError("", "The Username or Password is Incorrect");
 
                     }
                 }
