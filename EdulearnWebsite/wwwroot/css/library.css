@@ -3305,7 +3305,7 @@ button,
 
 @media screen and (max-width: 1680px) {
 	#header {
-		padding-top: 5em;
+		padding-top: 2em;
 	}
 }
 
@@ -3551,11 +3551,11 @@ button,
 		margin-top: 0;
 		padding-top: 0;
 	}
-
+a.bbutton {
+	border-bottom: none !important;
+}
 .home-back-button {
-	padding-bottom: 6px !important;
-	margin-bottom: 10px !important;
-	background: #f5f6f7;
+	background: #ffffff;
 	font-family: "Roboto Slab", serif;
 	font-size: 15px;
 	color: #303335;
