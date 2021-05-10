@@ -98,6 +98,30 @@ namespace EdulearnWebsite.Controllers
         }
 
 
+        [HttpGet]
+        public ActionResult VerifyAccount(string id)
+        {
+            bool Status = false;
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                db.Configuration.ValidateOnSaveEnabled = false; // This line I have added here to avoid 
+                                                                // Confirm password does not match issue on save changes
+                var v = db.users.Where(a => a.ActivationCode == new Guid(id)).FirstOrDefault();
+                if (v != null)
+                {
+                    v.IsEmailVerified = true;
+                    db.SaveChanges();
+                    Status = true;
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid Request";
+                }
+            }
+            ViewBag.Status = Status;
+            return View();
+        }
+
         public ActionResult Logout()
         {
             Session.Clear();

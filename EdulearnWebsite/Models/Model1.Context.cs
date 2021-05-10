@@ -29,6 +29,5 @@ namespace EdulearnWebsite.Models
         public virtual DbSet<headAdmin> headAdmins { get; set; }
         public virtual DbSet<learner> learners { get; set; }
         public virtual DbSet<user> users { get; set; }
-        public object Identity { get; internal set; }
     }
 }

@@ -26,6 +26,9 @@ namespace EdulearnWebsite.Models
         public string confirmPass { get; set; }
         public string email { get; set; }
 
+        public bool IsEmailVerified { get; set; }
+        public System.Guid ActivationCode { get; set; }
+
         public virtual admin admin { get; set; }
         public virtual headAdmin headAdmin { get; set; }
         public virtual learner learner { get; set; }
