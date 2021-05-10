@@ -113,7 +113,10 @@ namespace EdulearnWebsite.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             admin admin = db.admins.Find(id);
+            string Name = admin.username;
+            user userr = db.users.SingleOrDefault(user => admin.username == user.username);
             db.admins.Remove(admin);
+            db.users.Remove(userr);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

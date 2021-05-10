@@ -115,7 +115,10 @@ namespace EdulearnWebsite.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             learner learner = db.learners.Find(id);
+            string Name = learner.username;
+            user userr = db.users.SingleOrDefault(user => learner.username == user.username);
             db.learners.Remove(learner);
+            db.users.Remove(userr);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
