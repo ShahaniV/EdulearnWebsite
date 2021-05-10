@@ -1573,8 +1573,6 @@
     <Content Include="Views\Home\PrivacyPolicy.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\GamePages\BabyHazel.cshtml" />
-    <Content Include="Views\Home\Accounts\ManageAdmin.cshtml" />
-    <Content Include="Views\Home\Accounts\ManageUser.cshtml" />
     <Content Include="Views\HeadAdmin\Create.cshtml" />
     <Content Include="Views\HeadAdmin\Delete.cshtml" />
     <Content Include="Views\HeadAdmin\Details.cshtml" />
