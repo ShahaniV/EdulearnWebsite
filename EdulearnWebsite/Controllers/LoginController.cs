@@ -93,7 +93,7 @@ namespace EdulearnWebsite.Controllers
 
             ViewBag.AdminID = new SelectList(db.admins, "AdminID", "firstname", user.AdminID);
             ViewBag.HeadAdminID = new SelectList(db.headAdmins, "HeadAdminID", "firstname", user.HeadAdminID);
-            ViewBag.LearnerID = new SelectList(db.learners, "LearnerID", "username", user.LearnerID);
+            ViewBag.LearnerID = new SelectList(db.learners, "LearnerID", "username", learner.LearnerID);
             return View(user);
         }
 

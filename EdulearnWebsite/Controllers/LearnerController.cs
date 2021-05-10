@@ -13,6 +13,7 @@ namespace EdulearnWebsite.Controllers
     public class LearnerController : Controller
     {
         private edulearnEntities db = new edulearnEntities();
+        edulearnEntities1 database = new edulearnEntities1();
 
         // GET: Learner
         public ActionResult Index()
@@ -46,12 +47,14 @@ namespace EdulearnWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LearnerID,username,email,password")] learner learner)
+        public ActionResult Create([Bind(Include = "LearnerID,username,email,password")] learner learner, [Bind(Include = "LearnerID,username,email,password")] user users)
         {
             if (ModelState.IsValid)
             {
                 db.learners.Add(learner);
+                database.users.Add(users);
                 db.SaveChanges();
+                database.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -78,12 +81,14 @@ namespace EdulearnWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LearnerID,username,email,password")] learner learner)
+        public ActionResult Edit([Bind(Include = "LearnerID,username,email,password")] learner learner, [Bind(Include = "LearnerID,username,email,password")] user users)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(learner).State = EntityState.Modified;
+                database.Entry(users).State = EntityState.Modified;
                 db.SaveChanges();
+                database.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(learner);
