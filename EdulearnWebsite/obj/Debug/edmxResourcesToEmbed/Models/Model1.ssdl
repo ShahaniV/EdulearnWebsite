@@ -45,6 +45,7 @@
     <Property Name="email" Type="nvarchar" MaxLength="50" />
     <Property Name="IsEmailVerified" Type="bit" />
     <Property Name="ActivationCode" Type="uniqueidentifier" />
+    <Property Name="ResetPasswordCode" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <Association Name="FK_user_admin">
     <End Role="admin" Type="Self.admin" Multiplicity="0..1" />

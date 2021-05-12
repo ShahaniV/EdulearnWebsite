@@ -176,6 +176,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ResetPasswordModel.cs" />
     <Compile Include="Models\user.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -1591,6 +1592,8 @@
     <Content Include="Views\Learner\Edit.cshtml" />
     <Content Include="Views\Learner\Index.cshtml" />
     <Content Include="Views\Login\VerifyAccount.cshtml" />
+    <Content Include="Views\Login\ResetPassword.cshtml" />
+    <Content Include="Views\Login\ForgotPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

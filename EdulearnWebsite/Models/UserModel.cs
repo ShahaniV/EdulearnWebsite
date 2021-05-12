@@ -31,6 +31,8 @@ namespace EdulearnWebsite.Models
 
         public bool RememberMe { get; set; }
 
+        public string ResetPasswordCode { get; set; }
+
         public virtual admin admin { get; set; }
         public virtual headAdmin headAdmin { get; set; }
         public virtual learner learner { get; set; }

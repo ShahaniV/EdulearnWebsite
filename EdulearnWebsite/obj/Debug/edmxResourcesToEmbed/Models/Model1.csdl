@@ -51,6 +51,7 @@
     <NavigationProperty Name="learner" Relationship="Self.FK_user_learner" FromRole="user" ToRole="learner" />
     <Property Name="IsEmailVerified" Type="Boolean" />
     <Property Name="ActivationCode" Type="Guid" />
+    <Property Name="ResetPasswordCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_user_admin">
     <End Role="admin" Type="Self.admin" Multiplicity="0..1" />

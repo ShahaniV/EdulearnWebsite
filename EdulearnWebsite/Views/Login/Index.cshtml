@@ -36,7 +36,7 @@
 							@Html.ValidationMessageFor(model => model.RememberMe, "", new { @class = "text-danger" })
 						</div>
 						<div class="float-right w-100">
-							<p class="social-text mb-3 p-0 mb-0">Forgot password?</p>
+							@Html.ActionLink("Forgot password?", "ForgotPassword", "Login", null, new { @class = "social-text mb-3 p-0 mb-0" })
 						</div>
 					</div>
 					<input type="submit" value="Login" class="btn solid" />

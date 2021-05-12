@@ -38,6 +38,7 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="edulearnModel1.user">
         <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
           <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
           <ScalarProperty Name="IsEmailVerified" ColumnName="IsEmailVerified" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
