@@ -1590,6 +1590,7 @@
     <Content Include="Views\Learner\Details.cshtml" />
     <Content Include="Views\Learner\Edit.cshtml" />
     <Content Include="Views\Learner\Index.cshtml" />
+    <Content Include="Views\Login\VerifyAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
