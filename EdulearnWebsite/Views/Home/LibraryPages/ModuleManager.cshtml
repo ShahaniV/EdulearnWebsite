@@ -16,7 +16,7 @@
 
 			<!-- Header -->
 			<header id="header">
-				<a class="logo"><strong>Library</strong></a>
+				<a onclick="BackFunc()"><strong>Back</strong></a>
 				<div class="main-cont">
 					<div id="time-i">
 						<h1>-</h1>
@@ -241,6 +241,15 @@
 </div>
 
 <!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
 <script src="~/js/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/c0d25df00f.js"></script>
 <script src="~/js/browser.min.js"></script>

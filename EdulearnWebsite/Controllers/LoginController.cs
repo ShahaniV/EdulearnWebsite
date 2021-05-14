@@ -12,6 +12,9 @@ namespace EdulearnWebsite.Controllers
 {
     public class LoginController : Controller
     {
+        public static string LogController = "";
+        public static string LogPage = "";
+
         edulearnEntities db = new edulearnEntities();
         edulearnEntities1 database = new edulearnEntities1();
         // GET: Login
@@ -59,7 +62,7 @@ namespace EdulearnWebsite.Controllers
                         cookie.Expires = DateTime.Now.AddMinutes(timeout);
                         cookie.HttpOnly = true;
                         Response.Cookies.Add(cookie);
-
+                        
 
                         if (Url.IsLocalUrl(ReturnUrl))
                         {
@@ -69,14 +72,20 @@ namespace EdulearnWebsite.Controllers
                         {
                             if (headadminObj != null)
                             {
+                                LogController = "Home";
+                                LogPage = "Index";
                                 return RedirectToAction("Index", "Home");
                             }
                             else if (adminObj != null)
                             {
+                                LogController = "Home";
+                                LogPage = "AdminHome";
                                 return RedirectToAction("AdminHome", "Home");
                             }
                             else
                             {
+                                LogController = "Home";
+                                LogPage = "Home";
                                 return RedirectToAction("Home", "Home");
                             }
                         }
@@ -185,6 +194,11 @@ namespace EdulearnWebsite.Controllers
         {
             Session.Clear();
             return RedirectToAction("Index", "Login");
+        }
+
+        public ActionResult Back()
+        {
+            return RedirectToAction(LogPage, LogController);
         }
 
         [NonAction]

@@ -14,7 +14,7 @@
 			<header id="header">
 
 				<!-- Home Back Button -->
-				<a href="/Home" class="bbutton">
+				<a onclick="BackFunc()" class="bbutton">
 					<div class="home-back-button">
 						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
 					</div>
@@ -261,7 +261,15 @@
         </div>
 	</div>
 </div>
+<script>
 
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
 <!-- Library script -->
 <script src="~/wwwroot/js/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/c0d25df00f.js"></script>

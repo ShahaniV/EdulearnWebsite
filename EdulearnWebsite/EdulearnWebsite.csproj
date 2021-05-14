@@ -1584,7 +1584,6 @@
     <Content Include="Views\Admin\Details.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\AdminHome.cshtml" />
-    <Content Include="Views\Home\AdminLibrary.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Learner\Create.cshtml" />
     <Content Include="Views\Learner\Delete.cshtml" />
