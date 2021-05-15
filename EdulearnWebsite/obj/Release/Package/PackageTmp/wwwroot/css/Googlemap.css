@@ -1,0 +1,19 @@
+﻿
+#sidebar a.toggle {
+	color: #ff8888;
+}
+
+
+#map {
+	margin-top: 20px;
+	height: 500px;
+}
+
+#map {
+	border-radius: 2%;
+}
+
+@font-face {
+	font-family: custom;
+	src: url("https://raw.githubusercontent.com/Cmatttt/Google-maps-api-test/master/assets/fonts/SteelrDemo.ttf") format("truetype");
+}

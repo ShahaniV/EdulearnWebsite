@@ -1,0 +1,238 @@
+﻿.App {
+	position: relative;
+}
+
+.Library {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	left: 0;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	overflow: scroll;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100% !important;
+}
+
+	.Library::-webkit-scrollbar {
+		display: none;
+	}
+
+#gamelibrary.Library {
+	height: 1500px !important;
+	margin: 0 auto;
+	display: block;
+}
+
+.LibraryEntry {
+	padding-top: 80px;
+	margin-bottom: 10px;
+	position: relative;
+	pointer-events: none;
+	text-decoration: none;
+	margin-top: -4vw;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	cursor: pointer;
+}
+
+	.LibraryEntry:hover, .LibraryEntry:focus, .LibraryEntry.isActive {
+		z-index: 10;
+	}
+
+		.LibraryEntry:hover .LibraryEntry-item, .LibraryEntry:focus .LibraryEntry-item, .LibraryEntry.isActive .LibraryEntry-item {
+			-webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25), 0 0 3px rgba(123, 123, 123, 0.33);
+			box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25), 0 0 3px rgba(123, 123, 123, 0.33);
+			-webkit-transform: scale(1.25);
+			transform: scale(1.25);
+			z-index: 100;
+		}
+
+		.LibraryEntry:hover .LibraryEntry-backdrop, .LibraryEntry:focus .LibraryEntry-backdrop, .LibraryEntry.isActive .LibraryEntry-backdrop {
+			opacity: 1;
+			-webkit-transform: scale(1.45);
+			transform: scale(1.45);
+		}
+
+		.LibraryEntry:hover .LibraryEntry-gradient:before, .LibraryEntry:focus .LibraryEntry-gradient:before, .LibraryEntry.isActive .LibraryEntry-gradient:before {
+			top: 0;
+			opacity: 0;
+		}
+
+		.LibraryEntry:hover .LibraryEntry-name, .LibraryEntry:focus .LibraryEntry-name, .LibraryEntry.isActive .LibraryEntry-name {
+			opacity: 1;
+			padding-top: 24px;
+			-webkit-transform: translateY(100%);
+			transform: translateY(100%);
+		}
+
+.LibraryEntry-item {
+	position: relative;
+	width: 17vw;
+	max-width: 400px;
+	padding-top: 150%;
+	background-size: cover;
+	background-position: center;
+	-webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+	-webkit-transition: 0.3s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+	transition: 0.3s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+	transition: box-shadow 0.25s, transform 0.25s, 0.3s;
+	transition: box-shadow 0.25s, transform 0.25s, 0.3s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	pointer-events: all;
+	border-radius: 3px;
+}
+
+.LibraryEntry-name {
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.5vw;
+	opacity: 0;
+	-webkit-transition: 0.3s, opacity 0.15s;
+	transition: 0.3s, opacity 0.15s;
+	bottom: 0;
+	width: 100%;
+	left: -15%;
+	width: 130%;
+	text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6), 0 -2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.LibraryEntry-gradient {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+	.LibraryEntry-gradient:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: -35%;
+		background-image: linear-gradient(226deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 35%, rgba(255, 255, 255, 0.4) 42%, rgba(255, 255, 255, 0) 60%);
+		-webkit-transition: top 0.4s, opacity 0.4s;
+		transition: top 0.4s, opacity 0.4s;
+		z-index: 2;
+		opacity: 0.33;
+		position: absolute;
+		pointer-events: none;
+	}
+
+.LibraryEntry-backdrop {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	background-size: cover;
+	-webkit-animation: animateLibraryItem 16s infinite;
+	animation: animateLibraryItem 16s infinite;
+	border-radius: 24%;
+	-webkit-filter: blur(36px);
+	filter: blur(36px);
+}
+
+@-webkit-keyframes animateLibraryItem {
+	0%, 20%, 100% {
+		-webkit-filter: blur(20px);
+		filter: blur(20px);
+		border-radius: 24%;
+	}
+
+	40%, 80% {
+		-webkit-filter: blur(36px);
+		filter: blur(36px);
+		border-radius: 35%;
+	}
+
+	60% {
+		-webkit-filter: blur(20px);
+		filter: blur(20px);
+		border-radius: 44%;
+	}
+}
+
+@keyframes animateLibraryItem {
+	0%, 20%, 100% {
+		-webkit-filter: blur(20px);
+		filter: blur(20px);
+		border-radius: 24%;
+	}
+
+	40%, 80% {
+		-webkit-filter: blur(36px);
+		filter: blur(36px);
+		border-radius: 35%;
+	}
+
+	60% {
+		-webkit-filter: blur(20px);
+		filter: blur(20px);
+		border-radius: 44%;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	#gamelibrary.Library {
+		height: 850px !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.LibraryEntry,
+	.LibraryEntry-item,
+	.LibraryEntry-gradient {
+		margin: 0 auto;
+		width: 130px;
+		margin-bottom: 20px;
+		margin-right: 5px !important;
+		margin-left: 5px !important;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#gamelibrary.Library {
+		margin: 0 auto !important;
+		display: block;
+	}
+
+	div.LibraryEntry {
+		margin-bottom: 0 !important;
+		height: 200px;
+	}
+
+	div.LibraryEntry-item.open-popup {
+		margin-bottom: 0 !important;
+	}
+
+	div.filters.filter-button-group {
+		padding-bottom: 0 !important;
+	}
+
+	#gamelibrary.Library {
+		height: 900px !important;
+	}
+}
+
+#offer .about-left-col {
+	margin-left: 0 !important;
+}

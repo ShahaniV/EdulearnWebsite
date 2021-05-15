@@ -1,0 +1,90 @@
+/* body{
+    height: 1000px;
+    background-color: var(--bg-black-50);
+}
+h1{
+    color: var(--text-black-700); PARA MAY CHANGE RIN COLOR LAHAT PAG NAKA DARMODE OR INDI NA. LAGAY LNG GANTO
+} */
+
+.style-switcher {
+  background-color: #fcaa3f;
+  position: fixed;
+  right: 0;
+  top: 77px;
+  padding: 15px;
+  width: 180px;
+  z-index: 101;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+.style-switcher.open {
+  transform: translateX(-15px);
+}
+.style-switcher .s-icon {
+  background-color: #fcaa3f;
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 20px;
+  right: 100%;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.style-switcher .s-icon:after {
+  border-radius: 50%;
+}
+.style-switcher .s-icon i {
+  line-height: 40px;
+}
+.style-switcher .style-switcher-toggler {
+  top: 0;
+}
+.style-switcher .day-night {
+  top: 55px;
+}
+.style-switcher h5 {
+  margin: 0 0 10px;
+  color: var(--text-black-700);
+  font-style: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.style-switcher .colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style-switcher .colors span {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+}
+.style-switcher .color-1 {
+  background-color: #2f5061;
+}
+.style-switcher .color-2 {
+  background-color: #e57f84;
+}
+.style-switcher .color-3 {
+  background-color: #f8ea8c;
+}
+.style-switcher .color-4 {
+  background-color: #4297a0;
+}
+.style-switcher .color-5 {
+  background-color: rgb(247, 126, 78);
+}
+
+@media (max-width: 991px) {
+  .style-switcher {
+    right: 0;
+    top: 10px;
+    padding: 15px;
+  }
+}
