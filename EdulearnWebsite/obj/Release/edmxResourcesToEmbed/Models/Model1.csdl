@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="edulearnModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_admin" FromRole="admin" ToRole="user" />
+  </EntityType>
+  <EntityType Name="headAdmin">
+    <Key>
+      <PropertyRef Name="HeadAdminID" />
+    </Key>
+    <Property Name="HeadAdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_headAdmin" FromRole="headAdmin" ToRole="user" />
+  </EntityType>
+  <EntityType Name="learner">
+    <Key>
+      <PropertyRef Name="LearnerID" />
+    </Key>
+    <Property Name="LearnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_learner" FromRole="learner" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeadAdminID" Type="Int32" />
+    <Property Name="LearnerID" Type="Int32" />
+    <Property Name="AdminID" Type="Int32" />
+    <Property Name="confirmPass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="admin" Relationship="Self.FK_user_admin" FromRole="user" ToRole="admin" />
+    <NavigationProperty Name="headAdmin" Relationship="Self.FK_user_headAdmin" FromRole="user" ToRole="headAdmin" />
+    <NavigationProperty Name="learner" Relationship="Self.FK_user_learner" FromRole="user" ToRole="learner" />
+    <Property Name="IsEmailVerified" Type="Boolean" />
+    <Property Name="ActivationCode" Type="Guid" />
+    <Property Name="ResetPasswordCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_user_admin">
+    <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="admin">
+        <PropertyRef Name="AdminID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="AdminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_headAdmin">
+    <End Role="headAdmin" Type="Self.headAdmin" Multiplicity="0..1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="headAdmin">
+        <PropertyRef Name="HeadAdminID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="HeadAdminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_learner">
+    <End Role="learner" Type="Self.learner" Multiplicity="0..1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="learner">
+        <PropertyRef Name="LearnerID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="LearnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="edulearnEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <EntitySet Name="headAdmins" EntityType="Self.headAdmin" />
+    <EntitySet Name="learners" EntityType="Self.learner" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_user_admin" Association="Self.FK_user_admin">
+      <End Role="admin" EntitySet="admins" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_headAdmin" Association="Self.FK_user_headAdmin">
+      <End Role="headAdmin" EntitySet="headAdmins" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_learner" Association="Self.FK_user_learner">
+      <End Role="learner" EntitySet="learners" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
