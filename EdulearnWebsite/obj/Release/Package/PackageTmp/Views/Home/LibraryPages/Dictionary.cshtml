@@ -1,0 +1,166 @@
+﻿
+@{
+	ViewData["Title"] = "Dictionary";
+}
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/wwwroot/css/modules.css" />
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Home Back Button -->
+				<a onclick="BackFunc()" class="bbutton">
+					<div class="home-back-button">
+						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+					</div>
+				</a>
+
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<section class="pt-2">
+				<header class="main">
+					<h2 style="text-align: center;">Dictionary</h2>
+					<p style="text-align: center;">A GREAT PLACE TO BE STRANDED</p>
+				</header>
+				<div class="dictionary">
+					<section class="input container">
+						<object data="/wwwroot/images/searching.svg" type="image/svg+xml" class="w-50 m-auto text-center d-block"></object>
+						<div class="form__wrap">
+							<div class="input__wrap">
+								<input class="dinput" type="text" placeholder="Type a word" id="input" />
+								<button class="dbutton" id="search">Search</button>
+							</div>
+						</div>
+					</section>
+					<section class="data container dsection">
+						<span class="loading">Loading...</span>
+						<p class="def"></p>
+						<div class="audio"></div>
+						<div class="not__found"></div>
+					</section>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+
+                <ul>
+                    <li>@Html.ActionLink("General", "Library", "Home")</li>
+                    <li>
+
+                        <span class="opener">Web Directory</span>
+                        <ul>
+                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Modules</span>
+                        <ul>
+                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tables & Charts</span>
+                        <ul>
+                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Maps</span>
+                        <ul>
+                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Videos</span>
+                        <ul>
+                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">eBooks</span>
+                        <ul>
+                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+                </ul>
+            </nav>
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Systematrics All rights reserved.</a>.</p>
+            </footer>
+
+        </div>
+	</div>
+
+</div>
+
+<!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library.js"></script>
+<script src="~/wwwroot/js/dictionary.js"></script>

@@ -1,0 +1,258 @@
+﻿
+@{
+	ViewData["Title"] = "EduLearn";
+}
+<link rel="stylesheet" href="~/css/library.css" />
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+				<a onclick="BackFunc()"><strong>Back</strong></a>
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+			<!-- Content -->
+            <section style="padding-top: 10px !important">
+                <header class="main">
+                    <h1 style="text-align: center">Modules</h1>
+                </header>
+                <!-- Form -->
+                <form method="post" action="#">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-small">
+                            <label for="demo-category">Grade Level</label>
+                            <select name="demo-category" id="demo-category">
+                                <option value="">Grade Level</option>
+                                <option value="1">Manufacturing</option>
+                                <option value="1">Shipping</option>
+                                <option value="1">Administration</option>
+                                <option value="1">Human Resources</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <label for="demo-category">Subject</label>
+                            <select name="demo-category" id="demo-category">
+                                <option value="">Subject</option>
+                                <option value="1">Manufacturing</option>
+                                <option value="1">Shipping</option>
+                                <option value="1">Administration</option>
+                                <option value="1">Human Resources</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-12-xsmall">
+                            <label for="demo-name">Title</label>
+                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Module Title" />
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><a href="#" class="button icon solid fa-download">File</a></li>
+                                <li><a href="#" class="button primary">Add</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Table -->
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall d-flex flex-wrap">
+                        <label for="demo-category" class="flex-row"> Grade Level </label>
+                        <select name="demo-category" id="demo-category" class="flex-row">
+                            <option value="">Grade 6</option>
+                            <option value="1">Manufacturing</option>
+                            <option value="1">Shipping</option>
+                            <option value="1">Administration</option>
+                            <option value="1">Human Resources</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-12-xsmall d-flex flex-wrap">
+                        <label for="demo-category" class="flex-row"> Subject </label>
+                        <select name="demo-category" id="demo-category" class="flex-row">
+                            <option value="">Math</option>
+                            <option value="1">Manufacturing</option>
+                            <option value="1">Shipping</option>
+                            <option value="1">Administration</option>
+                            <option value="1">Human Resources</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Break -->
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>File</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adding Simple Fractions and Mixed Numbers</td>
+                                <td>Module1.pdf</td>
+                                <td>
+                                    <a href="#" class="button primary small">Edit</a>
+                                    <a href="#" class="button primary small">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Subtracting Simple Fractions and Mixed Numbers</td>
+                                <td>Module2.pdf</td>
+                                <td>
+                                    <a href="#" class="button primary small">Edit</a>
+                                    <a href="#" class="button primary small">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Multiplying Simple Fractions and Mixed Fractions</td>
+                                <td>Module3.pdf</td>
+                                <td>
+                                    <a href="#" class="button primary small">Edit</a>
+                                    <a href="#" class="button primary small">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dividing Simple Fractions and Mixed Fractions</td>
+                                <td>Module4.pdf</td>
+                                <td>
+                                    <a href="#" class="button primary small">Edit</a>
+                                    <a href="#" class="button primary small">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Addition of Decimals and Mixed Decimals</td>
+                                <td>Module5.pdf</td>
+                                <td>
+                                    <a href="#" class="button primary small">Edit</a>
+                                    <a href="#" class="button primary small">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<div class="inner">
+
+			<!-- Home Back Button -->
+			<a asp-page="Home">
+				<div class="home-back-button">
+					<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+				</div>
+			</a>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
+
+				<ul>
+					<li><a asp-page="/Library">General</a></li>
+					<li>
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/DirectoryPages/EnglishD">English</a></li>
+							<li><a asp-page="/LibraryPages/DirectoryPages/MathD">Math</a></li>
+							<li><a asp-page="/LibraryPages/DirectoryPages/FilipinoD">Filipino</a></li>
+							<li><a asp-page="/LibraryPages/DirectoryPages/ScienceD">Science</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/Kindergarten">Kindergarten</a></li>
+							<li><a asp-page="/LibraryPages/Elementary">Elementary</a></li>
+							<li><a asp-page="/LibraryPages/Junior_high">Junior High School</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/Flags">Flags</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/NumberChart">Numbers</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/LetterChart">Letters</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/Shapes">Shapes</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/Color">Colors</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/BodyParts">Body Parts</a></li>
+							<li><a asp-page="/LibraryPages/ChartsAndTables/MultiplicationTable">Multiplication Table</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/Maps/World">World Map</a></li>
+							<li><a asp-page="/LibraryPages/Maps/Country">Country Map</a></li>
+							<li><a asp-page="/LibraryPages/Maps/Google">Google Map</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/Youtube">Youtube</a></li>
+							<li><a asp-page="/LibraryPages/Channels">Channel Recommendations</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li><a asp-page="/LibraryPages/Ebook">Google eBooks</a></li>
+							<li><a asp-page="/LibraryPages/DirectoryPages/eBooksD">eBooks Web Directory</a></li>
+						</ul>
+					</li>
+					<li><a asp-page="/LibraryPages/Trivia">Trivia</a></li>
+					<li><a asp-page="/LibraryPages/Dictionary">Dictionary</a></li>
+					<li><a asp-page="/LibraryPages/StudyTips">Study Tips</a></li>
+				</ul>
+			</nav>
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; HPM. All rights reserved.</a>.</p>
+			</footer>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
+<script src="~/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/js/browser.min.js"></script>
+<script src="~/js/breakpoints.min.js"></script>
+<script src="~/js/util.js"></script>
+<script src="~/js/library.js"></script>

@@ -1,0 +1,240 @@
+﻿
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+
+<!-- Wrapper -->
+<div id="wrapper">
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Home Back Button -->
+				<a onclick="BackFunc()" class="bbutton">
+					<div class="home-back-button">
+						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+					</div>
+				</a>
+
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<section id="directory">
+				<header class="main">
+					<h2>Science Web Directory</h2>
+				</header>
+
+				<div class="card-group">
+					<div class="card">
+						<a href="https://edheads.org/"  target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/Edheads.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Edheads</h5>
+							<p class="card-text">
+								Great for younger aspiring scientist, including things like creating a line of stem cells, designing a cell phone, investigating crash site and even
+								performing brain surgery.
+							</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://www.sciencekids.co.nz/gamesactivities.html" target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/Sciencekids.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Science Kids</h5>
+							<p class="card-text">Focuses on teaching children the wonders of science.</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+					<div class="card">
+						<a href="http://www.blackholegang.com/" target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/blackholegang.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Black Hole Gang</h5>
+							<p class="card-text">Provides sources for kids and lesson planning to teachers on various topics related to science.</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+				</div>
+				<div class="card-group">
+					<div class="card">
+						<a href="http://bubbles.org/" target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/bubbles.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Bubblesphere</h5>
+							<p class="card-text">Information about the cultural phenomenon of bubbles, Includes history, references and games..</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+					<div class="card">
+						<a href="http://www.catie.org.uk/" target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/catie.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Catie</h5>
+							<p class="card-text">
+								Presents information for children about the science behind cosmetics, perfumes and toiletries. Includes fun facts and activities ideas.
+							</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://letstalkscience.ca/" target="_blank">
+							<img class="card-img-top" src="/wwwroot/images/directory-images/let's talk science.png" alt="Card image cap" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Let's talk science</h5>
+							<p class="card-text">Gives kids an interactive portal to explore and discover science, technology, and engineering.</p>
+						</div>
+						<div class="card-footer">
+							
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+        <div class="inner">
+
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input id="input-search" type="text" name="query" id="query" placeholder="Search" onkeyup="searchFunction()" onkeypress="return event.keyCode != 13;" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+
+                <ul>
+                    <li>@Html.ActionLink("General", "Library", "Home")</li>
+                    <li>
+
+                        <span class="opener">Web Directory</span>
+                        <ul>
+                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Modules</span>
+                        <ul>
+                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tables & Charts</span>
+                        <ul>
+                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Maps</span>
+                        <ul>
+                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Videos</span>
+                        <ul>
+                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">eBooks</span>
+                        <ul>
+                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Systematrics. All rights reserved.</p>
+            </footer>
+        </div>
+	</div>
+</div>
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
+<!-- Library script -->
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library.js"></script>
+<script>
+	function searchFunction() {
+		var $rows = $('#directory div div');
+		$('#input-search').keyup(function () {
+			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase().split(' ');
+			$rows.hide().filter(function () {
+				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+				var matchesSearch = true;
+				$(val).each(function (index, value) {
+					matchesSearch = (!matchesSearch) ? false : ~text.indexOf(value);
+				});
+				return matchesSearch;
+			}).show();
+		});
+	}
+</script>

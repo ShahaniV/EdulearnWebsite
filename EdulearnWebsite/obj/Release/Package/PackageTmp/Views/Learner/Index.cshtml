@@ -1,0 +1,169 @@
+﻿@model IEnumerable<EdulearnWebsite.Models.learner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<link rel="stylesheet" href="~/wwwroot/css/accounts.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+<!--Bootstrap-->
+<link href="https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet">
+<link rel="stylesheet" href="~/wwwroot/css/stye-switcher.css" />
+
+<div class="container g-container">
+    <main role="main" class="mx-auto">
+
+        <!--Navigation Bar-->
+        <header>
+            <a href="#" class="logo"><img src="~/wwwroot/images/flavicon.ico" class="owl-nav" /><span class="letterE">E</span>dulearn</a>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li>@Html.ActionLink("Library", "Library", "Home")</li>
+                <li>@Html.ActionLink("Game", "Game", "Home")</li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
+                        <div class="dropdown-divider"></div>
+                        <a href="/Home/Logout" class="dropdown-item pl-4">
+                            Logout
+                        </a>
+                    </div>
+                </li>
+
+                <div class="style-switcher outer-shadow">
+                    <div class="style-switcher-toggler s-icon outer-shadow inner-shadow">
+                        <i class="fas fa-cog fa-spin"></i>
+                    </div>
+                    <div class="day-night s-icon outer-shadow inner-shadow">
+                        <i class="fas"></i>
+                    </div>
+                    <h5>Theme Colors</h5>
+                    <div class="colors">
+                        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                    </div>
+                </div>
+            </ul>
+        </header>
+
+        <section style="padding-top: 10px !important" class="admin-form">
+            <h1 style="text-align: center; margin-top: 100px;">User</h1>
+
+            <div style="width: 90%; text-align: right;">
+                <a href="/Learner/Create" class="button primary" style="margin-bottom: 10px; ">Add User</a>
+            </div>
+
+
+            <!-- Break -->
+            <div class="table-wrapper">
+                <table style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;">Username</th>
+                            <th style="text-align: center;">Email</th>
+                            <th style="text-align: center;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.username)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.email)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.LearnerID }, new { @class = "button primary small" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.LearnerID }, new { @class = "button primary small" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+        <!--FOOTER-->
+        <section id="footer">
+            <div class="container footer-row">
+                <hr />
+                <div class="footer-left-col">
+                    <div class="footer-links">
+                        <div class="link-title">
+                            <h4>Support</h4>
+                            <a asp-page="/LibraryPages/Resources" target="_blank"><small>Resources</small></a><br />
+                            <a href="#contact"><small>Contact Us</small></a>
+                        </div>
+                        <div class="link-title">
+                            <h4>Legal</h4>
+                            <a asp-page="/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
+                            <a asp-page="/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
+                        </div>
+                        <div class="link-title">
+                            <h4>Explore</h4>
+                            <a href="#header"><small>Home</small></a><br />
+                            <a href="#about"><small>About</small></a>
+                        </div>
+                        <div class="link-title">
+                            <h4>&nbsp</h4>
+                            <a asp-page="/Library"><small>Library</small></a><br />
+                            <a asp-page="/Game"><small>Games</small></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-right-col">
+                    <div class="footer-info">
+                        <div class="copyright-text">
+                            <div style="padding-left: 15px;">
+                                <a href="https://www.facebook.com/hpmowl"><i class="fa fa-facebook fa-lg p-1" style="        color: #1b9de9"></i></a>
+                                <i id="msgboxShowMessage" class="fa fa-phone fa-lg p-1" style="color: #1b9de9"></i>
+                                <i id="msgboxShowEmail" class="fa fa-envelope fa-lg p-1" style="color: #1b9de9"></i>
+                            </div>
+                            <br />
+                            <small>Copyright 2020 HPM</small>
+                        </div>
+                        <div class="footer-logo">
+                            <img src="~/wwwroot/images/owl-logo.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="msgbox-area" class="msgbox-area"></div>
+
+    </main>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<!--Bootstrap-->
+<script src="~/wwwroot/js/accounts.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+<script src="~/wwwroot/js/style-switcher.js"></script>

@@ -1,0 +1,298 @@
+﻿@model EdulearnWebsite.Models.userModel
+
+@{
+	ViewBag.Title = "Library";
+}
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+
+
+<style>
+
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+</style>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Home Back Button -->
+				<a onclick="BackFunc()" class="bbutton">
+					<div class="home-back-button">
+						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+					</div>
+				</a>
+
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<header>
+						<h1>The right place for everyone.</h1>
+						<p>A free educational library</p>
+					</header>
+					<p>
+						Education is the key to survival, and essential to our social development. It is the process of training and maximizing our mental ability that will shape us individually, to create a more efficient society. Fostering maximum potential involves the development of educational systems, curriculums, management, along with the protection through policies that will help for nurturing the students.
+					</p>
+				</div>
+				<span class="image object">
+					<img src="~/wwwroot/images/search-svg.svg" alt="Searching" />
+				</span>
+			</section>
+
+
+			<!-- Section -->
+			<section>
+				<header class="major">
+					<h2>Overview</h2>
+				</header>
+				<div class="posts">
+					<article>
+						<a href="#" class="image"><img src="https://images.unsplash.com/photo-1553484771-371a605b060b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" /></a>
+						<h3>Modules</h3>
+						<p>Free Learning Modules from Kindergarten to Junior High School level, that are available for you to learn new skills, refresh, and expand the knowledge needed for your online and face-to-face classes.</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "Kindergarten", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="https://images.unsplash.com/photo-1530288782965-fbad40327074?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" /></a>
+						<h3>Web Directory</h3>
+						<p>List of websites that you can browse, it offers different services and information relevant to your interest topics. Making it easier and convenient to identify the assistance of websites in the internet.</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "EnglishD", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="https://images.unsplash.com/photo-1519500099198-fd81846b8f03?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" /></a>
+						<h3>Map</h3>
+						<p>Representing the real world on a much smaller scale. Helping you travel from one location to another and organize information. Figuring out where you are, and how to get wherever you want to go.</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "World", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="https://images.unsplash.com/photo-1543165796-5426273eaab3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" /></a>
+						<h3>Dictionary</h3>
+						<p>One of the most important tools during your study time. A relevant dictionary that will help you understand your subject better, improve your communication, and improve your grades by making sure you are using words correctly.</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "Dictionary", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="https://images.unsplash.com/photo-1560221328-12fe60f83ab8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80" alt="" /></a>
+						<h3>Charts and Tables</h3>
+						<p>Helping you to get a clearer picture of the topics and how they compare with other data. Consist of different educational charts and tables that display data and invite further exploration of a topic.</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "LetterChart", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<h3>Videos</h3>
+						<p>
+							Having YouTube videos to your eLearning journey helps you to explain an online activity, introduce a topic, motivate, or simply extend the information conveyed in your eLearning voyage.
+						</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "Youtube", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1598664977841-9e0f003548c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<h3>eBooks</h3>
+						<p>
+							Ensure that learners are proactively interacting with learning material. Serve an important purpose in the online world from different perspectives. Faster and Accessible electronic book can be easily accessed from virtually any device that is connected to the internet.
+						</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "Ebook", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1603792907191-89e55f70099a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<h3>Trivias</h3>
+						<p>
+							It is not enough to know large amounts of information; you must be also to recall facts in a timely fashion. Thus, trivia helps to keep the mind sharp and engaged, a plus for occupations that require any amount of brainpower.
+						</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "Trivia", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<h3>Study Tips</h3>
+						<p>
+							Struggling to be a successful student? Don't get discouraged, it isn't magic! But it does require desire, dedication, and a lot of work. This section provides you with proven tips and techniques for studying smarter, not harder. Learn how to develop and what study habits to apply, that will help you become a highly effective student.
+						</p>
+						<ul class="actions">
+							<li>@Html.ActionLink("More", "StudyTips", "Home", null, new { @class = "button" })</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<div class="inner">
+
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
+
+				<ul>
+					<li>@Html.ActionLink("General", "Library", "Home")</li>
+					<li>
+
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+							<li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+							<li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+							<li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+							<li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+							<li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+							<li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+							<li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+							<li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+							<li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+							<li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+							<li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+							<li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+					<li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+					<li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+				</ul>
+			</nav>
+
+			<!-- Section -->
+			<section>
+				<div class="mini-posts">
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<p>Work Hard Anywhere.</p>
+					</article>
+					<div id="datepicker" class="calendar"></div>
+				</div>
+			</section>
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; HPM. All rights reserved. Images: <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+			</footer>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- Popup Quotes to brighten your day -->
+<div class="popup-onload">
+	<div class="popup">
+		<a href="" class="x">x</a>
+		<img style="width: 200px; margin: auto; text-align: center; display: block; margin-bottom: 35px" src="~/wwwroot/images/finishline-vector.svg" alt="Finish Line" />
+		<p id="current_quote">Welcome!</p>
+		<button class="quote-closebtn">Close</button>
+	</div>
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+<!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
+
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library.js"></script>
+
+<!-- Calendar script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
