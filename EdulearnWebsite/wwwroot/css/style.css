@@ -204,7 +204,9 @@ header {
                 font-weight: 600;
                 color: var(--rgb66nav);
             }
-
+                header .navigation li a.dropdown-item {
+                    color: var(--rgb66nav);
+                }
                 header .navigation li a:hover {
                     color: var(--secondColor);
                 }
