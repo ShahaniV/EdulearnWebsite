@@ -173,9 +173,9 @@ namespace EdulearnWebsite.Controllers
             var verifyUrl = "/Login/" + emailFor + "/" + activationCode;
             var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
-            var fromEmail = new MailAddress("sheMeows283@gmail.com", "Edulearn Email Verification");
+            var fromEmail = new MailAddress("owlhpm@gmail.com", "Edulearn Email Verification");
             var toEmail = new MailAddress(emailID);
-            var fromEmailPassword = "09068175032"; // Replace with actual password
+            var fromEmailPassword = "Edulearn2021"; // Replace with actual password
 
             string subject = "";
             string body = "";

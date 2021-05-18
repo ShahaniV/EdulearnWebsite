@@ -92,11 +92,11 @@
 							<td>
 								@Html.DisplayFor(model => model.email)
 							</td>
-							@using (Html.BeginForm())
+							@using (Html.BeginForm("Delete", "Admin", new { ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new { role = "form", @class = "LoginForm" }))
 							{
 								@Html.AntiForgeryToken()
 								<td>
-									<input type="submit" value="Delete" onclick="ConfirmDelete()" class="button primary ml-2" />
+									<input type="submit" value="Delete" class="button primary ml-2" />
 								</td>
 							}
 						</tr>
@@ -188,34 +188,7 @@
 
 		</div>
 
-		<div class="modal fade" id="deleteModal" style="top:20% !important;">
-			<div class="modal-dialog">
-				<div class="modal-content">
-
-
-					<div class="modal-header">
-						<h4 class="modal-title">Logout</h4>
-						<a href="#" class="close" data-dismiss="modal">&times;</a>
-					</div>
-					<div class="modal-body">
-						<h5>Are you sure ? You want to Logout? </h5>
-
-						<div style="text-align:center;display:none" id="loaderDiv">
-							Loading.....
-							@*<img src="~/Content/img/2xkV.gif" style="height:200px;width:200px" />*@
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
-						<a href="#" style="background-color:#ff9017; color:white;" class="btn" onclick="DeleteFunc()">Confirm</a>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
+		
 
 		
 
@@ -235,27 +208,17 @@
 
 	}
 
-	var ConfirmDelete = function () {
-
-		$("#deleteModal").modal('show');
-
-	}
+	
 
 	var DeleteEmployee = function () {
 
 		$("#loaderDiv").show();
 		var baseUrl="@Url.Action("Logout","Home")";
-   window.location.href=baseUrl;
+		window.location.href=baseUrl;
 
 	}
 
-	var DeleteFunc = function () {
-
-		$("#loaderDiv").show();
-		var baseUrl="@Url.Action("Delete","Admin")";
-   window.location.href=baseUrl;
-
-	}
+	
 </script>
 <script src="~/wwwroot/js/accounts.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
