@@ -1,4 +1,6 @@
-﻿
+﻿@{
+	ViewData["Title"] = "Edulearn | Math";
+}
 <link rel="stylesheet" href="~/wwwroot/css/library.css" />
 
 <!-- Wrapper -->
@@ -36,7 +38,7 @@
 				</header>
 				<div class="card-group">
 					<div class="card">
-						<a href="http://www.algebra-online.com"  target="_blank">
+						<a href="http://www.algebra-online.com" target="_blank">
 							<img class="card-img-top" src="/wwwroot/images/directory-images/algebra-online.png" alt="Card image cap" />
 						</a>
 						<div class="card-body">
@@ -44,7 +46,7 @@
 							<p class="card-text">Service including private tutoring, a message board, software, and chat.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -56,7 +58,7 @@
 							<p class="card-text">Contains a map, privacy policy, comments, links, and contact details</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -68,7 +70,7 @@
 							<p class="card-text">Shows research studies, consultation service, publications, galleries, and contact details</p>
 						</div>
 						<div class="card-footer">
-						
+
 						</div>
 					</div>
 				</div>
@@ -84,7 +86,7 @@
 							<p class="card-text">Math resources include tutoring, calculators, games, homework help, and merchandise.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -98,7 +100,7 @@
 							</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -113,7 +115,7 @@
 							</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 				</div>
@@ -127,7 +129,7 @@
 							<p class="card-text">Offers free videos of algebra, geometry and trigonometry courses</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -142,7 +144,7 @@
 							</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -154,7 +156,7 @@
 							<p class="card-text">Information on services, consulting, workshops, research, and blog</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 				</div>
@@ -164,87 +166,87 @@
 
 	<!-- Sidebar -->
 	<div id="sidebar">
-        <div class="inner">
+		<div class="inner">
 
-            <!-- Search -->
-            <section id="search" class="alt">
-                <form method="post" action="#">
-                    <input id="input-search" type="text" name="query" id="query" placeholder="Search" onkeyup="searchFunction()" onkeypress="return event.keyCode != 13;" />
-                </form>
-            </section>
+			<!-- Search -->
+			<section id="search" class="alt">
+				<form method="post" action="#">
+					<input id="input-search" type="text" name="query" id="query" placeholder="Search" onkeyup="searchFunction()" onkeypress="return event.keyCode != 13;" />
+				</form>
+			</section>
 
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
 
-                <ul>
-                    <li>@Html.ActionLink("General", "Library", "Home")</li>
-                    <li>
+				<ul>
+					<li>@Html.ActionLink("General", "Library", "Home")</li>
+					<li>
 
-                        <span class="opener">Web Directory</span>
-                        <ul>
-                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
-                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
-                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
-                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Modules</span>
-                        <ul>
-                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
-                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
-                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Tables & Charts</span>
-                        <ul>
-                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
-                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
-                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
-                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
-                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Maps</span>
-                        <ul>
-                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
-                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
-                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Videos</span>
-                        <ul>
-                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
-                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">eBooks</span>
-                        <ul>
-                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
-                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
-                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
-                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
-                </ul>
-            </nav>
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+							<li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+							<li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+							<li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+							<li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+							<li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+							<li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+							<li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+							<li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+							<li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+							<li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+							<li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+							<li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+					<li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+					<li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+				</ul>
+			</nav>
 
-            <!-- Section -->
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; Systematrics All rights reserved. </p>
-            </footer>
-        </div>
+			<!-- Section -->
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; Systematrics All rights reserved. </p>
+			</footer>
+		</div>
 	</div>
 </div>
 <script>
