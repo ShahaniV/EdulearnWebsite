@@ -1,4 +1,6 @@
-﻿
+﻿@{
+	ViewData["Title"] = "Edulearn | English";
+}
 <link rel="stylesheet" href="~/wwwroot/css/library.css" />
 
 <!-- Wrapper -->
@@ -48,7 +50,7 @@
 							</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -62,7 +64,7 @@
 							<p class="card-text">Includes educational games organized by grade level (1st to 5th), particularly good for spelling and phonics.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -78,7 +80,7 @@
 							</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 				</div>
@@ -96,7 +98,7 @@
 							<p class="card-text">Includes videos, quizzes, vocabulary practice, idioms, crosswords, and much more. Though all with British accents.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -108,7 +110,7 @@
 							<p class="card-text">Vocabulary exercise organized by theme.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 					<div class="card">
@@ -120,7 +122,7 @@
 							<p class="card-text">Online picture dictionary, with everything from the alphabet to parts of the body to farm animals.</p>
 						</div>
 						<div class="card-footer">
-							
+
 						</div>
 					</div>
 				</div>
@@ -130,89 +132,89 @@
 
 	<!-- Sidebar -->
 	<div id="sidebar">
-        <div class="inner">
+		<div class="inner">
 
-            <!-- Search -->
-            <section id="search" class="alt">
-                <form method="post" action="#">
-                    <input id="input-search" type="text" name="query" id="query" placeholder="Search" onkeyup="searchFunction()" onkeypress="return event.keyCode != 13;" />
-                </form>
-            </section>
+			<!-- Search -->
+			<section id="search" class="alt">
+				<form method="post" action="#">
+					<input id="input-search" type="text" name="query" id="query" placeholder="Search" onkeyup="searchFunction()" onkeypress="return event.keyCode != 13;" />
+				</form>
+			</section>
 
-          
 
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
 
-                <ul>
-                    <li>@Html.ActionLink("General", "Library", "Home")</li>
-                    <li>
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
 
-                        <span class="opener">Web Directory</span>
-                        <ul>
-                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
-                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
-                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
-                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Modules</span>
-                        <ul>
-                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
-                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
-                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Tables & Charts</span>
-                        <ul>
-                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
-                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
-                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
-                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
-                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Maps</span>
-                        <ul>
-                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
-                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
-                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Videos</span>
-                        <ul>
-                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
-                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">eBooks</span>
-                        <ul>
-                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
-                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
-                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
-                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
-                </ul>
-            </nav>
+				<ul>
+					<li>@Html.ActionLink("General", "Library", "Home")</li>
+					<li>
 
-            <!-- Section -->
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; HPM. All rights reserved.</p>
-            </footer>
-        </div>
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+							<li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+							<li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+							<li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+							<li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+							<li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+							<li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+							<li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+							<li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+							<li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+							<li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+							<li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+							<li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+					<li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+					<li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+				</ul>
+			</nav>
+
+			<!-- Section -->
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; HPM. All rights reserved.</p>
+			</footer>
+		</div>
 	</div>
 </div>
 <script>

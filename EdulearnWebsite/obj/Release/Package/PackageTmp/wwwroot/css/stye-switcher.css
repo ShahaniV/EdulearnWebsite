@@ -10,7 +10,7 @@ h1{
   background-color: #fcaa3f;
   position: fixed;
   right: 0;
-  top: 77px;
+  top: 17px;
   padding: 15px;
   width: 180px;
   z-index: 101;
@@ -84,7 +84,7 @@ h1{
 @media (max-width: 991px) {
   .style-switcher {
     right: 0;
-    top: 10px;
+    top: -30px;
     padding: 15px;
   }
 }
