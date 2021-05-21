@@ -1,90 +1,146 @@
 ﻿@model EdulearnWebsite.Models.Module
 
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
 
-<div>
-    <h4>Module</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.moduleNo)
-        </dt>
+<link rel="stylesheet" href="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/wwwroot/css/modules.css" />
 
-        <dd>
-            @Html.DisplayFor(model => model.moduleNo)
-        </dd>
+<style>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 
-        <dd>
-            @Html.DisplayFor(model => model.title)
-        </dd>
+	.box h4 {
+		min-width:50%;
+	}
+</style>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.quarterNo)
-        </dt>
+<!-- Wrapper -->
+<div id="wrapper">
 
-        <dd>
-            @Html.DisplayFor(model => model.quarterNo)
-        </dd>
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.description)
-        </dt>
+			<!-- Header -->
+			<header id="header">
 
-        <dd>
-            @Html.DisplayFor(model => model.description)
-        </dd>
+				<!-- Home Back Button -->
 
-        <dt>
-            @Html.DisplayNameFor(model => model.files)
-        </dt>
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
 
-        <dd>
-            @Html.DisplayFor(model => model.files)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.datetime)
-        </dt>
+			<!-- Content -->
+			<section class="pt-4">
+				<header class="main mb-5">
+					<h1 style="margin-bottom: 0 !important; text-align: center">Create</h1>
+					<p style="text-align: center">Modules from <a href="https://lrmds.deped.gov.ph/" target="_blank"> DEPED LEARNING PORTAL</a></p>
+				</header>
 
-        <dd>
-            @Html.DisplayFor(model => model.datetime)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.adminName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.adminName)
-        </dd>
+				<div>
+					<h4>Module</h4>
+					<hr />
+					<div class="box d-flex flex-wrap justify-content-between">
+						<h4 style="font-weight: normal">
+							Module No. =
+							@Html.DisplayFor(model => model.moduleNo)
+						</h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.subject)
-        </dt>
+						<h4 style="font-weight: normal">
+							Quarter No. =
+							@Html.DisplayFor(model => model.quarterNo)
+						</h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.subject)
-        </dd>
+						<h4 style="font-weight: normal">
+							Title =
+							@Html.DisplayFor(model => model.title)
+						</h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.gradeLevel)
-        </dt>
+						<h4 style="font-weight: normal">
+							Description =
+							@Html.DisplayFor(model => model.description)
+						</h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.gradeLevel)
-        </dd>
+						<h4 style="font-weight: normal">
+							Files =
+							@Html.DisplayFor(model => model.files)
+						</h4>
 
-    </dl>
+						<h4 style="font-weight: normal">
+							Subject =
+							@Html.DisplayFor(model => model.subject)
+						</h4>
+
+						<h4 style="font-weight: normal">
+							Grade Level =
+							@Html.DisplayFor(model => model.gradeLevel)
+						</h4>
+
+						<h4 style="font-weight: normal">
+							Date Modified =
+							@Html.DisplayFor(model => model.datetime)
+						</h4>
+
+						<h4 style="font-weight: normal">
+							Admin Name =
+							@Html.DisplayFor(model => model.adminName)
+						</h4>
+
+
+					</div>
+				</div>
+				<p>
+					@Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "button primary m-2" }) |
+					@Html.ActionLink("Back to Module List", "Index")
+				</p>
+
+
+			</section>
+
+		</div>
+	</div>
+
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+<!-- Library script -->
+
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library-admin.js"></script>
+
+<!-- Calendar script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/wwwroot/js/modules.js"></script>
+<script src="/wwwroot/js/modules_script/kinder.js"></script>
+
