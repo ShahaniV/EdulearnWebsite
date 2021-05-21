@@ -121,6 +121,6 @@
     <Property Name="datetime" Type="DateTime" Precision="3" />
     <Property Name="adminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="gradeLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gradeLevel" Type="String" />
   </EntityType>
 </Schema>

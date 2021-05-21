@@ -12,20 +12,24 @@ namespace EdulearnWebsite.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Web;
 
     public partial class Module
     {
         public int Id { get; set; }
+        [Range(1, 100)]
         public Nullable<int> moduleNo { get; set; }
         public string title { get; set; }
+        [Range(1, 4)]
         public Nullable<int> quarterNo { get; set; }
         public string description { get; set; }
         [DisplayName("Upload File")]
         public string files { get; set; }
         public Nullable<System.DateTime> datetime { get; set; }
         public string adminName { get; set; }
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only")]
         public string subject { get; set; }
         public string gradeLevel { get; set; }
 
@@ -35,5 +39,6 @@ namespace EdulearnWebsite.Models
         {
             this.datetime = DateTime.Now;
         }
+
     }
 }

@@ -48,7 +48,7 @@ namespace EdulearnWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AdminID,firstname,lastname,username,email,password")] admin admin, [Bind(Include = "AdminID,username,email,password")] user useradmin)
+        public ActionResult Create(admin admin, [Bind(Include = "AdminID,username,email,password")] user useradmin)
         {
             bool Status = false;
             string message = "";
@@ -59,6 +59,13 @@ namespace EdulearnWebsite.Controllers
                 if (isExist)
                 {
                     ModelState.AddModelError("EmailExist", "Email already exist");
+                    return View(admin);
+                }
+
+                var usernameExist = IsUsernameExist(useradmin.username);
+                if (usernameExist)
+                {
+                    ModelState.AddModelError("", "Username already exist");
                     return View(admin);
                 }
 
@@ -166,6 +173,15 @@ namespace EdulearnWebsite.Controllers
             }
         }
 
+        [NonAction]
+        public bool IsUsernameExist(string Username)
+        {
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                var v = db.users.Where(a => a.username == Username).FirstOrDefault();
+                return v != null;
+            }
+        }
 
         [NonAction]
         public void SendVerificationLinkEmail(string emailID, string activationCode, string emailFor = "VerifyAccount")

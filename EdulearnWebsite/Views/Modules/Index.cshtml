@@ -72,6 +72,7 @@
 						<div class="list-header">Grade1</div>
 						<div class="list-content">
 							<div class="list-content-inner">
+								<h3 class="text-center">Math</h3>
 								<div style="width: 97%; text-align: right;">
 									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
 								</div>
@@ -84,7 +85,6 @@
 												<th style="text-align: center;">Quarter</th>
 												<th style="text-align: center;">Date modified</th>
 												<th style="text-align: center;">Admin</th>
-												<th style="text-align: center;">Visit</th>
 												<th style="text-align: center;">Actions</th>
 											</tr>
 										</thead>
@@ -93,9 +93,11 @@
 											@foreach (var item in Model)
 											{
 												<tr>
-													<td>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
+														<br/>
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
 													</td>
 													<td>
 														@Html.DisplayFor(modelItem => item.description)
@@ -108,9 +110,6 @@
 													</td>
 													<td>
 														Admin
-													</td>
-													<td>
-														<a href="@(item.files)" target="_blank">View</a>
 													</td>
 													<td>
 														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })

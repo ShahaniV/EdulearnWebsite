@@ -44,7 +44,7 @@
     <Property Name="datetime" Type="datetime" />
     <Property Name="adminName" Type="nvarchar" MaxLength="50" />
     <Property Name="subject" Type="varchar" MaxLength="50" />
-    <Property Name="gradeLevel" Type="varchar" MaxLength="50" />
+    <Property Name="gradeLevel" Type="int" />
   </EntityType>
   <EntityType Name="user">
     <Key>

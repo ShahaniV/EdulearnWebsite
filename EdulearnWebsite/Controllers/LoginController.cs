@@ -52,6 +52,8 @@ namespace EdulearnWebsite.Controllers
                             return View(objchk);
                         }
 
+
+
                         Session["UserID"] = obj.UserID.ToString();
                         Session["UserName"] = obj.username.ToString();
 
@@ -119,9 +121,9 @@ namespace EdulearnWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SignUp([Bind(Include = "UserID,username,password,HeadAdminID,LearnerID,AdminID,confirmPass,email")] user user, [Bind(Include = "LearnerID,username,email,password")] learner learner)
+        public ActionResult SignUp([Bind(Include = "UserID,username,password,HeadAdminID,LearnerID,AdminID,confirmPass,email")] user user, learner learner)
         {
-            
+
             bool Status = false;
             string message = "";
 
@@ -130,7 +132,14 @@ namespace EdulearnWebsite.Controllers
                 var isExist = IsEmailExist(user.email);
                 if (isExist)
                 {
-                    ModelState.AddModelError("EmailExist", "Email already exist");
+                    ModelState.AddModelError("", "Email already exist");
+                    return View(user);
+                }
+
+                var usernameExist = IsUsernameExist(user.username);
+                if (usernameExist)
+                {
+                    ModelState.AddModelError("", "Username already exist");
                     return View(user);
                 }
 
@@ -211,6 +220,17 @@ namespace EdulearnWebsite.Controllers
                 return v != null;
             }
         }
+
+        [NonAction]
+        public bool IsUsernameExist(string Username)
+        {
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                var v = db.users.Where(a => a.username == Username).FirstOrDefault();
+                return v != null;
+            }
+        }
+
 
 
         [NonAction]

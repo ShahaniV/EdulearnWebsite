@@ -56,15 +56,30 @@ namespace EdulearnWebsite.Controllers
             fileName = Path.Combine(Server.MapPath("../Files/"), fileName);
             module.fileFile.SaveAs(fileName);
 
+
             if (ModelState.IsValid)
             {
-                db.Modules.Add(module);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                var isExist = IsUsernameExist(module.adminName);
+                if (!isExist)
+                {
+                    ModelState.AddModelError("", "Admin Username doesn't exist");
+                    return View(module);
+                }
+                else
+                {
+                    IsAdminNameExist(module.adminName, module);
+                    db.Modules.Add(module);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
+
             }
 
             return View(module);
         }
+
+       
 
         // GET: Modules/Edit/5
         public ActionResult Edit(int? id)
@@ -99,9 +114,19 @@ namespace EdulearnWebsite.Controllers
                     fileName = Path.Combine(Server.MapPath("/Files/"), fileName);
                     module.fileFile.SaveAs(fileName);
                 }
-                db.Entry(module).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+
+                var isExist = IsUsernameExist(module.adminName);
+                if (!isExist)
+                {
+                    ModelState.AddModelError("", "Admin Username doesn't exist");
+                    return View(module);
+                }
+                else
+                {
+                    db.Entry(module).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
             return View(module);
         }
@@ -150,6 +175,26 @@ namespace EdulearnWebsite.Controllers
             return false;
         }
 
+        [NonAction]
+        public static void IsAdminNameExist(string Username, Module module)
+        {
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                var v = db.admins.Where(a => a.username == Username).FirstOrDefault();
+                var AdminName = v.firstname + " " + v.lastname;
+                module.adminName = AdminName;
+            }
+        }
+
+        [NonAction]
+        public bool IsUsernameExist(string Username)
+        {
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                var v = db.admins.Where(a => a.username == Username).FirstOrDefault();
+                return v != null;
+            }
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

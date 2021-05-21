@@ -11,7 +11,9 @@ namespace EdulearnWebsite.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class admin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +21,29 @@ namespace EdulearnWebsite.Models
         {
             this.users = new HashSet<user>();
         }
-    
+
         public int AdminID { get; set; }
+        [Required]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only")]
         public string firstname { get; set; }
+        [Required]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only")]
         public string lastname { get; set; }
+        [Required]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only")]
         public string username { get; set; }
+        [Required]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string email { get; set; }
+        [Required]
         public string password { get; set; }
-    
+
+        [NotMapped]
+        [Compare("password", ErrorMessage = "Confirm password doesn't match")]
+        public string confirmPass { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<user> users { get; set; }
+
     }
 }
