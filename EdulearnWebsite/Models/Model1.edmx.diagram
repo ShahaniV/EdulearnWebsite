@@ -12,6 +12,7 @@
         <AssociationConnector Association="edulearnModel.FK_user_admin" ManuallyRouted="false" />
         <AssociationConnector Association="edulearnModel.FK_user_headAdmin" ManuallyRouted="false" />
         <AssociationConnector Association="edulearnModel.FK_user_learner" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="edulearnModel.Module" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

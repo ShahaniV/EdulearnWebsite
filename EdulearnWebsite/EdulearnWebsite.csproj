@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LearnerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ModulesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -175,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Module.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ResetPasswordModel.cs" />
     <Compile Include="Models\user.cs">
@@ -965,6 +969,7 @@
     <Content Include="wwwroot\js\games.js" />
     <Content Include="wwwroot\js\jquery.min.js" />
     <Content Include="wwwroot\js\landingscript.js" />
+    <Content Include="wwwroot\js\library-admin.js" />
     <Content Include="wwwroot\js\library.js" />
     <Content Include="wwwroot\js\modules.js" />
     <Content Include="wwwroot\js\modules_script\grade1_2.js" />
@@ -1593,9 +1598,17 @@
     <Content Include="Views\Login\VerifyAccount.cshtml" />
     <Content Include="Views\Login\ResetPassword.cshtml" />
     <Content Include="Views\Login\ForgotPassword.cshtml" />
+    <Content Include="Views\Modules\Create.cshtml" />
+    <Content Include="Views\Modules\Delete.cshtml" />
+    <Content Include="Views\Modules\Details.cshtml" />
+    <Content Include="Views\Modules\Edit.cshtml" />
+    <Content Include="Views\Modules\Index.cshtml" />
+    <Content Include="Views\Home\AdminLibrary.cshtml" />
+    <Content Include="Views\Home\ManageModules.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

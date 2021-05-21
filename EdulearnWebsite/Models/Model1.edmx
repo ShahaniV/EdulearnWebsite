@@ -36,6 +36,21 @@
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="password" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="Modules">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="moduleNo" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="60" />
+          <Property Name="quarterNo" Type="int" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="files" Type="varchar(max)" />
+          <Property Name="datetime" Type="datetime" />
+          <Property Name="adminName" Type="nvarchar" MaxLength="50" />
+          <Property Name="subject" Type="varchar" MaxLength="50" />
+          <Property Name="gradeLevel" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="user">
           <Key>
             <PropertyRef Name="UserID" />
@@ -92,6 +107,7 @@
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="headAdmin" EntityType="Self.headAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="learner" EntityType="Self.learner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_user_admin" Association="Self.FK_user_admin">
             <End Role="admin" EntitySet="admin" />
@@ -216,7 +232,23 @@
             <End Role="learner" EntitySet="learners" />
             <End Role="user" EntitySet="users" />
           </AssociationSet>
+          <EntitySet Name="Modules" EntityType="edulearnModel.Module" />
         </EntityContainer>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="moduleNo" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="quarterNo" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="files" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="datetime" Type="DateTime" Precision="3" />
+          <Property Name="adminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gradeLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -271,6 +303,22 @@
                 <ScalarProperty Name="AdminID" ColumnName="AdminID" />
                 <ScalarProperty Name="confirmPass" ColumnName="confirmPass" />
                 <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modules">
+            <EntityTypeMapping TypeName="edulearnModel.Module">
+              <MappingFragment StoreEntitySet="Modules">
+                <ScalarProperty Name="gradeLevel" ColumnName="gradeLevel" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="adminName" ColumnName="adminName" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="files" ColumnName="files" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="quarterNo" ColumnName="quarterNo" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="moduleNo" ColumnName="moduleNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

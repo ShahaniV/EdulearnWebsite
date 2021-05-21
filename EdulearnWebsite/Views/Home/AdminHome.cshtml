@@ -1,6 +1,6 @@
 ﻿
 @{
-	ViewBag.Title = "Edulearn";
+	ViewBag.Title = "Edulearn | Admin";
 }
 
 <link rel="stylesheet" href="~/wwwroot/css/style.css" />
@@ -23,29 +23,22 @@
 				<li><a href="#header">Home</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#features">Features</a></li>
-				<li>@Html.ActionLink("Library", "Library", "Home")</li>
+				<li>@Html.ActionLink("Library", "AdminLibrary", "Home")</li>
 				<li>@Html.ActionLink("Game", "Game", "Home")</li>
 				<li><a href="#contact">Contact</a></li>
-				<div class="dropdown-divider"></div>
-				<li>
-					<a class="dropdown-item pl-4 pt-0" onclick="ConfirmDelete()">Logout  </a>
-				</li>
-
-
-				<div class="style-switcher outer-shadow">
-					<div class="style-switcher-toggler s-icon outer-shadow inner-shadow">
-						<i class="fas fa-cog fa-spin"></i>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
+						More
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						@Html.ActionLink("Manage Modules", "Index", "Modules", null, new { @class = "dropdown-item" })
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item pl-4 pt-0" onclick="ConfirmDelete()">Logout  </a>
 					</div>
+				</li>
+				<div class="style-switcher outer-shadow">
 					<div class="day-night s-icon outer-shadow inner-shadow">
 						<i class="fas"></i>
-					</div>
-					<h5>Theme Colors</h5>
-					<div class="colors">
-						<span class="color-1" onclick="setActiveStyle('color-1')"></span>
-						<span class="color-2" onclick="setActiveStyle('color-2')"></span>
-						<span class="color-3" onclick="setActiveStyle('color-3')"></span>
-						<span class="color-4" onclick="setActiveStyle('color-4')"></span>
-						<span class="color-5" onclick="setActiveStyle('color-5')"></span>
 					</div>
 				</div>
 			</ul>

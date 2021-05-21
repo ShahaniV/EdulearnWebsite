@@ -121,6 +121,7 @@ namespace EdulearnWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult SignUp([Bind(Include = "UserID,username,password,HeadAdminID,LearnerID,AdminID,confirmPass,email")] user user, [Bind(Include = "LearnerID,username,email,password")] learner learner)
         {
+            
             bool Status = false;
             string message = "";
 

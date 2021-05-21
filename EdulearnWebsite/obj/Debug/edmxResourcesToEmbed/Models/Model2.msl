@@ -52,5 +52,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="edulearnModel1.Module">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="gradeLevel" ColumnName="gradeLevel" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="adminName" ColumnName="adminName" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="files" ColumnName="files" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="quarterNo" ColumnName="quarterNo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="moduleNo" ColumnName="moduleNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

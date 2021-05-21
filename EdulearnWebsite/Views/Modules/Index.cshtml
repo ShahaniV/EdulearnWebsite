@@ -1,0 +1,730 @@
+﻿@model IEnumerable<EdulearnWebsite.Models.Module>
+
+@{
+	ViewBag.Title = "Edulearn | Manage Modules";
+}
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/wwwroot/css/modules.css" />
+
+<style>
+
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+</style>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Home Back Button -->
+				<a onclick="BackFunc()" class="bbutton">
+					<div class="home-back-button">
+						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+					</div>
+				</a>
+
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+
+			<!-- Content -->
+			<section class="pt-4">
+				<header class="main mb-5">
+					<h1 style="margin-bottom: 0 !important; text-align: center">Manage Modules</h1>
+					<p style="text-align: center">Modules from <a href="https://lrmds.deped.gov.ph/" target="_blank"> DEPED LEARNING PORTAL</a></p>
+				</header>
+				<div class="w-100 d-flex justify-content-center">
+					<button class="m-1" onclick="Kindergarten()">Kindergarten</button>
+					<button class="m-1" onclick="Elem()">Elementary</button>
+					<button class="m-1" onclick="High()">Highschool</button>
+				</div>
+
+
+				<ul class="faq-list" id="kindergarten">
+					<header class="main">
+						<h3>Kindergarten</h3>
+					</header>
+					<!-- kindergarten -->
+					<li class="J_list">
+						<div class="list-header">Grade1</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank">View</a>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="J_list">
+						<div class="list-header">Grade2</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<button href="@(item.files)" class="button">Highschool</button>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "button primary small" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="J_list">
+						<div class="list-header">Grade3</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<button href="@(item.files)" class="button">Highschool</button>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "button primary small" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="J_list">
+						<div class="list-header">Grade4</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<button href="@(item.files)" class="button">Highschool</button>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "button primary small" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="J_list">
+						<div class="list-header">Grade5</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<button href="@(item.files)" class="button">Highschool</button>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "button primary small" })
+														@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "button primary small" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="J_list">
+						<div class="list-header">Grade6</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Quarter</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Visit</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model)
+											{
+												<tr>
+													<td>
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.quarterNo)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														Admin
+													</td>
+													<td>
+														<a href="@(item.files)">link</a>
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="faq-list" id="elementary">
+					<header class="main">
+						<h3>Elementary</h3>
+					</header>
+					<!-- kindergarten -->
+					<li class="J_list">
+						<div class="list-header">Modules</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 93%; text-align: right;">
+									<a href="#" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mariela Flores</td>
+												<td>Mariela</td>
+												<td>Mariela@gmail.com</td>
+												<td>Mariela@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Joaquin Valdez</td>
+												<td>Joaquin</td>
+												<td>Joaquin@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Mike Almonte</td>
+												<td>Mike</td>
+												<td>Mike@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Jason Rosales</td>
+												<td>Jason</td>
+												<td>Jason@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Clark Glova</td>
+												<td>Clark</td>
+												<td>Clark@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="faq-list" id="highschool">
+					<header class="main">
+						<h3>High School</h3>
+					</header>
+					<!-- kindergarten -->
+					<li class="J_list">
+						<div class="list-header">Modules</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 93%; text-align: right;">
+									<a href="#" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Admin</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mariela Flores</td>
+												<td>Mariela</td>
+												<td>Mariela@gmail.com</td>
+												<td>Mariela@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Joaquin Valdez</td>
+												<td>Joaquin</td>
+												<td>Joaquin@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Mike Almonte</td>
+												<td>Mike</td>
+												<td>Mike@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Jason Rosales</td>
+												<td>Jason</td>
+												<td>Jason@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+											<tr>
+												<td>Clark Glova</td>
+												<td>Clark</td>
+												<td>Clark@gmail.com</td>
+												<td>
+													<a href="#" class="button primary small">Edit</a>
+													<a href="#" class="button primary small">Delete</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar" class="inactive">
+		<div class="inner">
+
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
+
+				<ul>
+					<li>@Html.ActionLink("General", "Library", "Home")</li>
+					<li>
+
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+							<li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+							<li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+							<li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+							<li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+							<li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+							<li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+							<li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+							<li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+							<li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+							<li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+							<li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+							<li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+					<li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+					<li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+				</ul>
+			</nav>
+
+			<!-- Section -->
+			<section>
+				<div class="mini-posts">
+					<article>
+						<a href="#" class="image">
+							<img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+								 alt="" />
+						</a>
+						<p>Work Hard Anywhere.</p>
+					</article>
+					<div id="datepicker" class="calendar"></div>
+				</div>
+			</section>
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; HPM. All rights reserved. Images: <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+			</footer>
+
+		</div>
+	</div>
+
+</div>
+
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+<!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+
+	function Kindergarten() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+
+		x.style.display = "block";
+		y.style.display = "none";
+		z.style.display = "none";
+	}
+	function Elem() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+
+		x.style.display = "none";
+		y.style.display = "block";
+		z.style.display = "none";
+	}
+	function High() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "block";
+	}
+</script>
+
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library-admin.js"></script>
+
+<!-- Calendar script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/wwwroot/js/modules.js"></script>
+<script src="/wwwroot/js/modules_script/kinder.js"></script>

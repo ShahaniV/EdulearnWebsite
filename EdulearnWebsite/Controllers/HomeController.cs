@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EdulearnWebsite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace EdulearnWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        private edulearnEntities db = new edulearnEntities();
         public ActionResult Index()
         {
             
@@ -53,6 +55,12 @@ namespace EdulearnWebsite.Controllers
         {
             return View();
         }
+
+        public ActionResult ManageModules()
+        {
+            return View(db.Modules.ToList());
+        }
+
         public ActionResult Game()
         {
             return View();

@@ -106,5 +106,21 @@
       <End Role="learner" EntitySet="learners" />
       <End Role="user" EntitySet="users" />
     </AssociationSet>
+    <EntitySet Name="Modules" EntityType="edulearnModel1.Module" />
   </EntityContainer>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="moduleNo" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="quarterNo" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="files" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="datetime" Type="DateTime" Precision="3" />
+    <Property Name="adminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gradeLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
