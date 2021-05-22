@@ -21,6 +21,11 @@ namespace EdulearnWebsite.Controllers
             return View(db.Modules.ToList());
         }
 
+        public ActionResult Kindergarten()
+        {
+            return View(db.Modules.ToList());
+        }
+
         // GET: Modules/Details/5
         public ActionResult Details(int? id)
         {
@@ -49,6 +54,7 @@ namespace EdulearnWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Module module)
         {
+            
             string fileName = Path.GetFileNameWithoutExtension(module.fileFile.FileName);
             string extension = Path.GetExtension(module.fileFile.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
@@ -67,10 +73,20 @@ namespace EdulearnWebsite.Controllers
                 }
                 else
                 {
-                    IsAdminNameExist(module.adminName, module);
-                    db.Modules.Add(module);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
+                    var ModExist = IsModulesExist(module.gradeLevel, module.subject, module.quarterNo, module.moduleNo);
+                    if (!ModExist)
+                    {
+                        IsAdminNameExist(module.adminName, module);
+                        db.Modules.Add(module);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Module already exists");
+                        return View(module);
+                    }
+                   
                 }
                 
 
@@ -192,6 +208,16 @@ namespace EdulearnWebsite.Controllers
             using (edulearnEntities db = new edulearnEntities())
             {
                 var v = db.admins.Where(a => a.username == Username).FirstOrDefault();
+                return v != null;
+            }
+        }
+
+        [NonAction]
+        public bool IsModulesExist(string GradeLevel, string Subject, int? quarter, int? moduleno)
+        {
+            using (edulearnEntities db = new edulearnEntities())
+            {
+                var v = db.Modules.Where(a => a.gradeLevel == GradeLevel && a.subject== Subject && a.quarterNo ==quarter && a.moduleNo ==moduleno).FirstOrDefault();
                 return v != null;
             }
         }

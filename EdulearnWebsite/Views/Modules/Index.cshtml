@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<EdulearnWebsite.Models.Module>
 
 @{
+
 	ViewBag.Title = "Edulearn | Manage Modules";
 }
 <link rel="stylesheet" href="~/wwwroot/css/library.css" />
@@ -62,7 +63,8 @@
 					<button class="m-1" onclick="High()">Junior Highschool</button>
 					<button class="m-1" onclick="SHigh()">Senior Highschool</button>
 				</div>
-
+				<div style="width: 100px; background-color:bisque;" class="text-center"> Quarter 1 </div>
+				<div style="		width: 100px; background-color: #c4ecff;" class="text-center"> Quarter 2 </div>
 
 				<ul class="faq-list" id="kindergarten">
 					<header class="main">
@@ -82,7 +84,6 @@
 										<thead>
 											<tr>
 												<th style="text-align: center;">Title</th>
-												<th style="text-align: center;">Quarter</th>
 												<th style="text-align: center;">Description</th>
 												<th style="text-align: center;">Date modified</th>
 												<th style="text-align: center;">Actions</th>
@@ -90,7 +91,7 @@
 										</thead>
 										<tbody>
 											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
-											@foreach (var item in Model)
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
 											{
 												<tr>
 													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
@@ -98,9 +99,6 @@
 														@Html.DisplayFor(modelItem => item.title)
 														<br />
 														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
-													</td>
-													<td>
-														@Html.DisplayFor(modelItem => item.quarterNo)
 													</td>
 													<td>
 														@Html.DisplayFor(modelItem => item.description)
@@ -115,6 +113,29 @@
 													</td>
 												</tr>
 											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+
 										</tbody>
 									</table>
 								</div>
@@ -124,7 +145,6 @@
 										<thead>
 											<tr>
 												<th style="text-align: center;">Title</th>
-												<th style="text-align: center;">Quarter</th>
 												<th style="text-align: center;">Description</th>
 												<th style="text-align: center;">Date modified</th>
 												<th style="text-align: center;">Actions</th>
@@ -132,7 +152,7 @@
 										</thead>
 										<tbody>
 											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
-											@foreach (var item in Model)
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
 											{
 												<tr>
 													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
@@ -142,7 +162,26 @@
 														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
 													</td>
 													<td>
-														@Html.DisplayFor(modelItem => item.quarterNo)
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
 													</td>
 													<td>
 														@Html.DisplayFor(modelItem => item.description)
@@ -183,7 +222,6 @@
 										<thead>
 											<tr>
 												<th style="text-align: center;">Title</th>
-												<th style="text-align: center;">Quarter</th>
 												<th style="text-align: center;">Description</th>
 												<th style="text-align: center;">Date modified</th>
 												<th style="text-align: center;">Actions</th>
@@ -199,9 +237,6 @@
 														@Html.DisplayFor(modelItem => item.title)
 														<br />
 														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
-													</td>
-													<td>
-														@Html.DisplayFor(modelItem => item.quarterNo)
 													</td>
 													<td>
 														@Html.DisplayFor(modelItem => item.description)

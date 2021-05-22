@@ -1,4 +1,5 @@
-﻿
+﻿@model EdulearnWebsite.Models.Module
+
 @{
 	ViewData["Title"] = "Edulearn | Kindergarten Modules";
 }
@@ -42,47 +43,139 @@
 					<h2 style="margin: 0 auto !important; text-align: center">Kindergarten</h2>
 					<p style="text-align: center">Modules from <a href="https://lrmds.deped.gov.ph/" target="_blank"> DEPED LEARNING PORTAL</a></p>
 				</header>
-				<ul class="faq-list">
+				<ul class="faq-list" id="kindergarten">
+					<header class="main">
+						<h3>Kindergarten</h3>
+					</header>
 					<!-- kindergarten -->
 					<li class="J_list">
-						<div class="list-header">Modules</div>
+						<div class="list-header">Kindergarten</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="k-coverflow-learning">
-										<div id="k-learning">
-											<a href="/wwwroot/module/kinder/kin_cnt.pdf" target="_blank"><img src="/wwwroot/cover/kinder/1.png" /></a>
-										</div>
-										<div id="k-learning-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">Math</h3>
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
 
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="k-coverflow-reading">
-										<div id="k-reading">
-											<a href="/wwwroot/module/kinder/kin_rdtg1.pdf" target="_blank"><img src="/wwwroot/cover/kinder/2.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdtg2.pdf" target="_blank"><img src="/wwwroot/cover/kinder/3.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdtg3.pdf" target="_blank"><img src="/wwwroot/cover/kinder/4.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdeng1.pdf" target="_blank"><img src="/wwwroot/cover/kinder/5.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdtg4.pdf" target="_blank"><img src="/wwwroot/cover/kinder/6.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdtg5.pdf" target="_blank"><img src="/wwwroot/cover/kinder/7.png" /></a>
-											<a href="/wwwroot/module/kinder/kin_rdtg6.pdf" target="_blank"><img src="/wwwroot/cover/kinder/8.png" /></a>
-										</div>
-										<div id="k-reading-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -93,80 +186,80 @@
 
 	<!-- Sidebar -->
 	<div id="sidebar">
-        <div class="inner">
-           
+		<div class="inner">
 
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
 
-                <ul>
-                    <li>@Html.ActionLink("General", "Library", "Home")</li>
-                    <li>
+			<!-- Menu -->
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
 
-                        <span class="opener">Web Directory</span>
-                        <ul>
-                            <li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
-                            <li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
-                            <li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
-                            <li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Modules</span>
-                        <ul>
-                            <li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
-                            <li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
-                            <li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Tables & Charts</span>
-                        <ul>
-                            <li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
-                            <li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
-                            <li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
-                            <li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
-                            <li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
-                            <li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Maps</span>
-                        <ul>
-                            <li>@Html.ActionLink("World Map", "World", "Home", null)</li>
-                            <li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
-                            <li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Videos</span>
-                        <ul>
-                            <li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
-                            <li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">eBooks</span>
-                        <ul>
-                            <li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
-                            <li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
-                    <li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
-                    <li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
-                </ul>
-            </nav>
+				<ul>
+					<li>@Html.ActionLink("General", "Library", "Home")</li>
+					<li>
 
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; HPM. All rights reserved.</a>.</p>
-            </footer>
-        </div>
+						<span class="opener">Web Directory</span>
+						<ul>
+							<li>@Html.ActionLink("English", "EnglishD", "Home", null)</li>
+							<li>@Html.ActionLink("Math", "MathD", "Home", null)</li>
+							<li>@Html.ActionLink("Filipino", "FilipinoD", "Home", null)</li>
+							<li>@Html.ActionLink("Science", "ScienceD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Modules</span>
+						<ul>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Tables & Charts</span>
+						<ul>
+							<li>@Html.ActionLink("Flags", "Flags", "Home", null)</li>
+							<li>@Html.ActionLink("Numbers", "NumberChart", "Home", null)</li>
+							<li>@Html.ActionLink("Letters", "LetterChart", "Home", null)</li>
+							<li>@Html.ActionLink("Shapes", "Shapes", "Home", null)</li>
+							<li>@Html.ActionLink("Colors", "Color", "Home", null)</li>
+							<li>@Html.ActionLink("Body Parts", "BodyParts", "Home", null)</li>
+							<li>@Html.ActionLink("Multiplication Table", "MultiplicationTable", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Maps</span>
+						<ul>
+							<li>@Html.ActionLink("World Map", "World", "Home", null)</li>
+							<li>@Html.ActionLink("Country Map", "Country", "Home", null)</li>
+							<li>@Html.ActionLink("Google Map", "Google", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Videos</span>
+						<ul>
+							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">eBooks</span>
+						<ul>
+							<li>@Html.ActionLink("Google Ebooks", "Ebook", "Home", null)</li>
+							<li>@Html.ActionLink("Ebooks Web Directory", "eBooksD", "Home", null)</li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Trivia", "Trivia", "Home", null)</li>
+					<li>@Html.ActionLink("Dictionary", "Dictionary", "Home", null)</li>
+					<li>@Html.ActionLink("Study Tips", "StudyTips", "Home", null)</li>
+				</ul>
+			</nav>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; HPM. All rights reserved.</a>.</p>
+			</footer>
+		</div>
 	</div>
 </div>
 

@@ -1560,7 +1560,6 @@
     <Content Include="Views\Home\LibraryPages\Maps\Country.cshtml" />
     <Content Include="Views\Home\LibraryPages\Maps\Google.cshtml" />
     <Content Include="Views\Home\LibraryPages\Maps\World.cshtml" />
-    <Content Include="Views\Home\LibraryPages\ModuleManager.cshtml" />
     <Content Include="Views\Home\LibraryPages\Resources.cshtml" />
     <Content Include="Views\Home\LibraryPages\StudyTips.cshtml" />
     <Content Include="Views\Home\LibraryPages\Trivia.cshtml" />
@@ -1611,6 +1610,7 @@
     <Content Include="Views\Modules\Index.cshtml" />
     <Content Include="Views\Home\AdminLibrary.cshtml" />
     <Content Include="Views\Home\ManageModules.cshtml" />
+    <Content Include="Views\Modules\Kindergarten.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

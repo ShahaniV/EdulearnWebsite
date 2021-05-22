@@ -22,8 +22,9 @@ namespace EdulearnWebsite.Models
         [Range(1, 100)]
         public Nullable<int> moduleNo { get; set; }
         public string title { get; set; }
-        [Range(1, 4)]
+        [Range(1, 2)]
         public Nullable<int> quarterNo { get; set; }
+        [DataType(DataType.MultilineText)]
         public string description { get; set; }
         [DisplayName("Upload File")]
         public string files { get; set; }
