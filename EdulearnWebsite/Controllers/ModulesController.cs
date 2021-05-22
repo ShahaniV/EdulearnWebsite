@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -78,6 +79,21 @@ namespace EdulearnWebsite.Controllers
                     {
                         IsAdminNameExist(module.adminName, module);
                         db.Modules.Add(module);
+                        try
+                        {
+                            db.SaveChanges();
+                        }
+                        catch (DbEntityValidationException ex)
+                        {
+                            foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                            {
+                                foreach (var validationError in entityValidationErrors.ValidationErrors)
+                                {
+                                    ModelState.AddModelError("", "Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                                    return View(module);
+                                }
+                            }
+                        }
                         db.SaveChanges();
                         return RedirectToAction("Index");
                     }
@@ -140,6 +156,21 @@ namespace EdulearnWebsite.Controllers
                 else
                 {
                     db.Entry(module).State = EntityState.Modified;
+                    try
+                    {
+                        db.SaveChanges();
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                        {
+                            foreach (var validationError in entityValidationErrors.ValidationErrors)
+                            {
+                                ModelState.AddModelError("", "Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                                return View(module);
+                            }
+                        }
+                    }
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
