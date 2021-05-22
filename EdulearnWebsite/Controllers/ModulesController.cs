@@ -26,6 +26,18 @@ namespace EdulearnWebsite.Controllers
         {
             return View(db.Modules.ToList());
         }
+        public ActionResult Elementary()
+        {
+            return View(db.Modules.ToList());
+        }
+        public ActionResult Junior_high()
+        {
+            return View(db.Modules.ToList());
+        }
+        public ActionResult Senior_high()
+        {
+            return View(db.Modules.ToList());
+        }
 
         // GET: Modules/Details/5
         public ActionResult Details(int? id)

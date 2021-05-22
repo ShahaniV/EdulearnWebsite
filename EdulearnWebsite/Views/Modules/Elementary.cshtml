@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<EdulearnWebsite.Models.Module>
 @{
 	ViewData["Title"] = "Edulearn | Elementary Modules";
 }
@@ -43,742 +43,1156 @@
 					<p style="text-align: center">Modules from <a href="https://commons.deped.gov.ph/" target="_blank"> DEPED COMMONS</a></p>
 				</header>
 
-				<ul class="faq-list">
-					<!-- Grade 1 -->
+				<ul class="faq-list" id="elementary">
+					<header class="main">
+						<h3>Elementary</h3>
+					</header>
+					<!-- elementary -->
 					<li class="J_list">
-						<div class="list-header">Grade 1</div>
+						<div class="list-header">Grade1</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g1-coverflow-english">
-										<div id="g1-english">
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/1.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/2.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/3.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/4.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/5.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/6.png" /></a>
-											<a href="/wwwroot/module/grade1/fil1/fil1_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g1/fil1/7.png" /></a>
-										</div>
-										<div id="g1-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g1-coverflow-math">
-										<div id="g1-math">
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/1.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/2.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/3.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/4.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/5.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/6.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/7.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/8.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/9.png" /></a>
-											<a href="/wwwroot/module/grade1/math1/math1_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g1/math1/10.png" /></a>
-										</div>
-										<div id="g1-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>ESP</h3>
-									</header>
-									<div id="g1-coverflow-fil">
-										<div id="g1-fil">
-											<a href="/wwwroot/module/grade1/esp1/esp1_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g1/esp1/1.png" /></a>
-											<a href="/wwwroot/module/grade1/esp1/esp1_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g1/esp1/2.png" /></a>
-											<a href="/wwwroot/module/grade1/esp1/esp1_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g1/esp1/3.png" /></a>
-											<a href="/wwwroot/module/grade1/esp1/esp1_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g1/esp1/4.png" /></a>
-											<a href="/wwwroot/module/grade1/esp1/esp1_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g1/esp1/5.png" /></a>
-										</div>
-										<div id="g1-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>MTBMLE</h3>
-									</header>
-									<div id="g1-coverflow-science">
-										<div id="g1-science">
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/1.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/2.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/3.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/4.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/5.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/6.png" /></a>
-											<a href="/module/grade1/mtb1/mtb1_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/7.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/8.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/9.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/10.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/11.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/12.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/13.png" /></a>
-											<a href="/wwwroot/module/grade1/mtb1/mtb1_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g1/mtb1/14.png" /></a>
-										</div>
-										<div id="g1-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">ESP</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "ESP" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "ESP" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">MTBMLE</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- Grade 2 -->
+
+					@*Grade2=============================================================================*@
 					<li class="J_list">
-						<div class="list-header">Grade 2</div>
+						<div class="list-header">Grade2</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>English</h3>
-									</header>
-									<div id="g2-coverflow-english">
-										<div id="g2-english">
-											<a href="/wwwroot/module/grade2/eng2/eng2_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/1.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/2.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/3.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/4.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/5.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/6.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/7.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/8.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/9.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/10.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/11.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/12.png" /></a>
-											<a href="/wwwroot/module/grade2/eng2/eng2_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g2/eng2/13.png" /></a>
-										</div>
-										<div id="g2-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g2-coverflow-math">
-										<div id="g2-math">
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/1.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/2.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/3.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/4.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/5.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/6.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/7.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/8.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/9.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/10.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/11.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/12.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/13.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/14.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/15.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md16.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/16.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md17.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/17.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md18.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/18.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q1_md19.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/19.png" /></a>
-
-											<!-- 2nd Quarter -->
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/20.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/21.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/22.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/23.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/24.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/25.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/26.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/27.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md9.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/28.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md10.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/29.png" /></a>
-											<a href="/wwwroot/module/grade2/math2/math2_q2_md11.pdf" target="_blank"><img src="/wwwroot/cover/g2/math2/30.png" /></a>
-										</div>
-										<div id="g2-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g2-coverflow-fil">
-										<div id="g2-fil">
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/1.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/2.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/3.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/4.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/5.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/6.png" /></a>
-
-											<!-- 2nd Quarter -->
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/7.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/8.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/9.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/10.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/11.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/12.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/13.png" /></a>
-											<a href="/wwwroot/module/grade2/fil2/fil2_q2_md9.pdf" target="_blank"><img src="/wwwroot/cover/g2/fil2/14.png" /></a>
-										</div>
-										<div id="g2-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>MTBMLE</h3>
-									</header>
-									<div id="g2-coverflow-science">
-										<div id="g2-science">
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/1.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/2.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/3.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/4.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/5.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/6.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/7.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/8.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/9.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/10.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/11.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/12.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/13.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/14.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/15.png" /></a>
-
-											<!-- 2nd Quarter -->
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/16.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/17.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/18.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/19.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/20.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/21.png" /></a>
-											<a href="/wwwroot/module/grade2/mtb2/mtb2_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g2/mtb2/22.png" /></a>
-										</div>
-										<div id="g2-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">MTBMLE</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- Grade 3 -->
+					@*Grade3 =============================================================================*@
 					<li class="J_list">
-						<div class="list-header">Grade 3</div>
+						<div class="list-header">Grade3</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>English</h3>
-									</header>
-									<div id="g3-coverflow-english">
-										<div id="g3-english">
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/1.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/2.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/3.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/4.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/5.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/6.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/7.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/8.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/9.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/10.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/11.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/12.png" /></a>
-
-											<!-- 2nd Quarter -->
-											<a href="/wwwroot/module/grade3/eng3/eng3_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/13.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/14.png" /></a>
-											<a href="/wwwroot/module/grade3/eng3/eng3_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/eng3/15.png" /></a>
-										</div>
-										<div id="g3-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g3-coverflow-math">
-										<div id="g3-math">
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/1.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/2.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/3.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/4.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md5a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/5.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md5b.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/6.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/7.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md7a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/8.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md7b.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/9.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/10.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/11.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/12.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md11a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/13.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md11b.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/14.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/15.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/16.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/17.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md15a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/18.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md15b.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/19.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q1_md16.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/20.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/21.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/22.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/23.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md4a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/24.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md4b.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/25.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md4c.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/26.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md4d.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/27.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/28.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/29.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/30.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md9.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/31.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md10.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/32.png" /></a>
-											<a href="/wwwroot/module/grade3/math3/math3_q2_md11a.pdf" target="_blank"><img src="/wwwroot/cover/g3/math3/33.png" /></a>
-										</div>
-										<div id="g3-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g3-coverflow-fil">
-										<div id="g3-fil">
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/1.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/2.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/3.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/4.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/5.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/6.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/7.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/8.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/9.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/10.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/11.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/12.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/13.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/14.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/15.png" /></a>
-											<!-- 2nd quarter -->
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/16.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/17.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/18.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/19.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/20.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/21.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md8.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/22.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md9.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/23.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md10.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/24.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md11.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/25.png" /></a>
-											<a href="/wwwroot/module/grade3/fil3/fil3_q2_md12.pdf" target="_blank"><img src="/wwwroot/cover/g3/fil3/26.png" /></a>
-										</div>
-										<div id="g3-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Science</h3>
-									</header>
-									<div id="g3-coverflow-science">
-										<div id="g3-science">
-											<a href="/wwwroot/module/grade3/sci3/sci3_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/1.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/2.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/3.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/4.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/5.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/6.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/7.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/8.png" /></a>
-											<a href="/wwwroot/module/grade3/sci3/sci3_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g3/sci3/9.png" /></a>
-										</div>
-										<div id="g3-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- Grade4 -->
+
+					@*Grade4 =============================================================================*@
 					<li class="J_list">
-						<div class="list-header">Grade 4</div>
+						<div class="list-header">Grade4</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>English</h3>
-									</header>
-									<div id="g4-coverflow-english">
-										<div id="g4-english">
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/1.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/2.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/3.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/4.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/5.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/6.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/7.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/8.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/9.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/10.png" /></a>
-											<a href="/wwwroot/module/grade4/eng4/eng4_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g4/eng4/11.png" /></a>
-										</div>
-										<div id="g4-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g4-coverflow-math">
-										<div id="g4-math">
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/1.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/2.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/3.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/4.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/5.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/6.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/7.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/8.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/9.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/10.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/11.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/12.png" /></a>
-											<a href="/wwwroot/module/grade4/math4/math4_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g4/math4/13.png" /></a>
-										</div>
-										<div id="g4-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g4-coverflow-fil">
-										<div id="g4-fil">
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/1.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/2.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/3.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/4.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/5.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/6.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/7.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/8.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/9.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/10.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/11.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/12.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/13.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/14.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/15.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_m16.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/16.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q1_md17.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/17.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/18.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/19.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/20.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/21.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/22.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md6.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/23.png" /></a>
-											<a href="/wwwroot/module/grade4/fil4/fil4_q2_md7.pdf" target="_blank"><img src="/wwwroot/cover/g4/fil4/24.png" /></a>
-										</div>
-										<div id="g4-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Science</h3>
-									</header>
-									<div id="g4-coverflow-science">
-										<div id="g4-science">
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/1.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/2.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md3a.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/3.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md3b.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/4.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md4a.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/5.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md4b.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/6.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md5a.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/7.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md5b.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/8.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md6a.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/9.png" /></a>
-											<a href="/wwwroot/module/grade4/sci4/sci4_q1_md6b.pdf" target="_blank"><img src="/wwwroot/cover/g4/sci4/10.png" /></a>
-										</div>
-										<div id="g4-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+											<tr>
+												<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+													@Html.DisplayFor(modelItem => item.moduleNo)
+													@Html.DisplayFor(modelItem => item.title)
+												</td>
+												<td>
+													@Html.DisplayFor(modelItem => item.description)
+												</td>
+												<td>
+													<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- Grade 5 -->
+					@*Grade5 =============================================================================*@
 					<li class="J_list">
-						<div class="list-header">Grade 5</div>
+						<div class="list-header">Grade5</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>English</h3>
-									</header>
-									<div id="g5-coverflow-english">
-										<div id="g5-english">
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/1.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/2.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/3.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/4.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/5.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/6.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/7.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/8.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/9.png" /></a>
-											<a href="/wwwroot/module/grade5/eng5/eng5_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g5/eng5/10.png" /></a>
-										</div>
-										<div id="g5-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g5-coverflow-math">
-										<div id="g5-math">
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/1.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/2.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/3.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/4.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/5.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/6.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/7.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/8.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/9.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/10.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/11.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/12.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/13.png" /></a>
-											<a href="/wwwroot/module/grade5/math5/math5_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g5/math5/14.png" /></a>
-										</div>
-										<div id="g5-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g5-coverflow-fil">
-										<div id="g5-fil">
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/1.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/2.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/3.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/4.png" /></a>
-											<a href="/wwwroot/module/grade5fil5/fil5_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/5.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/6.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/7.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/8.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/9.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/10.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/11.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/12.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/13.png" /></a>
-											<a href="/wwwroot/module/grade5/fil5/fil5_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g5/fil5/14.png" /></a>
-										</div>
-										<div id="g5-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Science</h3>
-									</header>
-									<div id="g5-coverflow-science">
-										<div id="g5-science">
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/1.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/2.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/3.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/4.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/5.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/6.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/7.png" /></a>
-											<a href="/wwwroot/module/grade5/sci5/sci5_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g5/sci5/8.png" /></a>
-										</div>
-										<div id="g5-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- Grade 6 -->
+					@*Grade6 =============================================================================*@
 					<li class="J_list">
-						<div class="list-header">Grade 6</div>
+						<div class="list-header">Grade6</div>
 						<div class="list-content">
 							<div class="list-content-inner">
-								<section>
-									<header class="main">
-										<h3>English</h3>
-									</header>
-									<div id="g6-coverflow-english">
-										<div id="g6-english">
-											<a href="/wwwroot/module/grade6/eng6/eng6_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g6/eng6/1.png" /></a>
-											<a href="/wwwroot/module/grade6/eng6/eng6_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g6/eng6/2.png" /></a>
-											<a href="/wwwroot/module/grade6/eng6/eng6_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g6/eng6/3.png" /></a>
-										</div>
-										<div id="g6-english-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Math</h3>
-									</header>
-									<div id="g6-coverflow-math">
-										<div id="g6-math">
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/1.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/2.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/3.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/4.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/5.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/6.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/7.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/8.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/9.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/10.png" /></a>
-											<a href="/wwwroot/module/grade6/math6/math6_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g6/math6/11.png" /></a>
-										</div>
-										<div id="g6-math-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Filipino</h3>
-									</header>
-									<div id="g6-coverflow-fil">
-										<div id="g6-fil">
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md1.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/1.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md2.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/2.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md3.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/3.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md4.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/4.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md5.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/5.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md6.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/6.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md7.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/7.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md8.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/8.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md9.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/9.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md10.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/10.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md11.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/11.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md12.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/12.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md13.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/13.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md14.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/14.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q1_md15.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/15.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q2_md1.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/16.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q2_md2.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/17.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q2_md3.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/18.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q2_md4.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/19.png" /></a>
-											<a href="/wwwroot/module/grade6/fil6/fil6_q2_md5.pdf" target="_blank"><img src="/wwwroot/cover/g6/fil6/20.png" /></a>
-										</div>
-										<div id="g6-fil-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<header class="main">
-										<h3>Science</h3>
-									</header>
-									<div id="g6-coverflow-science">
-										<div id="g6-science">
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1a.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/1.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1b.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/2.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1c.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/3.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1d.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/4.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1e.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/5.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md1f.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/6.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md2a.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/7.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md2b.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/8.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md2c.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/9.png" /></a>
-											<a href="/wwwroot/module/grade6/sci6/sci6_q1_md2d.pdf" target="_blank"><img src="/wwwroot/cover/g6/sci6/10.png" /></a>
-										</div>
-										<div id="g6-science-controls">
-											<i class="fa fa-chevron-left"></i>
-											<i class="fa fa-chevron-right"></i>
-										</div>
-									</div>
-								</section>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+											<tr>
+												<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+													@Html.DisplayFor(modelItem => item.moduleNo)
+													@Html.DisplayFor(modelItem => item.title)
+												</td>
+												<td>
+													@Html.DisplayFor(modelItem => item.description)
+												</td>
+												<td>
+													<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</li>

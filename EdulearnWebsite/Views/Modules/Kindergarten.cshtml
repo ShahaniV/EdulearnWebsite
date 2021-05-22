@@ -68,7 +68,7 @@
 											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
 											{
 												<tr>
-													<td style="		background-color: bisque;" href="@(item.files)" target="_blank" class="pb-2">
+													<td style="	background-color: bisque; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 
@@ -85,7 +85,7 @@
 											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
 											{
 												<tr>
-													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+													<td style="		background-color: #c4ecff; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 
@@ -119,7 +119,7 @@
 											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
 											{
 												<tr>
-													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+													<td style="background-color:bisque; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 
@@ -136,7 +136,7 @@
 											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
 											{
 												<tr>
-													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+													<td style="		background-color: #c4ecff; color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 

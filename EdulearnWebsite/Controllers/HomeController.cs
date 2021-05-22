@@ -111,20 +111,6 @@ namespace EdulearnWebsite.Controllers
             return View("LibraryPages/DIrectoryPages/eBooksD");
         }
 
-        //=========================================================== Modules
-        public ActionResult Kindergarten()
-        {
-            return View("LibraryPages/Kindergarten");
-        }
-        public ActionResult Elementary()
-        {
-            return View("LibraryPages/Elementary");
-        }
-        public ActionResult Junior_high()
-        {
-            return View("LibraryPages/Junior_high");
-        }
-
         //===================================================== Tables and Charts
         public ActionResult Flags()
         {
