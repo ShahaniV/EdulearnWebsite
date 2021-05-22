@@ -28,30 +28,20 @@
 				<li><a href="#contact">Contact</a></li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
-						Account
+						More
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						@Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
 						@Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
+						@Html.ActionLink("Manage Modules", "Index", "Modules", null, new { @class = "dropdown-item" })
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item pl-4 pt-0" onclick="ConfirmDelete()">Logout  </a>
 					</div>
 				</li>
 
 				<div class="style-switcher outer-shadow">
-					<div class="style-switcher-toggler s-icon outer-shadow inner-shadow">
-						<i class="fas fa-cog fa-spin"></i>
-					</div>
 					<div class="day-night s-icon outer-shadow inner-shadow">
 						<i class="fas"></i>
-					</div>
-					<h5>Theme Colors</h5>
-					<div class="colors">
-						<span class="color-1" onclick="setActiveStyle('color-1')"></span>
-						<span class="color-2" onclick="setActiveStyle('color-2')"></span>
-						<span class="color-3" onclick="setActiveStyle('color-3')"></span>
-						<span class="color-4" onclick="setActiveStyle('color-4')"></span>
-						<span class="color-5" onclick="setActiveStyle('color-5')"></span>
 					</div>
 				</div>
 			</ul>
@@ -331,13 +321,13 @@
 					<div class="footer-links">
 						<div class="link-title">
 							<h4>Support</h4>
-							@Html.ActionLink("Resources", "Resources", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Resources", "Resources", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
 							<a href="#contact"><small>Contact Us</small></a>
 						</div>
 						<div class="link-title">
 							<h4>Legal</h4>
-							@Html.ActionLink("Terms", "TermsAndConditions", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
-							@Html.ActionLink("Privacy", "PrivacyPolicy", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+							@Html.ActionLink("Terms", "TermsAndConditions", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
+							@Html.ActionLink("Privacy", "PrivacyPolicy", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })
 						</div>
 						<div class="link-title">
 							<h4>Explore</h4>

@@ -31,6 +31,21 @@
     <Property Name="email" Type="nvarchar" MaxLength="50" />
     <Property Name="password" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="moduleNo" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="60" />
+    <Property Name="quarterNo" Type="int" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="files" Type="varchar(max)" />
+    <Property Name="datetime" Type="datetime" />
+    <Property Name="adminName" Type="nvarchar" MaxLength="50" />
+    <Property Name="subject" Type="varchar" MaxLength="50" />
+    <Property Name="gradeLevel" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="user">
     <Key>
       <PropertyRef Name="UserID" />
@@ -87,6 +102,7 @@
     <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="headAdmin" EntityType="Self.headAdmin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="learner" EntityType="Self.learner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_user_admin" Association="Self.FK_user_admin">
       <End Role="admin" EntitySet="admin" />

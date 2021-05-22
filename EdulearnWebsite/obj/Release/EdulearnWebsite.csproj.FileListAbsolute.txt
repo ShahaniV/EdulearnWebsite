@@ -81,3 +81,7 @@ F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Release\Ed
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Release\EdulearnWebsite.csproj.CopyComplete
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Release\EdulearnWebsite.dll
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Release\EdulearnWebsite.pdb
+F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.abstractions.dll
+F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.core.dll
+F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.abstractions.xml
+F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.core.xml
