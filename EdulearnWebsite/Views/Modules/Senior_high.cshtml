@@ -42,10 +42,12 @@
 					<h2 style="margin: 0 auto !important; text-align: center">Junior High School Modules</h2>
 					<p style="text-align: center">Modules from <a href="https://commons.deped.gov.ph/" target="_blank"> DEPED COMMONS</a></p>
 				</header>
-
+				
 				<ul class="faq-list" id="seniorhighschool">
 					<header class="main">
 						<h3>Senior Highschool</h3>
+						<div style="width: 100px; background-color:bisque;" class="text-center"> Quarter 1 </div>
+						<div style="		width: 100px; background-color: #c4ecff;" class="text-center"> Quarter 2 </div>
 					</header>
 					<!-- kindergarten -->
 					<li class="J_list">
@@ -363,9 +365,10 @@
 					<li>
 						<span class="opener">Modules</span>
 						<ul>
-							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Home", null)</li>
-							<li>@Html.ActionLink("Elementary", "Elementary", "Home", null)</li>
-							<li>@Html.ActionLink("Junior High School", "Junior_high", "Home", null)</li>
+							<li>@Html.ActionLink("Kindergarten", "Kindergarten", "Modules")</li>
+							<li>@Html.ActionLink("Elementary", "Elementary", "Modules")</li>
+							<li>@Html.ActionLink("Junior High School", "Junior_high", "Modules")</li>
+							<li>@Html.ActionLink("Senior High School", "Senior_high", "Modules")</li>
 						</ul>
 					</li>
 					<li>
@@ -391,7 +394,7 @@
 					<li>
 						<span class="opener">Videos</span>
 						<ul>
-							<li>@Html.ActionLink("Mini Youtube", "Youtube", "Home", null)</li>
+							<li>@Html.ActionLink("Youtube", "Youtube", "Home", null)</li>
 							<li>@Html.ActionLink("Chanel Recommendation", "Channels", "Home", null)</li>
 						</ul>
 					</li>

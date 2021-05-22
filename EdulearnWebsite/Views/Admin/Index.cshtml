@@ -22,12 +22,9 @@
             <a href="#" class="logo"><img src="~/wwwroot/images/flavicon.ico" class="owl-nav" /><span class="letterE">E</span>dulearn</a>
             <div class="menuToggle" onclick="toggleMenu();"></div>
             <ul class="navigation">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a onclick="BackFunc()">Home</a></li>
                 <li>@Html.ActionLink("Library", "Library", "Home")</li>
                 <li>@Html.ActionLink("Game", "Game", "Home")</li>
-                <li><a href="#contact">Contact</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
                         Account
@@ -42,22 +39,11 @@
                     </div>
                 </li>
 
-                <div class="style-switcher outer-shadow">
-                    <div class="style-switcher-toggler s-icon outer-shadow inner-shadow">
-                        <i class="fas fa-cog fa-spin"></i>
-                    </div>
-                    <div class="day-night s-icon outer-shadow inner-shadow">
-                        <i class="fas"></i>
-                    </div>
-                    <h5>Theme Colors</h5>
-                    <div class="colors">
-                        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-                        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-                        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-                        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-                        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-                    </div>
-                </div>
+				<div class="style-switcher outer-shadow">
+					<div class="day-night s-icon outer-shadow inner-shadow">
+						<i class="fas"></i>
+					</div>
+				</div>
             </ul>
         </header>
 
@@ -119,13 +105,13 @@
                     <div class="footer-links">
                         <div class="link-title">
                             <h4>Support</h4>
-                            <a asp-page="/LibraryPages/Resources" target="_blank"><small>Resources</small></a><br />
+                            <a href="/Home/Resources" target="_blank"><small>Resources</small></a><br />
                             <a href="#contact"><small>Contact Us</small></a>
                         </div>
                         <div class="link-title">
                             <h4>Legal</h4>
-                            <a asp-page="/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
-                            <a asp-page="/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
+                            <a href="/Home/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
+                            <a href="/Home/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
                         </div>
                         <div class="link-title">
                             <h4>Explore</h4>
@@ -167,7 +153,15 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<script>
 
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+</script>
 <!--Bootstrap-->
 <script src="~/wwwroot/js/accounts.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

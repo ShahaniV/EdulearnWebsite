@@ -249,7 +249,7 @@ namespace EdulearnWebsite.Controllers
             {
                 subject = "Your account is successfully created!";
 
-                body = "<br/><br/>We are excited to tell you that your Dotnet Awesome account is" +
+                body = "<br/><br/>We are excited to tell you that your Edulearn account is" +
                    " successfully created. Please click on the below link to verify your account" +
                    " <br/><br/><a href='" + link + "'>" + link + "</a> ";
             }
