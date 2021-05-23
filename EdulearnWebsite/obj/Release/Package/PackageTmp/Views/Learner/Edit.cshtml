@@ -85,10 +85,11 @@
                         @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })
                         @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                     </div>
-                    <div class="col-6 col-12-xsmall">
-                        <label for="demo-name">Confirm Password</label>
-                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Confirm Password" />
-                    </div>
+					<div class="col-6 col-12-xsmall">
+						<label for="demo-name">Confirm Password</label>
+						@Html.EditorFor(model => model.confirmPass, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })
+						@Html.ValidationMessageFor(model => model.confirmPass, "", new { @class = "text-danger" })
+					</div>
                     <div class="col-12">
                         <ul class="actions">
                             <li><a href="/Admin" class="button ">Back to List</a></li>

@@ -1,0 +1,3210 @@
+﻿@model IEnumerable<EdulearnWebsite.Models.Module>
+
+@{
+
+	ViewBag.Title = "Edulearn | Manage Modules";
+}
+<link rel="stylesheet" href="~/wwwroot/css/library.css" />
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/wwwroot/css/modules.css" />
+
+<style>
+
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+</style>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Home Back Button -->
+				<a onclick="BackFunc()" class="bbutton">
+					<div class="home-back-button">
+						<i class="fa fa-arrow-left  fa-fw" aria-hidden="true"></i>Back
+					</div>
+				</a>
+
+				<div class="main-cont">
+					<div id="time-i">
+						<h1>-</h1>
+					</div>
+					<div id="date-i">
+						<h1>-</h1>
+					</div>
+					<div id="day-i">
+						<h1>-</h1>
+					</div>
+				</div>
+			</header>
+
+
+			<!-- Content -->
+			<section class="pt-4">
+				<header class="main mb-5">
+					<h1 style="margin-bottom: 0 !important; text-align: center">Manage Modules</h1>
+					<p style="text-align: center">Visit <a href="/Home/Library"> Library</a></p>
+				</header>
+				<div class="w-100 d-flex justify-content-center flex-wrap ">
+					<button class="m-1" onclick="Kindergarten()">Kindergarten</button>
+					<button class="m-1" onclick="Elem()">Elementary</button>
+					<button class="m-1" onclick="High()">Junior Highschool</button>
+					<button class="m-1" onclick="SHigh()">Senior Highschool</button>
+				</div>
+				<div style="width: 100px; background-color:bisque;" class="text-center"> Quarter 1 </div>
+				<div style="		width: 100px; background-color: #c4ecff;" class="text-center"> Quarter 2 </div>
+
+				<ul class="faq-list" id="kindergarten">
+					<header class="main">
+						<h3>Kindergarten</h3>
+					</header>
+					<!-- kindergarten -->
+					<li class="J_list">
+						<div class="list-header">Kindergarten</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<h3 class="text-center">Math</h3>
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Kindergarten" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="faq-list" id="elementary">
+					<header class="main">
+						<h3>Elementary</h3>
+					</header>
+					<!-- elementary -->
+					<li class="J_list">
+						<div class="list-header">Grade1</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<h3 class="text-center">Filipino</h3>
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">ESP</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "ESP" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "ESP" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">MTBMLE</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade1" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade1" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					@*Grade2=============================================================================*@
+					<li class="J_list">
+						<div class="list-header">Grade2</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">MTBMLE</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade2" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MTBMLE" && c.gradeLevel == "Grade2" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					@*Grade3 =============================================================================*@
+					<li class="J_list">
+						<div class="list-header">Grade3</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade3" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade3" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					@*Grade4 =============================================================================*@
+					<li class="J_list">
+						<div class="list-header">Grade4</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade4" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade4" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					@*Grade5 =============================================================================*@
+					<li class="J_list">
+						<div class="list-header">Grade5</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade5" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade5" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					@*Grade6 =============================================================================*@
+					<li class="J_list">
+						<div class="list-header">Grade6</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade6" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade6" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="faq-list" id="highschool">
+					<header class="main">
+						<h3>Junior High School</h3>
+					</header>
+					<!-- Grade 7 ======================================================================================= -->
+					<li class="J_list">
+						<div class="list-header">Grade7</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade7" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade7" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade7" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade7" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade7" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade7" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade7" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade7" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Grade 8 ======================================================================================= -->
+					<li class="J_list">
+						<div class="list-header">Grade8</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade8" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade8" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade8" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade8" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade8" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade8" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade8" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade8" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Grade 9 ======================================================================================= -->
+					<li class="J_list">
+						<div class="list-header">Grade9</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade9" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade9" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade9" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade9" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade9" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade9" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade9" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade9" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Grade 10 ======================================================================================= -->
+					<li class="J_list">
+						<div class="list-header">Grade10</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">English</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade10" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "English" && c.gradeLevel == "Grade10" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Math</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade10" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Math" && c.gradeLevel == "Grade10" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Filipino</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade10" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Filipino" && c.gradeLevel == "Grade10" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Science</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade10" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Science" && c.gradeLevel == "Grade10" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="faq-list" id="seniorhighschool">
+					<header class="main">
+						<h3>Senior Highschool</h3>
+					</header>
+					<!-- kindergarten -->
+					<li class="J_list">
+						<div class="list-header">Grade 11</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">Oral Communication</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Oral Communication" && c.gradeLevel == "Grade11" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Oral Communication" && c.gradeLevel == "Grade11" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Media & Information Literacy</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "MIL" && c.gradeLevel == "Grade11" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MIL." && c.gradeLevel == "Grade11" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Personal Development</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "PerDev" && c.gradeLevel == "Grade11" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PerDev" && c.gradeLevel == "Grade11" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- seniorhighschool -->
+					<li class="J_list">
+						<div class="list-header">Grade 12</div>
+						<div class="list-content">
+							<div class="list-content-inner">
+
+								<div style="width: 97%; text-align: right;">
+									<a href="/Modules/Create" class="button primary" style="margin-bottom: 10px; ">Add Modules</a>
+								</div>
+								<h3 class="text-center">Contemporary Philippine Art from the Regions</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "CPAR" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "CPAR" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Physical Education</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "PE" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PE" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+								<h3 class="text-center">Entrepreneurship</h3>
+								<div class="table-wrapper">
+									<table style="text-align: center;">
+										<thead>
+											<tr>
+												<th style="text-align: center;">Title</th>
+												<th style="text-align: center;">Description</th>
+												<th style="text-align: center;">Date modified</th>
+												<th style="text-align: center;">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
+											@foreach (var item in Model.Where(c => c.subject == "Entrepreneurship" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
+											{
+												<tr>
+													<td style="background-color:bisque;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Entrepreneurship" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
+											{
+												<tr>
+													<td style="		background-color: #c4ecff;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+														<br />
+														<a href="@(item.files)" target="_blank" class="button mt-4">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.datetime)
+													</td>
+													<td>
+														@Html.ActionLink("Edit", "Edit", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Details", "Details", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+														@Html.ActionLink("Delete", "Delete", "Modules", new { id = item.Id }, new { @class = "button primary small m-2" })
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+
+</div>
+
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+<!-- Library script -->
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
+
+	function Kindergarten() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+		var s = document.getElementById("seniorhighschool");
+
+		s.style.display = "none";
+		x.style.display = "block";
+		y.style.display = "none";
+		z.style.display = "none";
+	}
+	function Elem() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+		var s = document.getElementById("seniorhighschool");
+
+		s.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "block";
+		z.style.display = "none";
+	}
+	function High() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+		var s = document.getElementById("seniorhighschool");
+
+		s.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "block";
+	}
+	function SHigh() {
+		var x = document.getElementById("kindergarten");
+		var y = document.getElementById("elementary");
+		var z = document.getElementById("highschool");
+		var s = document.getElementById("seniorhighschool");
+
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "none";
+		s.style.display = "block";
+	}
+</script>
+
+<script src="~/wwwroot/js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/c0d25df00f.js"></script>
+<script src="~/wwwroot/js/browser.min.js"></script>
+<script src="~/wwwroot/js/breakpoints.min.js"></script>
+<script src="~/wwwroot/js/util.js"></script>
+<script src="~/wwwroot/js/library-admin.js"></script>
+
+<!-- Calendar script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/wwwroot/js/modules.js"></script>
+<script src="/wwwroot/js/modules_script/kinder.js"></script>
