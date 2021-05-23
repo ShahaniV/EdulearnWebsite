@@ -3877,3 +3877,12 @@ main {
 a.removeUnderline{
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 400px) {
+	#header > * {
+		flex: none !important;
+	}
+	.main-cont {
+		margin-left: 55px;
+	}
+}
