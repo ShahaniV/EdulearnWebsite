@@ -242,7 +242,7 @@
 										</tbody>
 									</table>
 								</div>
-								<h3 class="text-center">Physical Education</h3>
+								<h3 class="text-center">Komunikasyon at Pananaliksik sa Wika at Kulturang Pilipino</h3>
 								<div class="table-wrapper">
 									<table style="text-align: center;">
 										<thead>
@@ -254,7 +254,7 @@
 										</thead>
 										<tbody>
 											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
-											@foreach (var item in Model.Where(c => c.subject == "PE" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
+											@foreach (var item in Model.Where(c => c.subject == "KP" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
 											{
 												<tr>
 													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
@@ -269,7 +269,7 @@
 													</td>
 												</tr>
 											}
-											@foreach (var item in Model.Where(c => c.subject == "PE" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
+											@foreach (var item in Model.Where(c => c.subject == "KP" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
 											{
 												<tr>
 													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
@@ -287,7 +287,7 @@
 										</tbody>
 									</table>
 								</div>
-								<h3 class="text-center">Entrepreneurship</h3>
+								<h3 class="text-center">Physical Science</h3>
 								<div class="table-wrapper">
 									<table style="text-align: center;">
 										<thead>
@@ -299,7 +299,7 @@
 										</thead>
 										<tbody>
 											@*@foreach (var item in Model.Where(c => c.gradeLevel.Equals(1)))*@
-											@foreach (var item in Model.Where(c => c.subject == "Entrepreneurship" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
+											@foreach (var item in Model.Where(c => c.subject == "PS" && c.gradeLevel == "Grade12" && c.quarterNo == 1))
 											{
 												<tr>
 													<td style="background-color:bisque;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
@@ -314,7 +314,7 @@
 													</td>
 												</tr>
 											}
-											@foreach (var item in Model.Where(c => c.subject == "Entrepreneurship" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
+											@foreach (var item in Model.Where(c => c.subject == "PS" && c.gradeLevel == "Grade12" && c.quarterNo == 2))
 											{
 												<tr>
 													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">

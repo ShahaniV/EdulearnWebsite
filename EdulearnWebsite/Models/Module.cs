@@ -30,8 +30,9 @@ namespace EdulearnWebsite.Models
         public string files { get; set; }
         public Nullable<System.DateTime> datetime { get; set; }
         public string adminName { get; set; }
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only")]
+        [Required]
         public string subject { get; set; }
+        [Required]
         public string gradeLevel { get; set; }
 
         [NotMapped]
