@@ -305,22 +305,22 @@ header.sticky .navigation li a:hover {
               transform: translate3d(0, 0, 0);
     }
   }
-  .menuToggle {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background: url(/images/menu.png);
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-  }
-  .menuToggle.active {
-    background: url(/images/menu.png);
-    background-size: 28px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+    .menuToggle {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: url(/wwwroot/images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active {
+        background: url(/wwwroot/images/menu.png);
+        background-size: 28px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 .dropdown-menu.show {
@@ -4304,5 +4304,16 @@ hr {
     margin-top: 50px;
     padding: 20px 5px;
   }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+    .accButton {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-top: 10px !important;
+        margin-bottom: 15px;
+    }
 }
 /*# sourceMappingURL=accounts.css.map */

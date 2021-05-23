@@ -3,8 +3,6 @@
 @{
     ViewBag.Title = "Index";
 }
-
-
 <link rel="stylesheet" href="~/wwwroot/css/accounts.css" />
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -51,12 +49,12 @@
             <h1 style="text-align: center; margin-top: 100px;">Admin</h1>
 
             <div style="width: 90%; text-align: right;">
-                <a href="/Admin/Create" class="button primary" style="margin-bottom: 10px; ">Add Admin</a>
+                <a href="/Admin/Create" class="button primary accButton" style="margin-bottom: 10px; ">Add Admin</a>
             </div>
 
 
             <!-- Break -->
-            <div class="table-wrapper">
+            <div class="table-wrapper table-responsive-lg">
                 <table style="text-align: center;">
                     <thead>
                         <tr>
@@ -98,52 +96,52 @@
 
 
         <!--FOOTER-->
-        <section id="footer">
-            <div class="container footer-row">
-                <hr />
-                <div class="footer-left-col">
-                    <div class="footer-links">
-                        <div class="link-title">
-                            <h4>Support</h4>
-                            <a href="/Home/Resources" target="_blank"><small>Resources</small></a><br />
-                            <a href="#contact"><small>Contact Us</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>Legal</h4>
-                            <a href="/Home/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
-                            <a href="/Home/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>Explore</h4>
-                            <a href="#header"><small>Home</small></a><br />
-                            <a href="#about"><small>About</small></a>
-                        </div>
-                        <div class="link-title">
-                            <h4>&nbsp</h4>
-                            <a asp-page="/Library"><small>Library</small></a><br />
-                            <a asp-page="/Game"><small>Games</small></a>
-                        </div>
-                    </div>
-                </div>
+		<section id="footer">
+			<div class="container footer-row">
+				<hr />
+				<div class="footer-left-col">
+					<div class="footer-links">
+						<div class="link-title">
+							<h4>Support</h4>
+							@Html.ActionLink("Resources", "Resources", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
+							<a href="#contact"><small>Contact Us</small></a>
+						</div>
+						<div class="link-title">
+							<h4>Legal</h4>
+							@Html.ActionLink("Terms", "TermsAndConditions", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
+							@Html.ActionLink("Privacy", "PrivacyPolicy", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })
+						</div>
+						<div class="link-title">
+							<h4>Explore</h4>
+							@Html.ActionLink("Modules", "Kindergarten", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Ebooks", "Ebook", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+						</div>
+						<div class="link-title">
+							<h4>&nbsp</h4>
+							@Html.ActionLink("Web Directory", "EnglishD", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Trivias", "Trivia", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
+						</div>
+					</div>
+				</div>
 
-                <div class="footer-right-col">
-                    <div class="footer-info">
-                        <div class="copyright-text">
-                            <div style="padding-left: 15px;">
-                                <a href="https://www.facebook.com/hpmowl"><i class="fa fa-facebook fa-lg p-1" style="        color: #1b9de9"></i></a>
-                                <i id="msgboxShowMessage" class="fa fa-phone fa-lg p-1" style="color: #1b9de9"></i>
-                                <i id="msgboxShowEmail" class="fa fa-envelope fa-lg p-1" style="color: #1b9de9"></i>
-                            </div>
-                            <br />
-                            <small>Copyright 2020 HPM</small>
-                        </div>
-                        <div class="footer-logo">
-                            <img src="~/wwwroot/images/owl-logo.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="footer-right-col">
+					<div class="footer-info">
+						<div class="copyright-text">
+							<div style="padding-left: 15px;">
+								<a href="https://www.facebook.com/systedulearn/" target="_blank"><i class="fa fa-facebook fa-lg p-1" style="        color: #1b9de9"></i></a>
+								<i id="msgboxShowMessage" class="fa fa-phone fa-lg p-1" style="color: #1b9de9"></i>
+								<i id="msgboxShowEmail" class="fa fa-envelope fa-lg p-1" style="color: #1b9de9"></i>
+							</div>
+							<br />
+							<small>Copyright 2020 Systematrics</small>
+						</div>
+						<div class="footer-logo">
+							<img src="~/wwwroot/images/owl-logo.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
         <div id="msgbox-area" class="msgbox-area"></div>
 

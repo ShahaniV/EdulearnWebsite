@@ -500,3 +500,26 @@ form.sign-in-form {
     width: 110px;
   }
 }
+
+@media (max-width: 400px) {
+    .RemForContainer {
+        display: block !important;
+
+    }
+
+    .remember {
+        text-align:center;
+        margin: 0 auto;
+        float:none !important;
+        width: 140px;
+    }
+    .rbox {
+        float:right !important;
+    }
+    .forgot {
+        float:none !important;
+        text-align: center;
+    }
+}
+
+

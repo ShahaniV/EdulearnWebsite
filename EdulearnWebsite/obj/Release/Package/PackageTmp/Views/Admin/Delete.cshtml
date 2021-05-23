@@ -25,12 +25,9 @@
 			<a href="#" class="logo"><img src="~/wwwroot/images/flavicon.ico" class="owl-nav" /><span class="letterE">E</span>dulearn</a>
 			<div class="menuToggle" onclick="toggleMenu();"></div>
 			<ul class="navigation">
-				<li><a href="#header">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#features">Features</a></li>
+				<li><a onclick="BackFunc()">Home</a></li>
 				<li>@Html.ActionLink("Library", "Library", "Home")</li>
 				<li>@Html.ActionLink("Game", "Game", "Home")</li>
-				<li><a href="#contact">Contact</a></li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
 						Account
@@ -39,24 +36,15 @@
 						@Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
 						@Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item pl-4 pt-0" onclick="ConfirmLogout()">Logout  </a>
+						<a href="/Home/Logout" class="dropdown-item pl-4">
+							Logout
+						</a>
 					</div>
 				</li>
 
 				<div class="style-switcher outer-shadow">
-					<div class="style-switcher-toggler s-icon outer-shadow inner-shadow">
-						<i class="fas fa-cog fa-spin"></i>
-					</div>
 					<div class="day-night s-icon outer-shadow inner-shadow">
 						<i class="fas"></i>
-					</div>
-					<h5>Theme Colors</h5>
-					<div class="colors">
-						<span class="color-1" onclick="setActiveStyle('color-1')"></span>
-						<span class="color-2" onclick="setActiveStyle('color-2')"></span>
-						<span class="color-3" onclick="setActiveStyle('color-3')"></span>
-						<span class="color-4" onclick="setActiveStyle('color-4')"></span>
-						<span class="color-5" onclick="setActiveStyle('color-5')"></span>
 					</div>
 				</div>
 			</ul>
@@ -92,17 +80,17 @@
 							<td>
 								@Html.DisplayFor(model => model.email)
 							</td>
-							@using (Html.BeginForm("Delete", "Admin", new { ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new { role = "form", @class = "LoginForm" }))
+							@using (Html.BeginForm("Delete", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", @class = "LoginForm" }))
 							{
 								@Html.AntiForgeryToken()
 								<td>
-									<input type="submit" value="Delete" class="button primary ml-2" />
+									<input type="submit" value="Delete" class="button primary ml-2 accButton" />
 								</td>
 							}
 						</tr>
 					</tbody>
 				</table>
-				<a href="/Admin" class="button ">Back to List</a>
+				<a href="/Admin" class="button accButton">Back to List</a>
 			</div>
 		</section>
 
@@ -117,23 +105,23 @@
 					<div class="footer-links">
 						<div class="link-title">
 							<h4>Support</h4>
-							<a asp-page="/LibraryPages/Resources" target="_blank"><small>Resources</small></a><br />
+							@Html.ActionLink("Resources", "Resources", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
 							<a href="#contact"><small>Contact Us</small></a>
 						</div>
 						<div class="link-title">
 							<h4>Legal</h4>
-							<a asp-page="/TermsAndConditions" target="_blank"><small>Terms</small></a><br />
-							<a asp-page="/PrivacyPolicy" target="_blank"><small>Privacy</small></a>
+							@Html.ActionLink("Terms", "TermsAndConditions", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })<br />
+							@Html.ActionLink("Privacy", "PrivacyPolicy", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;", target = "_blank" })
 						</div>
 						<div class="link-title">
 							<h4>Explore</h4>
-							<a href="#header"><small>Home</small></a><br />
-							<a href="#about"><small>About</small></a>
+							@Html.ActionLink("Modules", "Kindergarten", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Ebooks", "Ebook", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
 						</div>
 						<div class="link-title">
 							<h4>&nbsp</h4>
-							<a asp-page="/Library"><small>Library</small></a><br />
-							<a asp-page="/Game"><small>Games</small></a>
+							@Html.ActionLink("Web Directory", "EnglishD", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })<br />
+							@Html.ActionLink("Trivias", "Trivia", "Home", null, new { @style = "font-size:0.8em; color:#777777; text-decoration: none;" })
 						</div>
 					</div>
 				</div>
@@ -142,12 +130,12 @@
 					<div class="footer-info">
 						<div class="copyright-text">
 							<div style="padding-left: 15px;">
-								<a href="https://www.facebook.com/hpmowl"><i class="fa fa-facebook fa-lg p-1" style="        color: #1b9de9"></i></a>
+								<a href="https://www.facebook.com/systedulearn/" target="_blank"><i class="fa fa-facebook fa-lg p-1" style="        color: #1b9de9"></i></a>
 								<i id="msgboxShowMessage" class="fa fa-phone fa-lg p-1" style="color: #1b9de9"></i>
 								<i id="msgboxShowEmail" class="fa fa-envelope fa-lg p-1" style="color: #1b9de9"></i>
 							</div>
 							<br />
-							<small>Copyright 2020 HPM</small>
+							<small>Copyright 2020 Systematrics</small>
 						</div>
 						<div class="footer-logo">
 							<img src="~/wwwroot/images/owl-logo.png" />
@@ -188,9 +176,9 @@
 
 		</div>
 
-		
 
-		
+
+
 
 	</main>
 </div>
@@ -219,6 +207,15 @@
 	}
 
 	
+</script>
+<script>
+
+	var BackFunc = function () {
+
+		var baseUrl="@Url.Action("Back","Login")";
+   window.location.href=baseUrl;
+
+	}
 </script>
 <script src="~/wwwroot/js/accounts.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

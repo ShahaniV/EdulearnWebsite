@@ -18,10 +18,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/EdulearnWebsite.dll">
-      <publishTime>05/23/2021 20:35:49</publishTime>
+      <publishTime>05/24/2021 01:29:18</publishTime>
     </File>
     <File Include="bin/EdulearnWebsite.pdb">
-      <publishTime>05/23/2021 20:35:49</publishTime>
+      <publishTime>05/24/2021 01:29:18</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -309,19 +309,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2021 22:01:23</publishTime>
     </File>
     <File Include="Views/Admin/Create.cshtml">
-      <publishTime>05/21/2021 12:13:06</publishTime>
+      <publishTime>05/24/2021 01:09:12</publishTime>
     </File>
     <File Include="Views/Admin/Delete.cshtml">
-      <publishTime>05/16/2021 20:14:53</publishTime>
+      <publishTime>05/24/2021 01:11:23</publishTime>
     </File>
     <File Include="Views/Admin/Details.cshtml">
       <publishTime>04/25/2021 22:52:12</publishTime>
     </File>
     <File Include="Views/Admin/Edit.cshtml">
-      <publishTime>05/21/2021 12:19:09</publishTime>
+      <publishTime>05/23/2021 22:36:18</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>05/23/2021 03:34:22</publishTime>
+      <publishTime>05/24/2021 01:13:04</publishTime>
     </File>
     <File Include="Views/HeadAdmin/Create.cshtml">
       <publishTime>04/25/2021 21:52:59</publishTime>
@@ -399,10 +399,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2021 17:08:28</publishTime>
     </File>
     <File Include="Views/Home/Home.cshtml">
-      <publishTime>05/23/2021 03:33:01</publishTime>
+      <publishTime>05/23/2021 22:14:43</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/23/2021 03:35:14</publishTime>
+      <publishTime>05/23/2021 22:15:49</publishTime>
     </File>
     <File Include="Views/Home/Library.cshtml">
       <publishTime>05/20/2021 11:34:19</publishTime>
@@ -486,7 +486,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2021 02:09:04</publishTime>
     </File>
     <File Include="Views/Home/PrivacyPolicy.cshtml">
-      <publishTime>05/23/2021 03:49:49</publishTime>
+      <publishTime>05/23/2021 22:11:36</publishTime>
     </File>
     <File Include="Views/Home/Shared/_Layout.cshtml">
       <publishTime>04/12/2021 14:36:43</publishTime>
@@ -495,7 +495,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/12/2021 14:36:43</publishTime>
     </File>
     <File Include="Views/Home/TermsAndConditions.cshtml">
-      <publishTime>05/23/2021 03:41:40</publishTime>
+      <publishTime>05/23/2021 22:17:47</publishTime>
     </File>
     <File Include="Views/Home/webfonts/fa-brands-400.eot">
       <publishTime>04/12/2021 14:36:43</publishTime>
@@ -543,25 +543,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/12/2021 14:36:43</publishTime>
     </File>
     <File Include="Views/Learner/Create.cshtml">
-      <publishTime>05/21/2021 12:12:14</publishTime>
+      <publishTime>05/24/2021 01:09:50</publishTime>
     </File>
     <File Include="Views/Learner/Delete.cshtml">
-      <publishTime>05/16/2021 20:15:31</publishTime>
+      <publishTime>05/24/2021 01:11:27</publishTime>
     </File>
     <File Include="Views/Learner/Details.cshtml">
       <publishTime>05/03/2021 02:19:21</publishTime>
     </File>
     <File Include="Views/Learner/Edit.cshtml">
-      <publishTime>05/21/2021 12:18:55</publishTime>
+      <publishTime>05/23/2021 22:38:02</publishTime>
     </File>
     <File Include="Views/Learner/Index.cshtml">
-      <publishTime>05/23/2021 03:36:44</publishTime>
+      <publishTime>05/24/2021 01:05:53</publishTime>
     </File>
     <File Include="Views/Login/ForgotPassword.cshtml">
       <publishTime>05/20/2021 11:23:15</publishTime>
     </File>
     <File Include="Views/Login/Index.cshtml">
-      <publishTime>05/21/2021 07:48:45</publishTime>
+      <publishTime>05/24/2021 00:27:14</publishTime>
     </File>
     <File Include="Views/Login/ResetPassword.cshtml">
       <publishTime>05/20/2021 11:26:45</publishTime>
@@ -573,22 +573,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/11/2021 02:02:03</publishTime>
     </File>
     <File Include="Views/Modules/Create.cshtml">
-      <publishTime>05/21/2021 20:02:51</publishTime>
+      <publishTime>05/23/2021 23:48:21</publishTime>
     </File>
     <File Include="Views/Modules/Delete.cshtml">
       <publishTime>05/21/2021 20:07:09</publishTime>
     </File>
     <File Include="Views/Modules/Details.cshtml">
-      <publishTime>05/21/2021 20:01:25</publishTime>
+      <publishTime>05/23/2021 23:48:35</publishTime>
     </File>
     <File Include="Views/Modules/Edit.cshtml">
-      <publishTime>05/21/2021 20:03:36</publishTime>
+      <publishTime>05/23/2021 23:48:40</publishTime>
     </File>
     <File Include="Views/Modules/Elementary.cshtml">
       <publishTime>05/23/2021 02:18:31</publishTime>
     </File>
     <File Include="Views/Modules/Index.cshtml">
-      <publishTime>05/23/2021 02:21:52</publishTime>
+      <publishTime>05/23/2021 23:20:02</publishTime>
     </File>
     <File Include="Views/Modules/Junior_high.cshtml">
       <publishTime>05/23/2021 02:19:24</publishTime>
@@ -597,7 +597,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2021 02:19:12</publishTime>
     </File>
     <File Include="Views/Modules/Senior_high.cshtml">
-      <publishTime>05/23/2021 02:19:00</publishTime>
+      <publishTime>05/23/2021 23:47:48</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>04/18/2021 22:01:11</publishTime>
@@ -2046,7 +2046,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2021 17:53:31</publishTime>
     </File>
     <File Include="wwwroot/css/accounts.css">
-      <publishTime>05/02/2021 22:55:41</publishTime>
+      <publishTime>05/24/2021 01:16:55</publishTime>
     </File>
     <File Include="wwwroot/css/channel.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
@@ -2067,19 +2067,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2021 17:57:37</publishTime>
     </File>
     <File Include="wwwroot/css/games.css">
-      <publishTime>04/28/2021 17:57:37</publishTime>
+      <publishTime>05/24/2021 01:24:25</publishTime>
     </File>
     <File Include="wwwroot/css/Googlemap.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
     </File>
     <File Include="wwwroot/css/landingstyle.css">
-      <publishTime>04/28/2021 17:57:37</publishTime>
+      <publishTime>05/24/2021 00:35:42</publishTime>
     </File>
     <File Include="wwwroot/css/letterChart.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
     </File>
     <File Include="wwwroot/css/library.css">
-      <publishTime>05/10/2021 08:11:53</publishTime>
+      <publishTime>05/24/2021 01:02:51</publishTime>
     </File>
     <File Include="wwwroot/css/modules.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
@@ -2103,7 +2103,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/18/2021 23:18:28</publishTime>
     </File>
     <File Include="wwwroot/css/style.css">
-      <publishTime>05/18/2021 23:11:40</publishTime>
+      <publishTime>05/24/2021 01:03:56</publishTime>
     </File>
     <File Include="wwwroot/css/trivia.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
