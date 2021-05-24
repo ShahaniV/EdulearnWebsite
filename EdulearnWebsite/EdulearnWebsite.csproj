@@ -1241,6 +1241,8 @@
     <Content Include="Files\fil9_q1_md6213220664.pdf" />
     <Content Include="Files\kin_cnt213815551.pdf" />
     <Content Include="Files\kin_rdeng1215836984.pdf" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
