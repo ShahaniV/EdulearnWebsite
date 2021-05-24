@@ -24,18 +24,8 @@
 				<li><a onclick="BackFunc()">Home</a></li>
 				<li>@Html.ActionLink("Library", "Library", "Home")</li>
 				<li>@Html.ActionLink("Game", "Game", "Home")</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0px;">
-						Account
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						@Html.ActionLink("Manage Admin", "Index", "Admin", null, new { @class = "dropdown-item" })
-						@Html.ActionLink("Manage User", "Index", "Learner", null, new { @class = "dropdown-item" })
-						<div class="dropdown-divider"></div>
-						<a href="/Home/Logout" class="dropdown-item pl-4">
-							Logout
-						</a>
-					</div>
+				<li>
+					<a class="dropdown-item pl-4 pt-0" onclick="ConfirmDelete()">Logout </a>
 				</li>
 
 				<div class="style-switcher outer-shadow">
