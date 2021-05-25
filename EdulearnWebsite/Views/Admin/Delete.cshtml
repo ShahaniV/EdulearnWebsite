@@ -180,23 +180,21 @@
 <!--Bootstrap-->
 <script>
 
-	var ConfirmLogout = function () {
+	var ConfirmDelete = function () {
 
 		$("#myModal").modal('show');
 
 	}
 
-	
-
 	var DeleteEmployee = function () {
 
 		$("#loaderDiv").show();
 		var baseUrl="@Url.Action("Logout","Home")";
-		window.location.href=baseUrl;
+   window.location.href=baseUrl;
 
 	}
 
-	
+
 </script>
 <script>
 
