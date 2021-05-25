@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
     <_PublishTargetUrl>ftp://198.37.116.41/www.OWL-website.somee.com/www.OWL-website.somee.com</_PublishTargetUrl>
-    <History>True|2021-05-24T17:15:38.3121673Z;True|2021-05-24T15:38:38.7244955+08:00;</History>
+    <History>True|2021-05-25T17:07:45.0808423Z;True|2021-05-25T01:15:38.3121673+08:00;True|2021-05-24T15:38:38.7244955+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -18,10 +18,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/EdulearnWebsite.dll">
-      <publishTime>05/25/2021 01:12:05</publishTime>
+      <publishTime>05/26/2021 01:04:25</publishTime>
     </File>
     <File Include="bin/EdulearnWebsite.pdb">
-      <publishTime>05/25/2021 01:12:05</publishTime>
+      <publishTime>05/26/2021 01:04:25</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -1098,7 +1098,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2021 17:08:28</publishTime>
     </File>
     <File Include="Views/Home/Home.cshtml">
-      <publishTime>05/23/2021 22:14:43</publishTime>
+      <publishTime>05/25/2021 23:41:37</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>05/23/2021 22:15:49</publishTime>
@@ -1116,10 +1116,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2021 02:07:08</publishTime>
     </File>
     <File Include="Views/Home/LibraryPages/ChartsAndTables/Flags.cshtml">
-      <publishTime>05/24/2021 15:58:25</publishTime>
+      <publishTime>05/26/2021 00:14:14</publishTime>
     </File>
     <File Include="Views/Home/LibraryPages/ChartsAndTables/LetterChart.cshtml">
-      <publishTime>05/23/2021 02:06:48</publishTime>
+      <publishTime>05/26/2021 00:54:17</publishTime>
     </File>
     <File Include="Views/Home/LibraryPages/ChartsAndTables/MultiplicationTable.cshtml">
       <publishTime>05/23/2021 02:06:38</publishTime>
@@ -1182,7 +1182,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/12/2021 14:36:43</publishTime>
     </File>
     <File Include="Views/Home/TermsAndConditions.cshtml">
-      <publishTime>05/23/2021 22:17:47</publishTime>
+      <publishTime>05/26/2021 00:03:24</publishTime>
     </File>
     <File Include="Views/Home/webfonts/fa-brands-400.eot">
       <publishTime>04/12/2021 14:36:43</publishTime>
@@ -2760,7 +2760,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2021 17:57:37</publishTime>
     </File>
     <File Include="wwwroot/css/landingstyle.css">
-      <publishTime>05/24/2021 00:35:42</publishTime>
+      <publishTime>05/25/2021 23:58:47</publishTime>
     </File>
     <File Include="wwwroot/css/letterChart.css">
       <publishTime>04/28/2021 17:57:37</publishTime>
