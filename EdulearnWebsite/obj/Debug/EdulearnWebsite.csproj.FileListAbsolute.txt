@@ -163,7 +163,6 @@ F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\Antlr3.Run
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.abstractions.xml
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\xunit.core.xml
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.csprojAssemblyReference.cache
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.csproj.CoreCompileInputs.cache
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.csproj.CopyComplete
 F:\Visual Studio Project\ShahaniV\EdulearnWebsite\EdulearnWebsite\obj\Debug\EdulearnWebsite.dll
