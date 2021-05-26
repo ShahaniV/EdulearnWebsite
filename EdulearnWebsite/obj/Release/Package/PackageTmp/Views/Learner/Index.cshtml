@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="~/wwwroot/css/stye-switcher.css" />
 
 <div class="container g-container">
-    <main role="main" class="mx-auto">
+	<main role="main" class="mx-auto">
 
-        <!--Navigation Bar-->
-        <header>
-            <a href="#" class="logo"><img src="~/wwwroot/images/flavicon.ico" class="owl-nav" /><span class="letterE">E</span>dulearn</a>
-            <div class="menuToggle" onclick="toggleMenu();"></div>
-            <ul class="navigation">
-                <li><a onclick="BackFunc()">Home</a></li>
-                <li>@Html.ActionLink("Library", "Library", "Home")</li>
-                <li>@Html.ActionLink("Game", "Game", "Home")</li>
+		<!--Navigation Bar-->
+		<header>
+			<a href="#" class="logo"><img src="~/wwwroot/images/flavicon.ico" class="owl-nav" /><span class="letterE">E</span>dulearn</a>
+			<div class="menuToggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a onclick="BackFunc()">Home</a></li>
+				<li>@Html.ActionLink("Library", "Library", "Home")</li>
+				<li>@Html.ActionLink("Game", "Game", "Home")</li>
 				<li>
 					<a class="dropdown-item pl-4 pt-0" onclick="ConfirmDelete()">Logout </a>
 				</li>
@@ -35,52 +35,52 @@
 						<i class="fas"></i>
 					</div>
 				</div>
-            </ul>
-        </header>
+			</ul>
+		</header>
 
-        <section style="padding-top: 10px !important" class="admin-form">
-            <h1 style="text-align: center; margin-top: 100px;">User</h1>
+		<section style="padding-top: 10px !important" class="admin-form">
+			<h1 style="text-align: center; margin-top: 100px;">User</h1>
 
-            <div style="width: 90%; text-align: right;">
-                <a href="/Learner/Create" class="button primary accButton" style="margin-bottom: 10px; ">Add User</a>
-            </div>
-
-
-            <!-- Break -->
-            <div class="table-wrapper table-responsive-lg">
-                <table style="text-align: center;">
-                    <thead>
-                        <tr>
-                            <th style="text-align: center;">Username</th>
-                            <th style="text-align: center;">Email</th>
-                            <th style="text-align: center;">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.username)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.email)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.LearnerID }, new { @class = "button primary small" })
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.LearnerID }, new { @class = "button primary small" })
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </section>
+			<div style="width: 90%; text-align: right;">
+				<a href="/Learner/Create" class="button primary accButton" style="margin-bottom: 10px; ">Add User</a>
+			</div>
 
 
+			<!-- Break -->
+			<div class="table-wrapper table-responsive-lg">
+				<table style="text-align: center;">
+					<thead>
+						<tr>
+							<th style="text-align: center;">Username</th>
+							<th style="text-align: center;">Email</th>
+							<th style="text-align: center;">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@Html.DisplayFor(modelItem => item.username)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.email)
+								</td>
+								<td>
+									@Html.ActionLink("Edit", "Edit", new { id = item.LearnerID }, new { @class = "button primary small" })
+									@Html.ActionLink("Delete", "Delete", new { id = item.LearnerID }, new { @class = "button primary small" })
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</section>
 
 
-        <!--FOOTER-->
+
+
+		<!--FOOTER-->
 		<section id="footer">
 			<div class="container footer-row">
 				<hr />
@@ -128,9 +128,37 @@
 			</div>
 		</section>
 
-        <div id="msgbox-area" class="msgbox-area"></div>
+		<div id="msgbox-area" class="msgbox-area"></div>
 
-    </main>
+		<div class="modal fade" id="myModal" style="top:20% !important;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+
+					<div class="modal-header">
+						<h4 class="modal-title">Logout</h4>
+						<a href="#" class="close" data-dismiss="modal">&times;</a>
+					</div>
+					<div class="modal-body">
+						<h5>Are you sure ? You want to Logout? </h5>
+
+						<div style="text-align:center;display:none" id="loaderDiv">
+							Loading.....
+							@*<img src="~/Content/img/2xkV.gif" style="height:200px;width:200px" />*@
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+						<a href="#" style="background-color:#ff9017; color:white;" class="btn" onclick="DeleteEmployee()">Confirm</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</main>
 </div>
 
 @section Scripts {
@@ -141,6 +169,20 @@
 	var BackFunc = function () {
 
 		var baseUrl="@Url.Action("Back", "Login")";
+   window.location.href=baseUrl;
+
+	}
+
+	var ConfirmDelete = function () {
+
+		$("#myModal").modal('show');
+
+	}
+
+	var DeleteEmployee = function () {
+
+		$("#loaderDiv").show();
+		var baseUrl="@Url.Action("Logout","Home")";
    window.location.href=baseUrl;
 
 	}

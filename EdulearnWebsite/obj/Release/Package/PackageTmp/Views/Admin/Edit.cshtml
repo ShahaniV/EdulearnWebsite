@@ -139,6 +139,34 @@
 
 		<div id="msgbox-area" class="msgbox-area"></div>
 
+		<div class="modal fade" id="myModal" style="top:20% !important;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+
+					<div class="modal-header">
+						<h4 class="modal-title">Logout</h4>
+						<a href="#" class="close" data-dismiss="modal">&times;</a>
+					</div>
+					<div class="modal-body">
+						<h5>Are you sure ? You want to Logout? </h5>
+
+						<div style="text-align:center;display:none" id="loaderDiv">
+							Loading.....
+							@*<img src="~/Content/img/2xkV.gif" style="height:200px;width:200px" />*@
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+						<a href="#" style="background-color:#ff9017; color:white;" class="btn" onclick="DeleteEmployee()">Confirm</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
 	</main>
 </div>
 
@@ -150,6 +178,20 @@
 	var BackFunc = function () {
 
 		var baseUrl="@Url.Action("Back", "Login")";
+   window.location.href=baseUrl;
+
+	}
+
+	var ConfirmDelete = function () {
+
+		$("#myModal").modal('show');
+
+	}
+
+	var DeleteEmployee = function () {
+
+		$("#loaderDiv").show();
+		var baseUrl="@Url.Action("Logout","Home")";
    window.location.href=baseUrl;
 
 	}
