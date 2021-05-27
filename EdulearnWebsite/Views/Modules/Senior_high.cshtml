@@ -46,8 +46,10 @@
 				<ul class="faq-list" id="seniorhighschool">
 					<header class="main">
 						<h3>Senior Highschool</h3>
-						<div style="width: 100px; background-color:bisque;" class="text-center"> Quarter 1 </div>
-						<div style="		width: 100px; background-color: #c4ecff;" class="text-center"> Quarter 2 </div>
+						<div class="m-1"><span style="width: 100px; background-color:bisque;" class="text-center p-1">Quarter 1</span> <span style="		width: 100px; background-color: #c4ecff;" class="text-center p-1">Quarter 1</span> </div>
+						<div class="m-1">
+							<span style=" width: 100px; background-color: #f5b8b8;" class="text-center p-1">Quarter 3</span> <span style=" width: 100px; background-color: #bdf5b8;" class="text-center p-1">Quarter 4</span>
+						</div>
 					</header>
 					<!-- kindergarten -->
 					<li class="J_list">
@@ -85,6 +87,36 @@
 											{
 												<tr>
 													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Oral Communication" && c.gradeLevel == "Grade11" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color: #f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "Oral Communication" && c.gradeLevel == "Grade11" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 													</td>
@@ -141,6 +173,36 @@
 													</td>
 												</tr>
 											}
+											@foreach (var item in Model.Where(c => c.subject == "MIL." && c.gradeLevel == "Grade11" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color: #f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "MIL." && c.gradeLevel == "Grade11" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
 										</tbody>
 									</table>
 								</div>
@@ -175,6 +237,36 @@
 											{
 												<tr>
 													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PerDev" && c.gradeLevel == "Grade11" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color: #f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PerDev" && c.gradeLevel == "Grade11" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 													</td>
@@ -239,6 +331,36 @@
 													</td>
 												</tr>
 											}
+											@foreach (var item in Model.Where(c => c.subject == "CPAR" && c.gradeLevel == "Grade12" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color: #f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "CPAR" && c.gradeLevel == "Grade12" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
 										</tbody>
 									</table>
 								</div>
@@ -284,6 +406,36 @@
 													</td>
 												</tr>
 											}
+											@foreach (var item in Model.Where(c => c.subject == "KP" && c.gradeLevel == "Grade12" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color: #f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "KP" && c.gradeLevel == "Grade12" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
 										</tbody>
 									</table>
 								</div>
@@ -318,6 +470,36 @@
 											{
 												<tr>
 													<td style="		background-color: #c4ecff;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PS" && c.gradeLevel == "Grade12" && c.quarterNo == 3))
+											{
+												<tr>
+													<td style="		background-color:#f5b8b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
+														@Html.DisplayFor(modelItem => item.moduleNo)
+														@Html.DisplayFor(modelItem => item.title)
+													</td>
+													<td>
+														@Html.DisplayFor(modelItem => item.description)
+													</td>
+													<td>
+														<a href="@(item.files)" target="_blank" class="button mt-2">View <i class="fa fa-book" aria-hidden="true"></i></a>
+													</td>
+												</tr>
+											}
+											@foreach (var item in Model.Where(c => c.subject == "PS" && c.gradeLevel == "Grade12" && c.quarterNo == 4))
+											{
+												<tr>
+													<td style="		background-color: #bdf5b8;color:#3d4449;" href="@(item.files)" target="_blank" class="pb-2">
 														@Html.DisplayFor(modelItem => item.moduleNo)
 														@Html.DisplayFor(modelItem => item.title)
 													</td>

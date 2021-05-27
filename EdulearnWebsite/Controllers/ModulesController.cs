@@ -67,7 +67,10 @@ namespace EdulearnWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Module module)
         {
-            
+            var ModuleNum = db.Modules.Where(a => a.gradeLevel == module.gradeLevel && a.subject == module.subject && a.quarterNo == module.quarterNo).OrderByDescending(p => p.moduleNo).First();
+            int ModuleNumber = (int)ModuleNum.moduleNo;
+            module.moduleNo = ModuleNumber + 1;
+
             string fileName = Path.GetFileNameWithoutExtension(module.fileFile.FileName);
             string extension = Path.GetExtension(module.fileFile.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
@@ -89,6 +92,9 @@ namespace EdulearnWebsite.Controllers
                     var ModExist = IsModulesExist(module.gradeLevel, module.subject, module.quarterNo, module.moduleNo);
                     if (!ModExist)
                     {
+                        
+
+
                         IsAdminNameExist(module.adminName, module);
                         db.Modules.Add(module);
                         try
@@ -111,7 +117,7 @@ namespace EdulearnWebsite.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Module already exists");
+                        ModelState.AddModelError("", "Module already exists" + module.moduleNo);
                         return View(module);
                     }
                    
@@ -205,6 +211,8 @@ namespace EdulearnWebsite.Controllers
             return View(db.Modules.Where(x => x.Id == id).FirstOrDefault());
         }
 
+
+
         // POST: Modules/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -216,6 +224,8 @@ namespace EdulearnWebsite.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+       
 
         private bool RemoveFileFromServer(string path)
         {

@@ -21,21 +21,24 @@ namespace EdulearnWebsite.Models
         public int Id { get; set; }
         [Range(1, 100)]
         public Nullable<int> moduleNo { get; set; }
+        [Required(ErrorMessage = "Title Field is required")]
         public string title { get; set; }
-        [Range(1, 2)]
+        [Required(ErrorMessage = "Quarter No. is required")]
+        [Range(1, 4)]
         public Nullable<int> quarterNo { get; set; }
         [DataType(DataType.MultilineText)]
         public string description { get; set; }
-        [DisplayName("Upload File")]
+        [DisplayName("Upload PDF File")]
         public string files { get; set; }
         public Nullable<System.DateTime> datetime { get; set; }
         public string adminName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Subject field is required")]
         public string subject { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Grade Level field is required")]
         public string gradeLevel { get; set; }
 
         [NotMapped]
+        [RegularExpression(@"^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.pdf|.PDF)$", ErrorMessage = "Incorrect file format, .pdf extension file only.")]
         public HttpPostedFileBase fileFile { get; set; }
         public Module()
         {
