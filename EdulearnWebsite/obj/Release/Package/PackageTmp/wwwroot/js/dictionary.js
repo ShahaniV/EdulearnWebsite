@@ -47,7 +47,7 @@ async function getData(word) {
         data.forEach(element => {
             let suggetion = document.createElement('span');
             suggetion.classList.add('suggested');
-            suggetion.innerText = element;
+            suggetion.innerText = element + ", ";
             notFound.appendChild(suggetion);
 
         })
