@@ -163,6 +163,7 @@ namespace EdulearnWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 if (module.fileFile.ContentLength > 0)
                 {
                     var supportedTypes = new[] { "pdf", "PDF" };
@@ -265,8 +266,17 @@ namespace EdulearnWebsite.Controllers
             using (edulearnEntities db = new edulearnEntities())
             {
                 var v = db.admins.Where(a => a.username == Username).FirstOrDefault();
-                var AdminName = v.firstname + " " + v.lastname;
-                module.adminName = AdminName;
+                if (v == null)
+                {
+                    var s = db.headAdmins.Where(a => a.username == Username).FirstOrDefault();
+                    var AdminName = s.firstname + " " + s.lastname;
+                    module.adminName = AdminName;
+                }
+                else {
+                    var AdminName = v.firstname + " " + v.lastname;
+                    module.adminName = AdminName;
+                }
+               
             }
         }
 
@@ -276,7 +286,16 @@ namespace EdulearnWebsite.Controllers
             using (edulearnEntities db = new edulearnEntities())
             {
                 var v = db.admins.Where(a => a.username == Username).FirstOrDefault();
-                return v != null;
+                if (v == null)
+                {
+                    var s = db.headAdmins.Where(a => a.username == Username).FirstOrDefault();
+                    return s != null;
+                }
+                else
+                {
+                    return v != null;
+                }
+                
             }
         }
 

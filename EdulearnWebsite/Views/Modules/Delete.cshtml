@@ -110,45 +110,17 @@
 					</div>
 				</div>
 
-				
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
 
 					<div class="form-actions no-color">
-						<input onclick="ConfirmDelete()" value="Delete" class="btn btn-default" /> |
+						<input type="submit" value="Delete" class="btn btn-default" /> |
 						@Html.ActionLink("Back to Module List", "Index")
 					</div>
+				}
 				
 
-				<div class="modal fade" id="myModal" style="top:20% !important;">
-					<div class="modal-dialog">
-						<div class="modal-content">
-
-
-							<div class="modal-header">
-								<h4 class="modal-title">Logout</h4>
-								<a href="#" class="close" data-dismiss="modal">&times;</a>
-							</div>
-							<div class="modal-body">
-								<h5>Please enter your password to continue</h5>
-
-								<div style="text-align:center;display:none" id="loaderDiv">
-									Loading.....
-									@*<img src="~/Content/img/2xkV.gif" style="height:200px;width:200px" />*@
-								</div>
-
-							</div>
-							@using (Html.BeginForm())
-							{
-								@Html.AntiForgeryToken()
-								<div class="modal-footer">
-									<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
-									<input type="submit" value="Confirm" class="btn btn-default" />
-								</div>
-							}
-							</div>
-
-					</div>
-
-				</div>
 
 			</section>
 
@@ -163,13 +135,7 @@
 	@Scripts.Render("~/bundles/jqueryval")
 }
 <!-- Library script -->
-<script>
-	var ConfirmDelete = function () {
 
-		$("#myModal").modal('show');
-
-	}
-</script>
 <script src="~/wwwroot/js/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/c0d25df00f.js"></script>
 <script src="~/wwwroot/js/browser.min.js"></script>
