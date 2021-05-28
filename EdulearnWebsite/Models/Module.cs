@@ -38,7 +38,6 @@ namespace EdulearnWebsite.Models
         public string gradeLevel { get; set; }
 
         [NotMapped]
-        [RegularExpression(@"^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.pdf|.PDF)$", ErrorMessage = "Incorrect file format, .pdf extension file only.")]
         public HttpPostedFileBase fileFile { get; set; }
         public Module()
         {

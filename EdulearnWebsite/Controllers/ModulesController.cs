@@ -71,8 +71,16 @@ namespace EdulearnWebsite.Controllers
             int ModuleNumber = (int)ModuleNum.moduleNo;
             module.moduleNo = ModuleNumber + 1;
 
+            var supportedTypes = new[] { "pdf", "PDF" };
+
             string fileName = Path.GetFileNameWithoutExtension(module.fileFile.FileName);
             string extension = Path.GetExtension(module.fileFile.FileName);
+            var fileExt = Path.GetExtension(module.fileFile.FileName).Substring(1);
+            if (!supportedTypes.Contains(fileExt))
+            {
+                ModelState.AddModelError("", "Incorrect file format, .pdf extension file only.");
+                return View(module);
+            }
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             module.files = "/Files/" + fileName;
             fileName = Path.Combine(Server.MapPath("../Files/"), fileName);
@@ -157,8 +165,15 @@ namespace EdulearnWebsite.Controllers
             {
                 if (module.fileFile.ContentLength > 0)
                 {
+                    var supportedTypes = new[] { "pdf", "PDF" };
                     string fileName = Path.GetFileNameWithoutExtension(module.fileFile.FileName);
                     string extension = Path.GetExtension(module.fileFile.FileName);
+                    var fileExt = Path.GetExtension(module.fileFile.FileName).Substring(1);
+                    if (!supportedTypes.Contains(fileExt))
+                    {
+                        ModelState.AddModelError("", "Incorrect file format, .pdf extension file only.");
+                        return View(module);
+                    }
                     fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
                     module.files = "/Files/" + fileName;
                     fileName = Path.Combine(Server.MapPath("/Files/"), fileName);
