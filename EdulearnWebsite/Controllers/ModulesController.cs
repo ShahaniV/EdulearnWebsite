@@ -89,21 +89,21 @@ namespace EdulearnWebsite.Controllers
 
             if (ModelState.IsValid)
             {
-                var isExist = IsUsernameExist(module.adminName);
-                if (!isExist)
-                {
-                    ModelState.AddModelError("", "Admin Username doesn't exist");
-                    return View(module);
-                }
-                else
-                {
+                //var isExist = IsUsernameExist(module.adminName);
+                //if (!isExist)
+                //{
+                //    ModelState.AddModelError("", "Admin Username doesn't exist");
+                //    return View(module);
+                //}
+                //else
+                //{
                     var ModExist = IsModulesExist(module.gradeLevel, module.subject, module.quarterNo, module.moduleNo);
                     if (!ModExist)
                     {
                         
 
 
-                        IsAdminNameExist(module.adminName, module);
+                        //IsAdminNameExist(module.adminName, module);
                         db.Modules.Add(module);
                         try
                         {
@@ -129,7 +129,7 @@ namespace EdulearnWebsite.Controllers
                         return View(module);
                     }
                    
-                }
+                
                 
 
             }
@@ -181,14 +181,14 @@ namespace EdulearnWebsite.Controllers
                     module.fileFile.SaveAs(fileName);
                 }
 
-                var isExist = IsUsernameExist(module.adminName);
-                if (!isExist)
-                {
-                    ModelState.AddModelError("", "Admin Username doesn't exist");
-                    return View(module);
-                }
-                else
-                {
+                //var isExist = IsUsernameExist(module.adminName);
+                //if (!isExist)
+                //{
+                //    ModelState.AddModelError("", "Admin Username doesn't exist");
+                //    return View(module);
+                //}
+                //else
+                //{
                     db.Entry(module).State = EntityState.Modified;
                     try
                     {
@@ -207,7 +207,7 @@ namespace EdulearnWebsite.Controllers
                     }
                     db.SaveChanges();
                     return RedirectToAction("Index");
-                }
+                
             }
             return View(module);
         }
